@@ -1,1967 +1,1572 @@
-- title: Authentication
+- title: 身份验证
   slug: authentication
-  description: Securing your online account login credentials
+  description: 保护你的在线账户登录凭据
   icon: password
   color: yellow
   intro: >-
-    Most reported data breaches are caused by the use of weak, default or stolen passwords
-    (according to [this Verizon report](http://www.verizonenterprise.com/resources/reports/rp_dbir-2016-executive-summary_xg_en.pdf)).
-    Use long, strong and unique passwords, manage them in a secure password manager, enable
-    2-factor authentication, keep on top of breaches and take care while logging into your accounts.
+    大多数数据泄露都是由于使用了弱密码、默认密码或被盗密码造成的
+    （参考[Verizon报告](http://www.verizonenterprise.com/resources/reports/rp_dbir-2016-executive-summary_xg_en.pdf)）。
+    使用足够长、强且唯一的密码，在安全的密码管理器中管理它们，启用
+    双因素认证，关注数据泄露动态，并在登录账户时保持警惕。
   checklist:
-  - point: Use a Strong Password
-    priority: Essential
+  - point: 使用强密码
+    priority: 基本
     details: >-
-      If your password is too short, or contains dictionary words, places or names- then it can be easily
-      cracked through brute force, or guessed by someone. The easiest way to make a strong password, is by
-      making it long (12+ characters)- consider using a 'passphrase', made up of many words. Alternatively,
-      use a password generator to create a long, strong random password. Have a play with
-      [Security.org's How Secure Is My Password?](https://security.org/how-secure-is-my-password/), to get an idea of how quickly common
-      passwords can be cracked. Read more about creating strong passwords:
-      [securityinabox.org](https://securityinabox.org/en/passwords/passwords-and-2fa/)
+      如果你的密码太短，或包含字典单词、地名或人名，那么它很容易被暴力破解或被猜到。
+      创建强密码最简单的方法就是让它足够长（12位以上），可以考虑使用由多个单词组成的“密码短语”。
+      或者，使用密码生成器生成一个长且随机的密码。你可以试试
+      [Security.org的密码安全性测试](https://security.org/how-secure-is-my-password/)，了解常见密码被破解的速度。
+      了解更多关于创建强密码的信息：[securityinabox.org](https://securityinabox.org/en/passwords/passwords-and-2fa/)
 
-  - point: Don't reuse Passwords
-    priority: Essential
+  - point: 不要重复使用密码
+    priority: 基本
     details: >-
-      If someone was to reuse a password, and one site they had an account with suffered a leak, then a
-      criminal could easily gain unauthorized access to their other accounts. This is usually done through
-      large-scale automated login requests, and it is called Credential Stuffing. Unfortunately this is all
-      too common, but it's simple to protect against- use a different password for each of your online accounts
+      如果你在多个网站重复使用密码，一旦其中一个网站发生泄露，攻击者就可以轻松访问你的其他账户。
+      这通常通过大规模自动化登录尝试实现，被称为“凭证填充攻击”。
+      这种情况很常见，但只要为每个账户使用不同的密码就能有效防护。
 
-  - point: Use a Secure Password Manager
-    priority: Essential
+  - point: 使用安全的密码管理器
+    priority: 基本
     details: >-
-      For most people it is going to be near-impossible to remember hundreds of strong and unique passwords.
-      A password manager is an application that generates, stores and auto-fills your login credentials for you.
-      All your passwords will be encrypted against 1 master passwords (which you must remember, and it should be
-      very strong). Most password managers have browser extensions and mobile apps, so whatever device you are on,
-      your passwords can be auto-filled. A good all-rounder is
-      [Bitwarden](https://awesome-privacy.xyz/essentials/password-managers/bitwarden), or see
-      [Recommended Password Managers](https://awesome-privacy.xyz/essentials/password-managers)
+      对大多数人来说，记住数百个强且唯一的密码几乎不可能。
+      密码管理器是一种应用程序，可以为你生成、存储并自动填写登录凭据。
+      所有密码都用一个主密码加密（你必须记住这个主密码，并且它应该非常强）。
+      大多数密码管理器都有浏览器扩展和移动应用，无论你用什么设备，都能自动填写密码。
+      推荐[Bitwarden](https://awesome-privacy.xyz/essentials/password-managers/bitwarden)，
+      或参考[推荐的密码管理器](https://awesome-privacy.xyz/essentials/password-managers)。
 
-  - point: Avoid sharing passwords
-    priority: Essential
+  - point: 避免分享密码
+    priority: 基本
     details: >-
-      While there may be times that you need to share access to an account with another person, you should
-      generally avoid doing this because it makes it easier for the account to become compromised. If you
-      absolutely do need to share a password for example when working on a team with a shared account this
-      should be done via features built into a password manager.
+      虽然有时你可能需要与他人共享账户访问权限，但一般应避免这样做，因为这会增加账户被攻破的风险。
+      如果确实需要共享密码，比如团队协作时，建议通过密码管理器内置的分享功能进行。
 
-  - point: Enable 2-Factor Authentication
-    priority: Essential
+  - point: 启用双因素认证（2FA）
+    priority: 基本
     details: >-
-      2FA is where you must provide both something you know (a password) and something you have (such as a
-      code on your phone) to log in. This means that if anyone has got your password (e.g. through phishing,
-      malware or a data breach), they will not be able to log into your account. It's easy to get started,
-      download [an authenticator app](https://github.com/Lissy93/awesome-privacy#2-factor-authentication)
-      onto your phone, and then go to your account security settings and follow the steps to enable 2FA. Next
-      time you log in on a new device, you will be prompted for the code that displays in the app on your phone
-      (it works without internet, and the code usually changes every 30-seconds)
+      2FA要求你在登录时同时提供你知道的信息（如密码）和你拥有的东西（如手机上的验证码）。
+      这样即使有人获得了你的密码（比如通过钓鱼、恶意软件或数据泄露），也无法登录你的账户。
+      启用方法很简单，下载[身份验证器应用](https://github.com/Lissy93/awesome-privacy#2-factor-authentication)，
+      然后在账户安全设置中启用2FA。下次在新设备登录时，你需要输入手机应用上的验证码（无需联网，验证码每30秒变化一次）。
 
-  - point: Keep Backup Codes Safe
-    priority: Essential
+  - point: 妥善保管备份码
+    priority: 基本
     details: >-
-      When you enable multi-factor authentication, you will usually be given several codes that you can use if
-      your 2FA method is lost, broken or unavailable. Keep these codes somewhere safe to prevent loss or
-      unauthorized access. You should store these on paper or in a safe place on disk (e.g. in offline storage
-      or in an encrypted file/drive). Don't store these in your Password Manager as 2FA sources and passwords
-      and should be kept separately.
+      启用多因素认证后，通常会获得一些备份码，用于2FA方式丢失、损坏或不可用时使用。
+      请将这些备份码保存在安全的地方，防止丢失或被他人获取。建议写在纸上或存储在离线加密文件/磁盘中。
+      不要将这些备份码和密码一起存放在密码管理器中，2FA源和密码应分开保存。
 
-  - point: Sign up for Breach Alerts
-    priority: Optional
+  - point: 订阅数据泄露提醒
+    priority: 可选
     details: >-
-      After a website suffers a significant data breach, the leaked data often ends up on the internet. There
-      are several websites that collect these leaked records, and allow you to search your email address to check
-      if you are in any of their lists. [Firefox Monitor](https://monitor.firefox.com), [Have I been pwned](https://haveibeenpwned.com)
-      and [DeHashed](https://dehashed.com) allow you to sign up for monitoring, where they will notify you if your
-      email address appears in any new data sets. It is useful to know as soon as possible when this happens, so
-      that you can change your passwords for the affected accounts. [Have i been pwned](https://awesome-privacy.xyz/security-tools/online-tools/have-i-been-pwned) also has domain-wide
-      notification, where you can receive alerts if any email addresses under your entire domain appear (useful if
-      you use aliases for [anonymous forwarding](https://github.com/Lissy93/awesome-privacy#anonymous-mail-forwarding))
+      网站发生重大数据泄露后，泄露的数据常常会在互联网上流传。
+      有一些网站收集这些泄露记录，并允许你通过邮箱查询是否在泄露名单中。
+      [Firefox Monitor](https://monitor.firefox.com)、[Have I been pwned](https://haveibeenpwned.com)
+      和 [DeHashed](https://dehashed.com) 都支持邮箱监控，发现新泄露时会通知你。
+      这样你可以第一时间修改受影响账户的密码。[Have I been pwned](https://awesome-privacy.xyz/security-tools/online-tools/have-i-been-pwned)
+      还支持域名范围通知，适合用别名邮箱的用户。
 
-  - point: Shield your Password/ PIN
-    priority: Optional
+  - point: 输入密码/PIN时注意遮挡
+    priority: 可选
     details: >-
-      When typing your password in public places, ensure you are not in direct line of site of a CCTV camera and
-      that no one is able to see over your shoulder. Cover your password or pin code while you type, and do not
-      reveal any plain text passwords on screen
+      在公共场所输入密码时，确保没有摄像头正对你，也没有人能从肩膀后偷看。
+      输入时用手遮挡，不要在屏幕上显示明文密码。
 
-  - point: Update Critical Passwords Periodically
-    priority: Optional
+  - point: 定期更新重要密码
+    priority: 可选
     details: >-
-      Database leaks and breaches are common, and it is likely that several of your passwords are already somewhere
-      online. Occasionally updating passwords of security-critical accounts can help mitigate this. But providing
-      that all your passwords are long, strong and unique, there is no need to do this too often- annually should be
-      sufficient. Enforcing mandatory password changes within organisations is [no longer recommended](https://duo.com/decipher/microsoft-will-no-longer-recommend-forcing-periodic-password-changes),
-      as it encourages colleagues to select weaker passwords
+      数据库泄露和数据泄漏很常见，你的部分密码很可能已经在网上流传。
+      定期（如每年）更新重要账户的密码有助于降低风险。但只要所有密码都足够长、强且唯一，就无需频繁更换。
+      企业强制定期更换密码已[不再推荐](https://duo.com/decipher/microsoft-will-no-longer-recommend-forcing-periodic-password-changes)，
+      因为这反而容易导致弱密码。
 
-  - point: Don’t save your password in browsers
-    priority: Optional
+  - point: 不要将密码保存在浏览器中
+    priority: 可选
     details: >-
-      Most modern browsers offer to save your credentials when you log into a site. Don’t allow this, as they are
-      not always encrypted, hence could allow someone to gain access into your accounts. Instead use a dedicated
-      password manager to store (and auto-fill) your passwords
+      现代浏览器常常会提示你保存登录凭据。不要允许浏览器保存密码，因为它们未必加密，容易被他人获取。
+      建议使用专用密码管理器存储和自动填写密码。
 
-  - point: Avoid logging in on someone else’s device
-    priority: Optional
+  - point: 避免在他人设备上登录
+    priority: 可选
     details: >-
-      Avoid logging on other people's computer, since you can't be sure their system is clean. Be especially cautious
-      of public machines, as malware and tracking is more common here. Using someone else's device is especially
-      dangerous with critical accounts like online banking. When using someone else's machine, ensure that you're in a
-      private/ incognito session (Use Ctrl+Shift+N/ Cmd+Shift+N). This will request browser to not save your credentials,
-      cookies and browsing history.
+      避免在他人电脑上登录账户，因为你无法确定对方设备是否安全。
+      公共电脑尤其危险，恶意软件和跟踪更常见。必须使用时，请开启隐私/无痕模式（Ctrl+Shift+N），
+      这样浏览器不会保存你的凭据、Cookie和历史记录。
 
-  - point: Avoid password hints
-    priority: Optional
+  - point: 避免使用密码提示
+    priority: 可选
     details: >-
-      Some sites allow you to set password hints. Often it is very easy to guess answers. In cases where password hints
-      are mandatory use random answers and record them in password manager (`Name of the first school: 6D-02-8B-!a-E8-8F-81`)
+      有些网站允许设置密码提示，答案往往很容易被猜到。如果必须设置，建议用随机答案，并记录在密码管理器中。
 
-  - point: Never answer online security questions truthfully
-    priority: Optional
+  - point: 不要真实回答安全问题
+    priority: 可选
     details: >-
-      If a site asks security questions (such as place of birth, mother's maiden name or first car etc), don't provide
-      real answers. It is a trivial task for hackers to find out this information online or through social engineering.
-      Instead, create a fictitious answer, and store it inside your password manager. Using real-words is better than
-      random characters, [explained here](https://news.ycombinator.com/item?id=29244870)
+      如果网站要求设置安全问题（如出生地、母亲姓名、第一辆车等），不要填写真实答案。
+      黑客很容易通过网络或社交工程获取这些信息。建议用虚构答案，并记录在密码管理器中。
 
-  - point: Don’t use a 4-digit PIN
-    priority: Optional
+  - point: 不要用4位PIN码
+    priority: 可选
     details: >-
-      Don’t use a short PIN to access your smartphone or computer. Instead, use a text password or much longer pin.
-      Numeric passphrases are easy crack, (A 4-digit pin has 10,000 combinations, compared to 7.4 million for a
-      4-character alpha-numeric code)
+      不要用4位数字PIN解锁手机或电脑，建议用文本密码或更长的PIN。
+      数字PIN很容易被破解（4位PIN只有1万种组合，4位字母数字码有740万种）。
 
-  - point: Avoid using SMS for 2FA
-    priority: Optional
+  - point: 避免用短信做2FA
+    priority: 可选
     details: >-
-      When enabling multi-factor authentication, opt for app-based codes or a hardware token, if supported. SMS is
-      susceptible to a number of common threats, such as [SIM-swapping](https://www.maketecheasier.com/sim-card-hijacking)
-      and [interception](https://secure-voice.com/ss7_attacks). There's also no guarantee of how securely your phone
-      number will be stored, or what else it will be used for. From a practical point of view, SMS will only work when
-      you have signal, and can be slow. If a website or service requires the usage of a SMS number for recovery consider
-      purchasing a second pre-paid phone number only used for account recovery for these instances.
+      启用多因素认证时，优先选择基于应用的验证码或硬件令牌。短信容易被[SIM卡劫持](https://www.maketecheasier.com/sim-card-hijacking)
+      或[拦截](https://secure-voice.com/ss7_attacks)，而且手机号的存储和用途也无法保证安全。
+      实际上，短信只有有信号时才能用，且速度较慢。如果网站强制要求短信恢复，建议专门买一张预付费卡只用于恢复。
 
-  - point: Avoid using your PM to Generate OTPs
-    priority: Advanced
+  - point: 避免用密码管理器生成OTP
+    priority: 高级
     details: >-
-      Many password managers are also able to generate 2FA codes. It is best not to use your primary password manager
-      as your 2FA authenticator as well, since it would become a single point of failure if compromised. Instead use a
-      dedicated [authenticator app](https://github.com/Lissy93/awesome-privacy#2-factor-authentication) on your phone or laptop
+      许多密码管理器也能生成2FA验证码。建议不要用主密码管理器同时做2FA认证器，否则一旦被攻破就是单点失效。
+      建议用专用的[身份验证器应用](https://github.com/Lissy93/awesome-privacy#2-factor-authentication)。
 
-  - point: Avoid Face Unlock
-    priority: Advanced
+  - point: 避免面部解锁
+    priority: 高级
     details: >-
-      Most phones and laptops offer a facial recognition authentication feature, using the camera to compare a snapshot
-      of your face with a stored hash. It may be very convenient, but there are numerous ways to [fool it](https://www.forbes.com/sites/jvchamary/2017/09/18/security-apple-face-id-iphone-x/)
-      and gain access to the device, through digital photos and reconstructions from CCTV footage. Unlike your password-
-      there are likely photos of your face on the internet, and videos recorded by surveillance cameras
+      大多数手机和电脑都支持面部识别解锁，虽然方便，但有很多[被破解](https://www.forbes.com/sites/jvchamary/2017/09/18/security-apple-face-id-iphone-x/)的方法，
+      比如用照片或监控视频重建。你的脸在互联网上很容易被找到，而密码不会。
 
-  - point: Watch out for Keyloggers
-    priority: Advanced
+  - point: 警惕键盘记录器
+    priority: 高级
     details: >-
-      A hardware [keylogger](https://en.wikipedia.org/wiki/Hardware_keylogger) is a physical device planted between
-      your keyboard and the USB port, which intercepts all key strokes, and sometimes relays data to a remote server.
-      It gives a hacker access to everything typed, including passwords. The best way to stay protected, is just by
-      checking your USB connection after your PC has been unattended. It is also possible for keyloggers to be planted
-      inside the keyboard housing, so look for any signs that the case has been tampered with, and consider bringing your
-      own keyboard to work. Data typed on a virtual keyboard, pasted from the clipboard or auto-filled by a password
-      manager can not be intercepted by a hardware keylogger.
+      硬件[键盘记录器](https://en.wikipedia.org/wiki/Hardware_keylogger)是一种插在键盘和USB口之间的物理设备，
+      能截获所有按键，有时还会远程上传数据。最好的防护方法是离开电脑后检查USB接口。
+      也有可能被植入键盘内部，注意外壳是否被撬动。虚拟键盘、剪贴板粘贴或密码管理器自动填写的数据不会被硬件记录器截获。
 
-  - point: Consider a Hardware Token
-    priority: Advanced
+  - point: 考虑使用硬件令牌
+    priority: 高级
     details: >-
-      A U2F/ FIDO2 security key is a USB (or NFC) device that you insert while logging in to an online service, in to
-      verify your identity, instead of entering a OTP from your authenticator. [SoloKey](https://solokeys.com) and
-      [NitroKey](https://www.nitrokey.com) are examples of such keys. They bring with them several security benefits,
-      since the browser communicates directly with the device and cannot be fooled as to which host is requesting
-      authentication, because the TLS certificate is checked. [This post](https://security.stackexchange.com/a/71704) is
-      a good explanation of the security of using FIDO U2F tokens. Of course it is important to store the physical key
-      somewhere safe, or keep it on your person. Some online accounts allow for several methods of 2FA to be enabled
+      U2F/FIDO2安全密钥是一种USB（或NFC）设备，登录时插入以验证身份，替代手机验证码。
+      [SoloKey](https://solokeys.com)和[NitroKey](https://www.nitrokey.com)是常见产品。
+      这种方式有很多安全优势，因为浏览器会直接与设备通信，并校验TLS证书，无法被伪造。
+      详细原理见[这篇帖子](https://security.stackexchange.com/a/71704)。
+      物理密钥要妥善保管。部分账户支持多种2FA方式同时启用。
 
-  - point: Consider Offline Password Manager
-    priority: Advanced
+  - point: 考虑离线密码管理器
+    priority: 高级
     details: >-
-      For increased security, an encrypted offline password manager will give you full control over your data.
-      [KeePass](https://awesome-privacy.xyz/essentials/password-managers/keepass) is a popular choice, with lots of [plugins](https://[KeePass](https://awesome-privacy.xyz/essentials/password-managers/keepass).info/plugins.html) and
-      community forks with additional compatibility and functionality. Popular clients include: [KeePassXC](https://keepassxc.org)
-      (desktop), [KeePassDX](https://www.keepassdx.com) (Android) and [StrongBox](https://apps.apple.com/us/app/strongbox-password-safe/id897283731)
-      (iOS). The drawback being that it may be slightly less convenient for some, and it will be up to you to back it up,
-      and store it securely
+      为了更高安全性，可以使用加密的离线密码管理器，完全掌控数据。
+      [KeePass](https://awesome-privacy.xyz/essentials/password-managers/keepass)是流行选择，有丰富的[插件](https://[KeePass](https://awesome-privacy.xyz/essentials/password-managers/keepass).info/plugins.html)和社区分支。
+      常用客户端有：[KeePassXC](https://keepassxc.org)（桌面）、[KeePassDX](https://www.keepassdx.com)（安卓）、[StrongBox](https://apps.apple.com/us/app/strongbox-password-safe/id897283731)（iOS）。
+      缺点是略微不便，需要自己备份和安全存储。
 
-  - point: Consider Unique Usernames
-    priority: Advanced
+  - point: 考虑使用唯一用户名
+    priority: 高级
     details: >-
-      Having different passwords for each account is a good first step, but if you also use a unique username, email or
-      phone number to log in, then it will be significantly harder for anyone trying to gain unauthorised access. The easiest
-      method for multiple emails, is using auto-generated aliases for anonymous mail forwarding. This is where
-      [anything]@yourdomain.com will arrive in your inbox, allowing you to use a different email for each account (see
-      [Mail Alias Providers](https://github.com/Lissy93/awesome-privacy#mail-forwarding)). Usernames are easier,
-      since you can use your password manager to generate, store and auto-fill these. Virtual phone numbers can be generated
-      through your VOIP provider
+      每个账户用不同密码是第一步，如果还能用唯一的用户名、邮箱或手机号登录，将大大增加攻击难度。
+      邮箱可以用自动生成的别名实现匿名转发（如[anything]@yourdomain.com），每个账户用不同邮箱。
+      用户名也可以用密码管理器生成和保存。虚拟手机号可通过VOIP服务商生成。
   softwareLinks:
-    - title: Password Managers
+    - title: 密码管理器
       url: https://github.com/Lissy93/awesome-privacy#password-managers
-    - title: 2-Factor Authentication
+    - title: 双因素认证
       url: https://github.com/Lissy93/awesome-privacy#2-factor-authentication
 
-- title: Web Browsing
+- title: 网络
+  slug: networks
+  description: 保护你的网络流量安全
+  icon: network
+  intro: >-
+    本节介绍如何安全地将你的设备连接到互联网，包括路由器配置和 VPN 设置等内容。
+  checklist:
+    - point: 使用 VPN
+      priority: 基本
+      details: >-
+        使用值得信赖的付费 VPN 服务。这有助于防止你访问的网站记录你的真实 IP，减少 ISP 可收集的数据量，并提升在公共 WiFi 下的安全性。
+
+    - point: 更改路由器密码
+      priority: 基本
+      details: >-
+        新购路由器后请立即更改默认密码。默认密码通常是公开的，任何在附近的人都可能连接你的网络。
+
+    - point: 使用 WPA2 及强密码
+      priority: 基本
+      details: >-
+        WiFi 有多种认证协议。目前最安全的是 WPA2 和（新路由器支持的）WPA3。
+
+    - point: 保持路由器固件最新
+      priority: 基本
+      details: >-
+        厂商会发布固件更新以修复安全漏洞、实现新标准，有时还会增加功能或提升性能。请及时更新。
+
+    - point: 部署全网 VPN
+      priority: 可选
+      details: >-
+        如果你在路由器、防火墙或家庭服务器上配置 VPN，所有设备的流量都会被加密并通过 VPN 路由，无需每台设备单独安装 VPN 应用。
+
+    - point: 防止 DNS 泄漏
+      priority: 可选
+      details: >-
+        使用 VPN 时，务必只用 VPN 服务商或安全 DNS 服务的 DNS 服务器，防止真实流量泄露。
+
+    - point: 使用安全的 VPN 协议
+      priority: 可选
+      details: >-
+        OpenVPN 和 WireGuard 是开源、轻量且安全的隧道协议。避免使用 PPTP 或 SSTP。
+
+    - point: 安全 DNS
+      priority: 可选
+      details: >-
+        使用 DNS-over-HTTPS，通过 HTTPS 协议加密 DNS 解析过程，保护你与 DNS 服务器之间的数据。
+
+    - point: 避免使用运营商赠送的路由器
+      priority: 可选
+      details: >-
+        运营商赠送的路由器通常批量生产，固件安全性差且很少更新，建议自购高安全性路由器。
+
+    - point: 白名单 MAC 地址
+      priority: 可选
+      details: >-
+        在路由器设置中启用 MAC 地址白名单，只有已授权设备才能连接，即使知道密码也无法接入。
+
+    - point: 更改路由器本地 IP 地址
+      priority: 可选
+      details: >-
+        恶意脚本可能利用已知的本地 IP 地址攻击路由器。更改默认管理地址可提升安全性。
+
+    - point: SSID 不要包含个人信息
+      priority: 可选
+      details: >-
+        修改 WiFi 名称，避免包含真实姓名、门牌号、品牌型号等个人信息。
+
+    - point: 选择不被公开收录
+      priority: 可选
+      details: >-
+        WiFi SSID 可能被扫描、记录并公开在互联网上。可通过设置避免被收录。
+
+    - point: 隐藏 SSID
+      priority: 可选
+      details: >-
+        隐藏 WiFi 名称可减少被扫描和攻击的概率，但并非绝对安全。
+
+    - point: 禁用 WPS
+      priority: 可选
+      details: >-
+        Wi-Fi Protected Setup 虽然方便连接，但存在严重安全隐患，建议关闭。
+
+    - point: 禁用 UPnP
+      priority: 可选
+      details: >-
+        通用即插即用（UPnP）允许应用自动映射端口，但有大量安全漏洞，建议关闭。
+
+    - point: 为访客单独设置访客网络
+      priority: 可选
+      details: >-
+        不要让访客连接主 WiFi 网络，建议为访客单独设置隔离的访客网络。
+
+    - point: 更改路由器默认管理 IP
+      priority: 可选
+      details: >-
+        修改路由器后台管理面板的默认 IP 地址，可防止针对本地 IP 的攻击。
+
+    - point: 关闭不必要的进程和服务
+      priority: 可选
+      details: >-
+        如 Telnet、SSH 等命令行服务不应暴露在公网，且本地网络如无必要也应关闭。
+
+    - point: 关闭不必要的端口
+      priority: 可选
+      details: >-
+        关闭所有不需要的开放端口，开放端口会为黑客提供攻击入口。
+
+    - point: 禁用未用的远程访问协议
+      priority: 可选
+      details: >-
+        禁用如 PING、Telnet、SSH、UPnP、HNAP 等协议，防止被远程探测和攻击。
+
+    - point: 禁用云端管理
+      priority: 可选
+      details: >-
+        路由器后台管理权限极其重要，建议关闭云端远程管理功能，防止被远程入侵。
+
+    - point: 合理设置无线覆盖范围
+      priority: 可选
+      details: >-
+        无线信号覆盖范围过大，攻击面也随之增加。根据实际需要调整发射功率。
+
+    - point: 全部流量通过 [Tor](https://awesome-privacy.xyz/networking/mix-networks/tor)
+      priority: 高级
+      details: >-
+        VPN 也有弱点。若需更高安全性，可将所有网络流量通过 [Tor](https://awesome-privacy.xyz/networking/mix-networks/tor) 网络转发。
+
+    - point: 禁用所有设备的 WiFi
+      priority: 高级
+      details: >-
+        即使是安全的 WiFi 网络也会增加攻击面。可关闭家庭 WiFi，所有设备用有线连接。
+  color: violet
+  softwareLinks:
+    - title: 虚拟专用网络（VPN）
+      url: https://github.com/Lissy93/awesome-privacy#virtual-private-networks
+    - title: 混合网络
+      url: https://github.com/Lissy93/awesome-privacy#mix-networks
+    - title: 路由器固件
+      url: https://github.com/Lissy93/awesome-privacy#router-firmware
+    - title: 开源代理
+      url: https://github.com/Lissy93/awesome-privacy#proxies
+    - title: DNS 服务商
+      url: https://github.com/Lissy93/awesome-privacy#dns
+    - title: 防火墙
+      url: https://github.com/Lissy93/awesome-privacy#firewalls
+    - title: 网络分析工具
+      url: https://github.com/Lissy93/awesome-privacy#network-analysis
+    - title: 自托管网络安全工具
+      url: https://github.com/Lissy93/awesome-privacy#self-hosted-network-security
+
+- title: 网络浏览
   slug: web-browsing
-  description: Avoiding tracking, censorship, and data collection online
+  description: 避免在线跟踪、审查和数据收集
   icon: browser
   intro: >-
-    Most websites on the internet will use some form of tracking, often to gain
-    insight into their users behaviour and preferences. This data can be incredibly
-    detailed, and so is extremely valuable to corporations, governments and intellectual
-    property thieves. Data breaches and leaks are common, and deanonymizing users web
-    activity is often a trivial task.
+    互联网上的大多数网站都会使用某种形式的跟踪，通常是为了了解用户的行为和偏好。这些数据极为详细，因此对企业、政府和知识产权窃贼来说都非常有价值。数据泄露和泄漏很常见，去匿名化用户的网络活动往往非常容易。
 
+    跟踪主要有两种方式：有状态（基于 Cookie）和无状态（基于指纹）。Cookie 是存储在你浏览器中的小型信息片段，带有唯一 ID 用于识别你。浏览器指纹识别是一种极其准确的用户识别和跟踪方式。收集的信息非常全面，通常包括浏览器详情、操作系统、屏幕分辨率、支持的字体、插件、时区、语言和字体偏好，甚至硬件配置。
 
-    There are two primary methods of tracking; stateful (cookie-based), and stateless
-    (fingerprint-based). Cookies are small pieces of information, stored in your browser
-    with a unique ID that is used to identify you. Browser fingerprinting is a highly
-    accurate way to identify and track users wherever they go online. The information
-    collected is quite comprehensive, and often includes browser details, OS, screen
-    resolution, supported fonts, plugins, time zone, language and font preferences,
-    and even hardware configurations.
-
-
-    This section outlines the steps you can take, to be better protected from threats,
-    minimise online tracking and improve privacy.
+    本节将介绍你可以采取的措施，以更好地防范威胁、减少在线跟踪并提升隐私保护。
   checklist:
-  - point: Block Ads
-    priority: Essential
-    details: >-
-      Using an ad-blocker can help improve your privacy, by blocking the trackers that ads implement.
-      [uBlock Origin](https://awesome-privacy.xyz/networking/ad-blockers/ublock-origin) is a very
-      efficient and open source browser addon,
-      developed by Raymond Hill. When 3rd-party ads are displayed on a webpage, they have the ability to
-      track you, gathering personal information about you and your habits, which can then be sold, or used
-      to show you more targeted ads, and some ads are plain malicious or fake. Blocking ads also makes pages
-      load faster, uses less data and provides a less cluttered experience.
+    - point: 屏蔽广告
+      priority: 基本
+      details: >-
+        使用广告拦截器有助于提升隐私，阻止广告中实现的跟踪器。[uBlock Origin](https://awesome-privacy.xyz/networking/ad-blockers/ublock-origin) 是一款高效且开源的浏览器插件。第三方广告可跟踪你，收集你的个人信息和习惯，这些信息可能被出售或用于更精准的广告推送，有些广告甚至是恶意或虚假的。屏蔽广告还能加快网页加载速度、减少流量消耗并提升体验。
 
-  - point: Ensure Website is Legitimate
-    priority: Basic
-    details: >-
-      It may sound obvious, but when you logging into any online accounts, double check the URL is correct.
-      Storing commonly visited sites in your bookmarks is a good way to ensure the URL is easy to find. When
-      visiting new websites, look for common signs that it could be unsafe: Browser warnings, redirects,
-      on-site spam and pop-ups. You can also check a website using a tool, such as:
-      [Virus Total](https://awesome-privacy.xyz/security-tools/online-tools/virus-total),
-      [IsLegitSite](https://www.islegitsite.com), [Google Safe Browsing Status](https://transparencyreport.google.com/safe-browsing/search)
-      if you are unsure.
+    - point: 确认网站是否合法
+      priority: 基本
+      details: >-
+        登录任何在线账户时，请务必核对网址是否正确。将常用网站加入书签是避免钓鱼的好方法。访问新网站时，注意浏览器警告、重定向、站内垃圾信息和弹窗等可疑迹象。你也可以用 [Virus Total](https://awesome-privacy.xyz/security-tools/online-tools/virus-total)、[IsLegitSite](https://www.islegitsite.com)、[Google 安全浏览状态](https://transparencyreport.google.com/safe-browsing/search) 等工具检测网站安全性。
 
-  - point: Watch out for Browser Malware
-    priority: Basic
-    details: >-
-      Your system or browser can be compromised by spyware, miners, browser hijackers, malicious redirects,
-      adware etc. You can usually stay protected, just by: ignoring pop-ups, be wary of what your clicking,
-      don't proceed to a website if your browser warns you it may be malicious. Common signs of browser malware
-      include: default search engine or homepage has been modified, toolbars, unfamiliar extensions or icons,
-      significantly more ads, errors and pages loading much slower than usual. These articles from Heimdal
-      explain [signs of browser malware](https://heimdalsecurity.com/blog/warning-signs-operating-system-infected-malware),
-      [how browsers get infected](https://heimdalsecurity.com/blog/practical-online-protection-where-malware-hides)
-      and [how to remove browser malware](https://heimdalsecurity.com/blog/malware-removal).
+    - point: 警惕浏览器恶意软件
+      priority: 基本
+      details: >-
+        你的系统或浏览器可能被间谍软件、挖矿程序、劫持器、恶意重定向、广告软件等感染。保护方法包括：忽略弹窗、谨慎点击、不访问浏览器警告为恶意的网站。常见感染迹象有：默认搜索引擎或主页被篡改、出现陌生工具栏或扩展、广告明显增多、错误频发、网页加载变慢。可参考 Heimdal 的[恶意软件迹象](https://heimdalsecurity.com/blog/warning-signs-operating-system-infected-malware)、[感染途径](https://heimdalsecurity.com/blog/practical-online-protection-where-malware-hides)和[清除方法](https://heimdalsecurity.com/blog/malware-removal)。
 
-  - point: Use a Privacy-Respecting Browser
-    priority: Essential
-    details: >-
-      [Firefox](https://awesome-privacy.xyz/essentials/browsers/firefox) (with a few tweaks)
-      and [Brave](https://awesome-privacy.xyz/essentials/browsers/brave-browser)
-      are secure, private-respecting browsers. Both are fast, open source, user-friendly and available on all
-      major operating systems. Your browser has access to everything that you do online, so if possible, avoid
-      Google Chrome, Edge and Safari as (without correct configuration) all three of them, collect usage data,
-      call home and allow for invasive tracking. Firefox requires a few changes to achieve optimal security,
-      for example - [arkenfox](https://github.com/arkenfox/user.js/wiki) or [12byte](https://12bytes.org/firefox-configuration-guide-for-privacy-freaks-and-performance-buffs/)'s
-      user.js configs. See more: [Privacy Browsers](https://github.com/Lissy93/awesome-privacy#browsers).
+    - point: 使用注重隐私的浏览器
+      priority: 基本
+      details: >-
+        [Firefox](https://awesome-privacy.xyz/essentials/browsers/firefox)（需适当配置）和 [Brave](https://awesome-privacy.xyz/essentials/browsers/brave-browser) 是安全且注重隐私的浏览器。它们开源、快速、易用，适用于主流操作系统。浏览器能访问你所有的网络活动，尽量避免使用 Google Chrome、Edge 和 Safari（除非正确配置），因为它们默认会收集使用数据并允许侵入性跟踪。Firefox 可通过 [arkenfox](https://github.com/arkenfox/user.js/wiki) 或 [12byte](https://12bytes.org/firefox-configuration-guide-for-privacy-freaks-and-performance-buffs/) 的 user.js 配置提升安全性。更多内容见[隐私浏览器](https://github.com/Lissy93/awesome-privacy#browsers)。
 
-  - point: Use a Private Search Engine
-    priority: Essential
-    details: >-
-      Using a privacy-preserving, non-tracking search engine, will reduce risk that your search terms are not
-      logged, or used against you. Consider [DuckDuckGo](https://awesome-privacy.xyz/essentials/search-engines/duckduckgo),
-      or [Qwant](https://awesome-privacy.xyz/essentials/search-engines/qwant).
-      Google implements some [incredibly invasive](https://hackernoon.com/data-privacy-concerns-with-google-b946f2b7afea)
-      tracking policies, and have a history of displaying [biased search results](https://www.businessinsider.com/evidence-that-google-search-results-are-biased-2014-10).
-      Therefore Google, along with Bing, Baidu, Yahoo and Yandex are incompatible with anyone looking to protect
-      their privacy. It is recommended to update your [browsers default search](https://duckduckgo.com/install)
-      to a privacy-respecting search engine.
+    - point: 使用隐私搜索引擎
+      priority: 基本
+      details: >-
+        使用注重隐私、不跟踪用户的搜索引擎，可减少搜索词被记录或滥用的风险。推荐 [DuckDuckGo](https://awesome-privacy.xyz/essentials/search-engines/duckduckgo) 或 [Qwant](https://awesome-privacy.xyz/essentials/search-engines/qwant)。Google 实施了[极具侵入性](https://hackernoon.com/data-privacy-concerns-with-google-b946f2b7afea)的跟踪政策，并有[搜索结果偏见](https://www.businessinsider.com/evidence-that-google-search-results-are-biased-2014-10)的历史。建议将浏览器默认搜索引擎更换为注重隐私的选项。
 
-  - point: Remove Unnecessary Browser Addons
-    priority: Essential
-    details: >-
-      Extensions are able to see, log or modify anything you do in the browser, and some innocent looking
-      browser apps, have malicious intentions. Websites can see which extensions you have installed, and may
-      use this to enhance your fingerprint, to more accurately identify/ track you. Both [Firefox](https://awesome-privacy.xyz/essentials/browsers/firefox) and Chrome
-      web stores allow you to check what permissions/access rights an extension requires before you install it.
-      Check the reviews. Only install extensions you really need, and removed those which you haven't used in a while.
+    - point: 移除不必要的浏览器插件
+      priority: 基本
+      details: >-
+        扩展可以查看、记录或修改你在浏览器中的一切操作，有些看似无害的插件其实有恶意。网站还能检测你安装了哪些扩展，从而增强指纹识别。安装前请检查扩展所需权限和用户评价，只保留真正需要的扩展，定期清理不用的插件。
 
-  - point: Keep Browser Up-to-date
-    priority: Essential
-    details: >-
-      Browser vulnerabilities are constantly being [discovered](https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=browser)
-      and patched, so it’s important to keep it up to date, to avoid a zero-day exploit. You can [see which browser
-      version you're using here](https://www.whatismybrowser.com/), or follow [this guide](https://www.whatismybrowser.com/guides/how-to-update-your-browser/)
-      for instructions on how to update. Some browsers will auto-update to the latest stable version.
+    - point: 保持浏览器最新
+      priority: 基本
+      details: >-
+        浏览器漏洞不断被[发现](https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=browser)和修复，及时更新浏览器可避免零日漏洞攻击。你可以[查看当前浏览器版本](https://www.whatismybrowser.com/)，或参考[更新指南](https://www.whatismybrowser.com/guides/how-to-update-your-browser/)。部分浏览器支持自动更新。
 
-  - point: Check for HTTPS
-    priority: Essential
-    details: >-
-      If you enter information on a non-HTTPS website, this data is transported unencrypted and can therefore
-      be read by anyone who intercepts it. Do not enter any data on a non-HTTPS website, but also do not let
-      the green padlock give you a false sense of security, just because a website has SSL certificate, does
-      not mean that it is legitimate or trustworthy. [HTTPS-Everywhere](https://www.eff.org/https-everywhere)
-      (developed by the [EFF](https://www.eff.org/)) used to be a browser extension/addon that automatically
-      enabled HTTPS on websites, but as of 2022 is now deprecated. In their [accouncement article](https://www.eff.org/)
-      the EFF explains that most browsers now integrate such protections. Additionally, it provides instructions
-      for [Firefox](https://awesome-privacy.xyz/essentials/browsers/firefox), Chrome, Edge and Safari browsers on how to enable their HTTPS secure protections.
+    - point: 检查 HTTPS
+      priority: 基本
+      details: >-
+        在非 HTTPS 网站输入信息时，数据是明文传输，容易被窃听。不要在非 HTTPS 网站输入任何数据，但也不要因有 SSL 证书就掉以轻心。曾经的 [HTTPS-Everywhere](https://www.eff.org/https-everywhere) 插件已不再维护，大多数浏览器已内置相关保护。可参考 [EFF 公告](https://www.eff.org/) 及各主流浏览器的 HTTPS 设置方法。
 
-  - point: Use DNS-over-HTTPS
-    priority: Essential
-    details: >-
-      Traditional DNS makes requests in plain text for everyone to see. It allows for eavesdropping and
-      manipulation of DNS data through man-in-the-middle attacks. Whereas DNS-over-HTTPS performs DNS
-      resolution via the HTTPS protocol, meaning data between you and your DNS resolver is encrypted.
-      A popular option is [CloudFlare](https://awesome-privacy.xyz/networking/dns-providers/cloudflare)'s [1.1.1.1](https://awesome-privacy.xyz/security-tools/mobile-apps/1.1.1.1), or compare providers- it is simple to enable in-browser.
-      Note that DoH comes with its own issues, mostly preventing web filtering.
+    - point: 使用 DNS-over-HTTPS
+      priority: 基本
+      details: >-
+        传统 DNS 请求是明文的，容易被窃听和篡改。DNS-over-HTTPS 通过 HTTPS 协议加密 DNS 解析过程，保护你与 DNS 服务器之间的数据。推荐 [CloudFlare](https://awesome-privacy.xyz/networking/dns-providers/cloudflare) 的 [1.1.1.1](https://awesome-privacy.xyz/security-tools/mobile-apps/1.1.1.1)，也可比较其他服务商。注意 DoH 也有自身问题，比如影响网络过滤。
 
-  - point: Multi-[Session](https://awesome-privacy.xyz/communication/encrypted-messaging/session) Containers
-    priority: Essential
-    details: >-
-      Compartmentalisation is really important to keep different aspects of your browsing separate. For
-      example, using different profiles for work, general browsing, social media, online shopping etc
-      will reduce the number associations that data brokers can link back to you. One option is to make
-      use of [Firefox Containers](https://awesome-privacy.xyz/security-tools/browser-extensions/firefox-multi-account-containers)
-      which is designed exactly for this purpose.
-      Alternatively, you could
-      use different browsers for different tasks
-      ([Brave](https://awesome-privacy.xyz/essentials/browsers/brave-browser),
-      [Firefox](https://awesome-privacy.xyz/essentials/browsers/firefox),
-      [Tor](https://awesome-privacy.xyz/networking/mix-networks/tor) etc).
+    - point: 多会话容器
+      priority: 基本
+      details: >-
+        隔离不同的浏览活动非常重要。例如，工作、日常浏览、社交、网购等使用不同的浏览器配置文件，可减少数据关联。可使用 [Firefox Containers](https://awesome-privacy.xyz/security-tools/browser-extensions/firefox-multi-account-containers) 实现，也可以用不同浏览器分别处理不同任务（如 [Brave](https://awesome-privacy.xyz/essentials/browsers/brave-browser)、[Firefox](https://awesome-privacy.xyz/essentials/browsers/firefox)、[Tor](https://awesome-privacy.xyz/networking/mix-networks/tor) 等）。
 
-  - point: Use Incognito
-    priority: Essential
-    details: >-
-      When using someone else's machine, ensure that you're in a private/ incognito session. This will
-      prevent browser history, cookies and some data being saved, but is not fool-proof- you can still
-      be tracked.
+    - point: 使用无痕/隐私模式
+      priority: 基本
+      details: >-
+        在他人设备上使用浏览器时，请确保开启隐私/无痕模式。这样可防止浏览历史、Cookie 和部分数据被保存，但并非万无一失，仍有被跟踪的可能。
 
-  - point: Understand Your Browser Fingerprint
-    priority: Essential
-    details: >-
-      Browser Fingerprinting is an incredibly accurate method of tracking, where a website identifies you
-      based on your device information. You can view your fingerprint at amiunique.org- The aim is to be
-      as un-unique as possible.
+    - point: 了解你的浏览器指纹
+      priority: 基本
+      details: >-
+        浏览器指纹识别是一种极其准确的跟踪方式，网站可通过设备信息识别你。你可以在 amiunique.org 查看自己的指纹，目标是让自己尽量“不独特”。
 
-  - point: Manage Cookies
-    priority: Essential
-    details: >-
-      Clearing cookies regularly is one step you can take to help reduce websites from tracking you.
-      Cookies may also store your session token, which if captured, would allow someone to access your
-      accounts without credentials. To mitigate this you should clear cookies often.
+    - point: 管理 Cookie
+      priority: 基本
+      details: >-
+        定期清除 Cookie 有助于减少网站跟踪。Cookie 还可能存储会话令牌，一旦被窃取，攻击者可无需凭据访问你的账户。建议经常清理 Cookie。
 
-  - point: Block Third-Party Cookies
-    priority: Essential
-    details: >-
-      Third-party cookies placed on your device by a website other than the one you’re visiting. This
-      poses a privacy risk, as a 3rd entity can collect data from your current session. This guide explains
-      how you can disable 3rd-party cookies, and you can check here ensure this worked.
+    - point: 阻止第三方 Cookie
+      priority: 基本
+      details: >-
+        第三方 Cookie 由你访问的网站以外的其他网站设置，存在隐私风险。可参考相关指南禁用第三方 Cookie，并通过检测工具确认设置生效。
 
-  - point: Block Third-Party Trackers
-    priority: Essential
-    details: >-
-      Blocking trackers will help to stop websites, advertisers, analytics and more from tracking you in
-      the background. [Privacy Badger](https://awesome-privacy.xyz/security-tools/browser-extensions/privacy-badger),
-      [DuckDuckGo Privacy Essentials](https://awesome-privacy.xyz/security-tools/browser-extensions/privacy-essentials),
-      [uBlock Origin](https://awesome-privacy.xyz/networking/ad-blockers/ublock-origin) and uMatrix (advanced)
-      are all very effective, open source tracker-blockers available for all major browsers.
+    - point: 阻止第三方跟踪器
+      priority: 基本
+      details: >-
+        阻止跟踪器有助于防止网站、广告商、分析服务等在后台跟踪你。[Privacy Badger](https://awesome-privacy.xyz/security-tools/browser-extensions/privacy-badger)、[DuckDuckGo Privacy Essentials](https://awesome-privacy.xyz/security-tools/browser-extensions/privacy-essentials)、[uBlock Origin](https://awesome-privacy.xyz/networking/ad-blockers/ublock-origin) 和 uMatrix（进阶）都是高效的开源跟踪拦截插件。
 
-  - point: Beware of Redirects
-    priority: Optional
-    details: >-
-      While some redirects are harmless, others, such as Unvalidated redirects are used in phishing attacks,
-      it can make a malicious link seem legitimate. If you are unsure about a redirect URL, you can check
-      where it forwards to with a tool like RedirectDetective.
+    - point: 警惕重定向
+      priority: 可选
+      details: >-
+        有些重定向无害，但未经验证的重定向常被用于钓鱼攻击，使恶意链接看起来合法。如有疑问，可用 RedirectDetective 等工具检查重定向目标。
 
-  - point: Do Not Sign Into Your Browser
-    priority: Optional
-    details: >-
-      Many browsers allow you to sign in, in order to sync history, bookmarks and other browsing data across
-      devices. However this not only allows for further data collection, but also increases attack surface
-      through providing another avenue for a malicious actor to get hold of personal information.
+    - point: 不要登录浏览器账户
+      priority: 可选
+      details: >-
+        许多浏览器允许你登录账户以同步历史、书签等数据，但这不仅增加了数据收集，还扩大了攻击面。建议关闭此功能。
 
-  - point: Disallow Prediction Services
-    priority: Optional
-    details: >-
-      Some browsers allow for prediction services, where you receive real-time search results or URL auto-fill.
-      If this is enabled then data is sent to Google (or your default search engine) with every keypress,
-      rather than when you hit enter.
+    - point: 禁用预测服务
+      priority: 可选
+      details: >-
+        某些浏览器的预测服务会在你每次输入时将数据发送到默认搜索引擎，而不仅仅是在回车时。建议关闭此功能。
 
-  - point: Avoid G Translate for Webpages
-    priority: Optional
-    details: >-
-      When you visit a web page written in a foreign language, you may be prompted to install the Google Translate
-      extension. Be aware that Google collects all data (including input fields), along with details of the current
-      user. Instead use a translation service that is not linked to your browser.
+    - point: 避免使用 Google 网页翻译
+      priority: 可选
+      details: >-
+        访问外语网页时，浏览器可能提示安装 Google 翻译插件。请注意，Google 会收集所有数据（包括输入内容）及用户详情。建议使用与浏览器无关的翻译服务。
 
-  - point: Disable Web Notifications
-    priority: Optional
-    details: >-
-      Browser push notifications are a common method for criminals to encourage you to click their link, since
-      it is easy to spoof the source. Be aware of this, and for instructions on disabling browser notifications,
-      see this article.
+    - point: 禁用网页通知
+      priority: 可选
+      details: >-
+        浏览器推送通知常被用于诱导点击恶意链接。建议关闭浏览器通知，具体方法可参考相关教程。
 
-  - point: Disable Automatic Downloads
-    priority: Optional
-    details: >-
-      Drive-by downloads is a common method of getting harmful files onto a users device. This can be mitigated
-      by disabling auto file downloads, and be cautious of websites which prompt you to download files unexpectedly.
+    - point: 禁用自动下载
+      priority: 可选
+      details: >-
+        “Drive-by” 下载是常见的恶意文件传播方式。可通过禁用自动下载功能，并警惕意外下载提示来防范。
 
-  - point: Disallow Access to Sensors
-    priority: Optional
-    details: >-
-      Mobile websites can tap into your device sensors without asking. If you grant these permissions to your
-      browser once, then all websites are able to use these capabilities, without permission or notification.
+    - point: 禁止访问传感器
+      priority: 可选
+      details: >-
+        移动网站可在未经许可的情况下访问设备传感器。建议在浏览器设置中关闭相关权限。
 
-  - point: Disallow Location
-    priority: Optional
-    details: >-
-      Location Services lets sites ask for your physical location to improve your experience. This should be
-      disabled in settings. Note that there are still other methods of determining your approximate location.
+    - point: 禁止定位服务
+      priority: 可选
+      details: >-
+        位置服务允许网站请求你的物理位置。建议在设置中关闭此功能，尽管仍有其他方式可推测你的大致位置。
 
-  - point: Disallow Camera/ Microphone access
-    priority: Optional
-    details: >-
-      Check browser settings to ensure that no websites are granted access to webcam or microphone. It may also
-      be beneficial to use physical protection such as a webcam cover and microphone blocker.
+    - point: 禁止摄像头/麦克风访问
+      priority: 可选
+      details: >-
+        检查浏览器设置，确保没有网站被授予摄像头或麦克风权限。也可使用物理遮挡保护隐私。
 
-  - point: Disable Browser Password Saves
-    priority: Optional
-    details: >-
-      Do not allow your browser to store usernames and passwords. These can be easily viewed or accessed.
-      Instead use a password manager.
+    - point: 禁用浏览器密码保存
+      priority: 可选
+      details: >-
+        不要让浏览器保存用户名和密码，这些信息容易被他人获取。建议使用专用密码管理器。
 
-  - point: Disable Browser Autofill
-    priority: Optional
-    details: >-
-      Turn off autofill for any confidential or personal details. This feature can be harmful if your browser
-      is compromised in any way. Instead, consider using your password manager's Notes feature.
+    - point: 禁用浏览器自动填充
+      priority: 可选
+      details: >-
+        关闭自动填充敏感信息功能。如果浏览器被攻破，自动填充可能导致隐私泄露。可考虑用密码管理器的备注功能替代。
 
-  - point: Protect from Exfil Attack
-    priority: Optional
-    details: >-
-      The CSS Exfiltrate attack is a method where credentials and other sensitive details can be snagged with
-      just pure CSS. You can stay protected,
-      with the [CSS Exfil Protection](https://awesome-privacy.xyz/security-tools/browser-extensions/css-exfil-protection) plugin.
+    - point: 防范 CSS Exfil 攻击
+      priority: 可选
+      details: >-
+        CSS Exfil 攻击可通过纯 CSS 窃取凭据等敏感信息。可安装 [CSS Exfil Protection](https://awesome-privacy.xyz/security-tools/browser-extensions/css-exfil-protection) 插件防护。
 
-  - point: Deactivate ActiveX
-    priority: Optional
-    details: >-
-      ActiveX is a browser extension API that built into Microsoft IE, and enabled by default. It's not commonly
-      used anymore, but since it gives plugins intimate access rights, and can be dangerous, therefore you should
-      disable it.
+    - point: 关闭 ActiveX
+      priority: 可选
+      details: >-
+        ActiveX 是 IE 浏览器的扩展 API，默认启用但极易被滥用。建议关闭。
 
-  - point: Disable WebRTC
-    priority: Optional
-    details: >-
-      WebRTC allows high-quality audio/video communication and peer-to-peer file-sharing straight from the
-      browser. However it can pose as a privacy leak. To learn more, check out this guide.
+    - point: 禁用 WebRTC
+      priority: 可选
+      details: >-
+        WebRTC 支持高质量音视频通信和 P2P 文件传输，但可能泄露隐私。可参考相关指南了解并关闭 WebRTC。
 
-  - point: Spoof HTML5 Canvas Sig
-    priority: Optional
-    details: >-
-      Canvas Fingerprinting allows websites to identify and track users very accurately. You can use the
-      Canvas-Fingerprint-Blocker extension to spoof your fingerprint or
-      use [Tor](https://awesome-privacy.xyz/networking/mix-networks/tor).
+    - point: 伪造 HTML5 Canvas 签名
+      priority: 可选
+      details: >-
+        Canvas 指纹识别可极为准确地跟踪用户。可用 Canvas-Fingerprint-Blocker 插件伪造指纹，或使用 [Tor](https://awesome-privacy.xyz/networking/mix-networks/tor)。
 
-  - point: Spoof User Agent
-    priority: Optional
-    details: >-
-      The user agent tells the website what device, browser and version you are using. Switching user agent
-      periodically is one small step you can take to become less unique.
+    - point: 伪造 User Agent
+      priority: 可选
+      details: >-
+        User Agent 会告知网站你的设备、浏览器及版本。定期更换 User Agent 可降低唯一性。
 
-  - point: Disregard DNT
-    priority: Optional
-    details: >-
-      Enabling Do Not Track has very limited impact, since many websites do not respect or follow this. Since
-      it is rarely used, it may also add to your signature, making you more unique.
+    - point: 忽略 DNT
+      priority: 可选
+      details: >-
+        启用“请勿跟踪”效果有限，大多数网站并不遵守。反而可能让你的指纹更独特。
 
-  - point: Prevent HSTS Tracking
-    priority: Optional
-    details: >-
-      HSTS was designed to help secure websites, but privacy concerns have been raised as it allowed site
-      operators to plant super-cookies. It can be disabled by visiting chrome://net-internals/#hsts in
-      Chromium-based browsers.
+    - point: 防范 HSTS 跟踪
+      priority: 可选
+      details: >-
+        HSTS 本意是提升安全，但也可被用于植入超级 Cookie。可在 chrome://net-internals/#hsts 关闭（限 Chromium 浏览器）。
 
-  - point: Prevent Automatic Browser Connections
-    priority: Optional
-    details: >-
-      Even when you are not using your browser, it may call home to report on usage activity, analytics and
-      diagnostics. You may wish to disable some of this, which can be done through the settings.
+    - point: 防止浏览器自动连接
+      priority: 可选
+      details: >-
+        即使你未使用浏览器，它也可能自动回传使用数据、分析和诊断信息。可在设置中关闭部分自动连接。
 
-  - point: Enable 1st-Party Isolation
-    priority: Optional
-    details: >-
-      [First Party Isolation](https://awesome-privacy.xyz/security-tools/browser-extensions/first-party-isolation) means
-      that all identifier sources and browser state are scoped using the URL bar
-      domain, this can greatly reduce tracking.
+    - point: 启用一方隔离
+      priority: 可选
+      details: >-
+        [First Party Isolation](https://awesome-privacy.xyz/security-tools/browser-extensions/first-party-isolation) 可将所有标识符和状态限定在当前域名下，大幅减少跟踪。
 
-  - point: Strip Tracking Params from URLs
-    priority: Advanced
-    details: >-
-      Websites often append additional GET parameters to URLs that you click, to identify information like
-      source/referrer. You can sanitize manually,
-      or use an extension like [ClearURLs](https://awesome-privacy.xyz/security-tools/browser-extensions/clearurls) to strip tracking data
-      from URLs automatically.
+    - point: 去除 URL 跟踪参数
+      priority: 高级
+      details: >-
+        网站常在 URL 添加参数用于跟踪。你可以手动清理，或用 [ClearURLs](https://awesome-privacy.xyz/security-tools/browser-extensions/clearurls) 插件自动去除。
 
-  - point: First Launch Security
-    priority: Advanced
-    details: >-
-      After installing a web browser, the first time you launch it (prior to configuring its privacy settings),
-      most browsers will call home. Therefore, after installing a browser, you should first disable your internet
-      connection, then configure privacy options before reenabling your internet connectivity.
+    - point: 首次启动安全
+      priority: 高级
+      details: >-
+        安装浏览器后首次启动（在配置隐私设置前），大多数浏览器会自动联网。建议首次启动前断网，先配置好隐私选项再联网。
 
-  - point: Use The Tor Browser
-    priority: Advanced
-    details: >-
-      The [Tor](https://awesome-privacy.xyz/networking/mix-networks/tor) Project provides a browser that encrypts and routes your traffic through multiple nodes, keeping
-      users safe from interception and tracking. The main drawbacks are speed and user experience.
+    - point: 使用 Tor 浏览器
+      priority: 高级
+      details: >-
+        [Tor](https://awesome-privacy.xyz/networking/mix-networks/tor) 项目提供的浏览器可加密并多节点转发流量，防止拦截和跟踪。缺点是速度和体验较差。
 
-  - point: Disable JavaScript
-    priority: Advanced
-    details: >-
-      Many modern web apps are JavaScript-based, so disabling it will greatly decrease your browsing experience.
-      But if you really want to go all out, then it will really reduce your attack surface.
+    - point: 禁用 JavaScript
+      priority: 高级
+      details: >-
+        许多现代网站依赖 JavaScript，禁用后体验会大幅下降。但如果极度追求安全，禁用 JS 可极大减少攻击面。
   softwareLinks:
-    - title: Privacy Browsers
+    - title: 隐私浏览器
       url: https://github.com/Lissy93/awesome-privacy#browsers
-    - title: Search Engines
-      utl: https://github.com/Lissy93/awesome-privacy#search-engines
-    - title: Browser Extensions
+    - title: 搜索引擎
+      url: https://github.com/Lissy93/awesome-privacy#search-engines
+    - title: 浏览器扩展
       url: https://github.com/Lissy93/awesome-privacy#browser-extensions
-    - title: Browser & Bookmark Sync
+    - title: 浏览器与书签同步
       url: https://github.com/Lissy93/awesome-privacy#browser-sync
   color: emerald
 
-- title: Email
+- title: 电子邮件
   slug: email
-  description: Protecting the gateway to your online accounts
+  description: 保护你所有在线账户的入口
   icon: email
   intro: >-
-    Nearly 50 years since the first email was sent, it's still very much a big part
-    of our day-to-day life, and will continue to be for the near future. So considering
-    how much trust we put in them, it's surprising how fundamentally insecure this
-    infrastructure is. Email-related fraud
-    [is on the up](https://www.csoonline.com/article/3247670/email/email-security-in-2018.html),
-    and without taking basic measures you could be at risk.
-    
+    电子邮件自诞生近50年来，依然是我们日常生活中不可或缺的一部分，并将在可预见的未来继续存在。考虑到我们对邮箱的高度依赖，令人惊讶的是，这一基础设施本质上极其不安全。与邮件相关的欺诈[正在增加](https://www.csoonline.com/article/3247670/email/email-security-in-2018.html)，如果不采取基本措施，你可能会面临风险。
 
-    If a hacker gets access to your emails, it provides a gateway for your other
-    accounts to be compromised (through password resets), therefore email security
-    is paramount for your digital safety.
+    一旦黑客获取了你的邮箱，就能通过重置密码等方式攻破你其它账户，因此邮箱安全是数字安全的重中之重。
 
-
-    The big companies providing "free" email service, don't have a good reputation
-    for respecting users privacy: Gmail was caught giving
-    [third parties full access](https://www.wsj.com/articles/techs-dirty-secret-the-app-developers-sifting-through-your-gmail-1530544442)
-    to user emails and also [tracking all of your purchases](https://www.cnbc.com/2019/05/17/google-gmail-tracks-purchase-history-how-to-delete-it.html).
-    Yahoo was also caught scanning emails in real-time [for US surveillance agencies](http://news.trust.org/item/20161004170601-99f8c)
-    Advertisers [were granted access](https://thenextweb.com/insider/2018/08/29/both-yahoo-and-aol-are-scanning-customer-emails-to-attract-advertisers)
-    to Yahoo and AOL users messages to “identify and segment potential customers by picking up on contextual buying signals, and past purchases.”
-
+    提供“免费”邮箱服务的大公司在用户隐私方面口碑并不好：Gmail 曾被曝[允许第三方完全访问](https://www.wsj.com/articles/techs-dirty-secret-the-app-developers-sifting-through-your-gmail-1530544442)用户邮件，还会[追踪你的所有消费记录](https://www.cnbc.com/2019/05/17/google-gmail-tracks-purchase-history-how-to-delete-it.html)。Yahoo 也曾被曝[实时扫描邮件以配合美国情报机构](http://news.trust.org/item/20161004170601-99f8c)。广告商还[被允许访问](https://thenextweb.com/insider/2018/08/29/both-yahoo-and-aol-are-scanning-customer-emails-to-attract-advertisers)Yahoo 和 AOL 用户的邮件，以“识别和细分潜在客户，分析购买意向和历史”。
   checklist:
-  - point: Have more than one email address
-    priority: Essential
-    details: >-
-      Consider using a different email address for security-critical communications from trivial mail such
-      as newsletters. This compartmentalization could reduce the amount of damage caused by a data breach,
-      and also make it easier to recover a compromised account.
+    - point: 拥有多个邮箱地址
+      priority: 基本
+      details: >-
+        建议将重要通信和普通邮件（如订阅、广告）分开使用不同邮箱。这样可以降低数据泄露带来的损失，也便于找回被盗账户。
 
-  - point: Keep Email Address Private
-    priority: Essential
-    details: >-
-      Do not share your primary email publicly, as mail addresses are often the starting point for most
-      phishing attacks.
+    - point: 保持邮箱地址私密
+      priority: 基本
+      details: >-
+        不要公开你的主邮箱地址，因为邮箱往往是钓鱼攻击的起点。
 
-  - point: Keep your Account Secure
-    priority: Essential
-    details: >-
-      Use a long and unique password, enable 2FA and be careful while logging in. Your email account
-      provides an easy entry point to all your other online accounts for an attacker.
+    - point: 保障账户安全
+      priority: 基本
+      details: >-
+        使用长且唯一的密码，启用双因素认证，并在登录时保持警惕。邮箱一旦被攻破，攻击者可轻松入侵你其它在线账户。
 
-  - point: Disable Automatic Loading of Remote Content
-    priority: Essential
-    details: >-
-      Email messages can contain remote content such as images or stylesheets, often automatically loaded
-      from the server. You should disable this, as it exposes your IP address and device information, and
-      is often used for tracking. For more info, see [this article](https://www.theverge.com/2019/7/3/20680903/email-pixel-trackers-how-to-stop-images-automatic-download).
+    - point: 禁用远程内容自动加载
+      priority: 基本
+      details: >-
+        邮件可能包含远程内容（如图片、样式表），通常会自动从服务器加载。应关闭此功能，否则会泄露你的 IP 和设备信息，并被用于跟踪。详见[这篇文章](https://www.theverge.com/2019/7/3/20680903/email-pixel-trackers-how-to-stop-images-automatic-download)。
 
-  - point: Use Plaintext
-    priority: Optional
-    details: >-
-      There are two main types of emails on the internet: plaintext and HTML. The former is strongly preferred
-      for privacy & security as HTML messages often include identifiers in links and inline images, which can
-      collect usage and personal data. There's also numerous risks of remote code execution targeting the HTML
-      parser of your mail client, which cannot be exploited if you are using plaintext. For more info, as well
-      as setup instructions for your mail provider, see [UsePlaintext.email](https://useplaintext.email/).
+    - point: 使用纯文本邮件
+      priority: 可选
+      details: >-
+        邮件有纯文本和 HTML 两种格式。为隐私和安全，推荐使用纯文本，因为 HTML 邮件常包含跟踪链接和图片，可能收集你的数据，也存在远程代码执行风险。详见 [UsePlaintext.email](https://useplaintext.email/)。
 
-  - point: Don’t connect third-party apps to your email account
-    priority: Optional
-    details: >-
-      If you give a third-party app or plug-in full access to your inbox, they effectively have full unhindered
-      access to all your emails and their contents, which poses significant security and privacy risks.
+    - point: 不要将第三方应用连接到邮箱
+      priority: 可选
+      details: >-
+        授权第三方应用或插件访问邮箱，等于让其完全读取你的所有邮件内容，存在极大安全和隐私风险。
 
-  - point: Don't Share Sensitive Data via Email
-    priority: Optional
-    details: >-
-      Emails are very easily intercepted. Furthermore, you can’t be sure of how secure your recipient's
-      environment is. Therefore, emails cannot be considered safe for exchanging confidential information,
-      unless it is encrypted.
+    - point: 不要通过邮件发送敏感信息
+      priority: 可选
+      details: >-
+        邮件极易被拦截，也无法保证收件方环境安全。除非加密，否则不应通过邮件交换机密信息。
 
-  - point: Consider Switching to a Secure Mail Provider
-    priority: Optional
-    details: >-
-      Secure and reputable email providers such as [Forward Email](https://awesome-privacy.xyz/communication/encrypted-email/forward-email),
-      [ProtonMail](https://awesome-privacy.xyz/communication/mail-forwarding/protonmail),
-      and [Tutanota](https://awesome-privacy.xyz/communication/encrypted-email/tuta) allow for end-to-end
-      encryption, full privacy as well as more security-focused features. Unlike typical email providers, your
-      mailbox cannot be read by anyone but you, since all messages are encrypted.
+    - point: 考虑使用安全邮箱服务商
+      priority: 可选
+      details: >-
+        [Forward Email](https://awesome-privacy.xyz/communication/encrypted-email/forward-email)、[ProtonMail](https://awesome-privacy.xyz/communication/mail-forwarding/protonmail)、[Tutanota](https://awesome-privacy.xyz/communication/encrypted-email/tuta) 等安全邮箱服务商支持端到端加密和隐私保护。与传统邮箱不同，只有你能读取自己的邮件。
 
-  - point: Use Smart Key
-    priority: Advanced
-    details: >-
-      OpenPGP does not support Forward secrecy, which means if either your or the recipient's private key is
-      ever stolen, all previous messages encrypted with it will be exposed. Therefore, you should take great
-      care to keep your private keys safe. One method of doing so, is to use a USB Smart Key to sign or decrypt
-      messages, allowing you to do so without your private key leaving the USB device.
+    - point: 使用智能密钥
+      priority: 高级
+      details: >-
+        OpenPGP 不支持前向保密，若你或收件人的私钥被盗，所有历史加密邮件都将暴露。务必妥善保管私钥。可用 USB 智能密钥签名或解密邮件，私钥不会离开 USB 设备。
 
-  - point: Use Aliasing / Anonymous Forwarding
-    priority: Advanced
-    details: >-
-      Email aliasing allows messages to be sent to [anything]@my-domain.com and still land in your primary inbox.
-      Effectively allowing you to use a different, unique email address for each service you sign up for. This means
-      if you start receiving spam, you can block that alias and determine which company leaked your email address.
+    - point: 使用别名/匿名转发
+      priority: 高级
+      details: >-
+        邮箱别名允许你用 [anything]@my-domain.com 接收邮件，实际都转发到主邮箱。这样每个服务都能用不同邮箱注册，收到垃圾邮件时可直接屏蔽该别名，并追溯泄露源头。
 
-  - point: Subaddressing
-    priority: Optional
-    details: >-
-      An alternative to aliasing is subaddressing, where anything after the `+` symbol is omitted during mail delivery.
-      This enables you to keep track of who shared/ leaked your email address, but unlike aliasing, it will not protect
-      against your real address being revealed.
+    - point: 子地址（+号邮箱）
+      priority: 可选
+      details: >-
+        子地址是在邮箱名后加 `+` 符号，邮件仍能正常送达。可用于追踪邮箱泄露来源，但无法像别名那样隐藏真实邮箱。
 
-  - point: Use a Custom Domain
-    priority: Advanced
-    details: >-
-      Using a custom domain means that you are not dependent on the address assigned by your mail provider. So you can
-      easily switch providers in the future and do not need to worry about a service being discontinued.
+    - point: 使用自定义域名
+      priority: 高级
+      details: >-
+        使用自定义域名邮箱，不依赖服务商分配的地址，方便将来更换邮箱服务，无需担心服务终止。
 
-  - point: Sync with a client for backup
-    priority: Advanced
-    details: >-
-      To avoid losing temporary or permanent access to your emails during an unplanned event (such as an outage or
-      account lock), Thunderbird can sync/ backup messages from multiple accounts via IMAP and store locally on your
-      primary device.
+    - point: 客户端同步备份邮件
+      priority: 高级
+      details: >-
+        为防止因意外（如服务中断、账户被封）丢失邮件，可用 Thunderbird 等客户端通过 IMAP 同步/备份多账户邮件到本地。
 
-  - point: Be Careful with Mail Signatures
-    priority: Advanced
-    details: >-
-      You do not know how secure of an email environment the recipient of your message may have. There are several
-      extensions that automatically crawl messages, and create a detailed database of contact information based upon
-      email signatures.
+    - point: 谨慎使用邮件签名
+      priority: 高级
+      details: >-
+        无法保证收件方环境安全。部分扩展会自动抓取邮件签名，建立联系人数据库。注意不要在签名中泄露过多信息。
 
-  - point: Be Careful with Auto-Replies
-    priority: Advanced
-    details: >-
-      Out-of-office automatic replies are very useful for informing people there will be a delay in replying, but all
-      too often people reveal too much information- which can be used in social engineering and targeted attacks.
+    - point: 谨慎设置自动回复
+      priority: 高级
+      details: >-
+        自动回复（如外出通知）虽方便，但常常泄露过多信息，可能被用于社工和定向攻击。
 
-  - point: Choose the Right Mail Protocol
-    priority: Advanced
-    details: >-
-      Do not use outdated protocols (below IMAPv4 or POPv3), both have known vulnerabilities and out-dated security.
+    - point: 选择合适的邮件协议
+      priority: 高级
+      details: >-
+        不要使用过时协议（IMAPv4 或 POPv3 以下），这些协议存在已知漏洞和安全隐患。
 
-  - point: Self-Hosting
-    priority: Advanced
-    details: >-
-      Self-hosting your own mail server is not recommended for non-advanced users, since correctly securing it is
-      critical yet requires strong networking knowledge.
+    - point: 自建邮箱服务器
+      priority: 高级
+      details: >-
+        非高级用户不建议自建邮箱服务器，因其安全配置极为复杂且要求较高的网络知识。
 
-  - point: Always use TLS Ports
-    priority: Advanced
-    details: >-
-      There are SSL options for POP3, IMAP, and SMTP as standard TCP/IP ports. They are easy to use, and widely
-      supported so should always be used instead of plaintext email ports.
+    - point: 始终使用 TLS 端口
+      priority: 高级
+      details: >-
+        POP3、IMAP、SMTP 等协议均有 SSL 端口，广泛支持且易于使用，应始终使用加密端口而非明文端口。
 
-  - point: DNS Availability
-    priority: Advanced
-    details: >-
-      For self-hosted mail servers, to prevent DNS problems impacting availability- use at least 2 MX records, with
-      secondary and tertiary MX records for redundancy when the primary MX record fails.
+    - point: 配置 DNS 冗余
+      priority: 高级
+      details: >-
+        自建邮箱服务器时，为防止 DNS 故障影响可用性，应至少设置两个 MX 记录，主备切换保证邮件收发不中断。
 
-  - point: Prevent DDoS and Brute Force Attacks
-    priority: Advanced
-    details: >-
-      For self-hosted mail servers (specifically SMTP), limit your total number of simultaneous connections, and maximum
-      connection rate to reduce the impact of attempted bot attacks.
+    - point: 防范 DDoS 和暴力破解
+      priority: 高级
+      details: >-
+        自建邮箱服务器（尤其是 SMTP）应限制并发连接数和最大连接速率，降低被机器人攻击的风险。
 
-  - point: Maintain IP Blacklist
-    priority: Advanced
-    details: >-
-      For self-hosted mail servers, you can improve spam filters and harden security, through maintaining an up-to-date
-      local IP blacklist and a spam URI realtime block lists to filter out malicious hyperlinks.
+    - point: 维护 IP 黑名单
+      priority: 高级
+      details: >-
+        自建邮箱服务器可通过维护本地 IP 黑名单和实时垃圾邮件 URI 阻断列表，提高反垃圾能力和安全性。
   color: teal
   softwareLinks:
-    - title: Secure Email Providers
+    - title: 安全邮箱服务商
       url: https://github.com/Lissy93/awesome-privacy#encrypted-email
-    - title: Mail Forwarding
+    - title: 邮件转发
       url: https://github.com/Lissy93/awesome-privacy#anonymous-mail-forwarding
-    - title: Pre-Configured Mail Servers
+    - title: 预配置邮箱服务器
       url: https://github.com/Lissy93/awesome-privacy#pre-configured-mail-servers
-    - title: Email Clients
+    - title: 邮件客户端
       url: https://github.com/Lissy93/awesome-privacy#email-clients
 
-- title: Messaging
+- title: 即时通讯
   slug: messaging
-  description: Keeping your communications private and secure
+  description: 让你的通信内容私密且安全
   icon: messaging
   intro: ''
   checklist:
-  - point: Only Use Fully End-to-End Encrypted Messengers
-    priority: Essential
-    details: >-
-      End-to-end encryption is a system of communication where messages are encrypted on your device and
-      not decrypted until they reach the intended recipient. This ensures that any actor who intercepts
-      traffic cannot read the message contents, nor can anybody with access to the central servers where
-      data is stored.
+    - point: 只使用端到端加密的通讯工具
+      priority: 基本
+      details: >-
+        端到端加密是一种通信方式，消息在你的设备上加密，只有到达目标收件人时才会解密。这样即使有人拦截了通信流量，或有权访问服务器数据，也无法读取消息内容。
 
-  - point: Use only Open Source Messaging Platforms
-    priority: Essential
-    details: >-
-      If code is open source then it can be independently examined and audited by anyone qualified to do
-      so, to ensure that there are no backdoors, vulnerabilities, or other security issues.
+    - point: 只用开源的通讯平台
+      priority: 基本
+      details: >-
+        开源代码可以被任何有能力的人独立审查和审核，以确保没有后门、漏洞或其它安全隐患。
 
-  - point: Use a "Trustworthy" Messaging Platform
-    priority: Essential
-    details: >-
-      When selecting an encrypted messaging app, ensure it's fully open source, stable, actively maintained,
-      and ideally backed by reputable developers.
+    - point: 选择“可信赖”的通讯平台
+      priority: 基本
+      details: >-
+        选择加密通讯应用时，确保其完全开源、稳定、持续维护，并由值得信赖的开发者团队支持。
 
-  - point: Check Security Settings
-    priority: Essential
-    details: >-
-      Enable security settings, including contact verification, security notifications, and encryption.
-      Disable optional non-security features such as read receipt, last online, and typing notification.
+    - point: 检查安全设置
+      priority: 基本
+      details: >-
+        启用安全设置，包括联系人验证、安全通知和加密。关闭非安全相关的可选功能，如已读回执、最后在线、正在输入等。
 
-  - point: Ensure your Recipients Environment is Secure
-    priority: Essential
-    details: >-
-      Your conversation can only be as secure as the weakest link. Often the easiest way to infiltrate a
-      communications channel is to target the individual or node with the least protection.
+    - point: 确保收件方环境安全
+      priority: 基本
+      details: >-
+        通信的安全性取决于最薄弱的环节。攻击者往往会针对保护最弱的个人或节点。
 
-  - point: Disable Cloud Services
-    priority: Essential
-    details: >-
-      Some mobile messaging apps offer a web or desktop companion. This not only increases attack surface but
-      it has been linked to several critical security issues, and should therefore be avoided, if possible.
+    - point: 禁用云服务
+      priority: 基本
+      details: >-
+        一些移动通讯应用提供网页版或桌面端，这会增加攻击面，并已被证实存在严重安全问题，如无必要应避免使用。
 
-  - point: Secure Group Chats
-    priority: Essential
-    details: >-
-      The risk of compromise rises exponentially, the more participants are in a group, as the attack surface
-      increases. Periodically check that all participants are legitimate.
+    - point: 群聊安全
+      priority: 基本
+      details: >-
+        群聊参与者越多，风险越高，攻击面也随之增加。应定期检查所有成员身份是否合法。
 
-  - point: Create a Safe Environment for Communication
-    priority: Essential
-    details: >-
-      There are several stages where your digital communications could be monitored or intercepted. This includes:
-      your or your participants' device, your ISP, national gateway or government logging, the messaging provider,
-      the servers.
+    - point: 营造安全的通信环境
+      priority: 基本
+      details: >-
+        数字通信在多个环节可能被监听或拦截，包括你或对方的设备、ISP、国家网关或政府日志、通讯服务商及其服务器。
 
-  - point: Agree on a Communication Plan
-    priority: Optional
-    details: >-
-      In certain situations, it may be worth making a communication plan. This should include primary and backup
-      methods of securely getting in hold with each other.
+    - point: 约定通信方案
+      priority: 可选
+      details: >-
+        在某些情况下，建议提前约定通信方案，包括主要和备用的安全联系方式。
 
-  - point: Strip Meta-Data from Media
-    priority: Optional
-    details: >-
-      Metadata is "Data about Data" or additional information attached to a file or transaction. When you send a
-      photo, audio recording, video, or document you may be revealing more than you intended to.
+    - point: 去除媒体元数据
+      priority: 可选
+      details: >-
+        元数据是“关于数据的数据”，如照片、音频、视频或文档可能包含你不希望泄露的信息。发送前应去除元数据。
 
-  - point: Defang URLs
-    priority: Optional
-    details: >-
-      Sending links via various services can unintentionally expose your personal information. This is because,
-      when a thumbnail or preview is generated- it happens on the client-side.
+    - point: 处理 URL 链接
+      priority: 可选
+      details: >-
+        通过各种服务发送链接时，可能会无意中暴露个人信息。例如生成缩略图或预览时，操作发生在客户端。
 
-  - point: Verify your Recipient
-    priority: Optional
-    details: >-
-      Always ensure you are talking to the intended recipient, and that they have not been compromised. One method
-      for doing so is to use an app which supports contact verification.
+    - point: 验证收件人身份
+      priority: 可选
+      details: >-
+        始终确保你正在与目标收件人通信，并且对方未被攻破。可使用支持联系人验证的应用。
 
-  - point: Enable Ephemeral Messages
-    priority: Optional
-    details: >-
-      Self-destructing messages is a feature that causes your messages to automatically delete after a set amount
-      of time. This means that if your device is lost, stolen, or seized, an adversary will only have access to the
-      most recent communications.
+    - point: 启用阅后即焚消息
+      priority: 可选
+      details: >-
+        阅后即焚功能可让消息在设定时间后自动删除。如果设备丢失、被盗或被查获，攻击者只能获取最近的通信内容。
 
-  - point: Avoid SMS
-    priority: Optional
-    details: >-
-      SMS may be convenient, but it's not secure. It is susceptible to threats such as interception, sim swapping,
-      manipulation, and malware.
+    - point: 避免使用短信
+      priority: 可选
+      details: >-
+        短信虽然方便，但极不安全，容易被拦截、SIM劫持、篡改或感染恶意软件。
 
-  - point: Watch out for Trackers
-    priority: Optional
-    details: >-
-      Be wary of messaging applications with trackers, as the detailed usage statistics they collect are often very
-      invasive, and can sometimes reveal your identity as well as personal information that you would otherwise not
-      intend to share.
+    - point: 警惕内置跟踪器
+      priority: 可选
+      details: >-
+        部分通讯应用内置跟踪器，收集的详细使用数据可能极具侵入性，甚至泄露你的身份和其它隐私信息。
 
-  - point: Consider Jurisdiction
-    priority: Advanced
-    details: >-
-      The jurisdictions where the organisation is based, and data is hosted should also be taken into account.
+    - point: 考虑司法管辖区
+      priority: 高级
+      details: >-
+        应考虑通讯服务提供商及其数据托管地所在的司法管辖区。
 
-  - point: Use an Anonymous Platform
-    priority: Advanced
-    details: >-
-      If you believe you may be targeted, you should opt for an anonymous messaging platform that does not require
-      a phone number, or any other personally identifiable information to sign up or use.
+    - point: 使用匿名通讯平台
+      priority: 高级
+      details: >-
+        如果你认为自己可能被针对，应选择无需手机号或其它个人身份信息即可注册和使用的匿名通讯平台。
 
-  - point: Ensure Forward Secrecy is Supported
-    priority: Advanced
-    details: >-
-      Opt for a platform that implements forward secrecy. This is where your app generates a new encryption key
-      for every message.
+    - point: 确保支持前向保密
+      priority: 高级
+      details: >-
+        选择实现前向保密的平台，即每条消息都生成新的加密密钥。
 
-  - point: Consider a Decentralized Platform
-    priority: Advanced
-    details: >-
-      If all data flows through a central provider, you have to trust them with your data and meta-data. You cannot
-      verify that the system running is authentic without back doors.
+    - point: 考虑去中心化平台
+      priority: 高级
+      details: >-
+        如果所有数据都流经中心化服务商，你必须信任其不会滥用数据。去中心化平台可降低此类风险。
   softwareLinks:
-    - title: Secure Messaging Apps
+    - title: 安全即时通讯应用
       url: https://github.com/Lissy93/awesome-privacy#encrypted-messaging
-    - title: P2P Messaging Platforms
+    - title: P2P 通讯平台
       url: https://github.com/Lissy93/awesome-privacy#p2p-messaging
   color: cyan
 
-- title: Social Media
+- title: 社交媒体
   slug: social-media
-  description: Minimizing the risks associated with using online communities
+  description: 最小化使用在线社区带来的风险
   icon: social
-  intro: >
-    Online communities have existed since the invention of the internet, and give
-    people around the world the opportunity to connect, communicate and share.
-    Although these networks are a great way to promote social interaction and
-    bring people together, that have a dark side - there are some serious
-    [Privacy Concerns with Social Networking Services](https://en.wikipedia.org/wiki/Privacy_concerns_with_social_networking_services),
-    and these social networking sites are owned by private corporations,
-    and that they make their money by collecting data about individuals and
-    selling that data on, often to third party advertisers.
+  intro: >-
+    在线社区自互联网诞生以来就存在，让全球用户能够连接、交流和分享。虽然这些网络极大促进了社交互动和信息传播，但也存在严重的隐私风险——
+    [社交网络服务的隐私问题](https://en.wikipedia.org/wiki/Privacy_concerns_with_social_networking_services)不容忽视，这些平台大多由私营公司运营，其盈利模式就是收集用户数据并出售给第三方广告商。
 
-    Secure your account, lock down your privacy settings, but know that even
-    after doing so, all data intentionally and non-intentionally uploaded is
-    effectively public. If possible, avoid using conventional social media networks.
+    即使你加固了账户安全、锁定了隐私设置，所有上传的数据（无论有意还是无意）实际上都等同于公开。若可能，建议避免使用传统社交网络。
   checklist:
-  - point: Secure your Account
-    priority: Essential
-    details: >-
-      Social media profiles get stolen or taken over all too often. To protect your account: use a unique
-      and strong password, and enable 2-factor authentication.
+    - point: 保护你的账户
+      priority: 基本
+      details: >-
+        社交媒体账户被盗或被接管的情况屡见不鲜。请使用唯一且强密码，并启用双因素认证。
 
-  - point: Check Privacy Settings
-    priority: Essential
-    details: >-
-      Most social networks allow you to control your privacy settings. Ensure that you are comfortable with
-      what data you are currently exposing and to whom.
+    - point: 检查隐私设置
+      priority: 基本
+      details: >-
+        大多数社交网络允许你自定义隐私设置。确保你了解当前公开了哪些数据，以及对哪些人可见。
 
-  - point: Think of All Interactions as Public
-    priority: Essential
-    details: >-
-      There are still numerous methods of viewing a users 'private' content across many social networks.
-      Therefore, before uploading, posting or commenting on anything, think "Would I mind if this was totally public?"
+    - point: 所有互动都视为公开
+      priority: 基本
+      details: >-
+        许多社交网络仍有多种方式可查看用户“私密”内容。在上传、发布或评论前，请思考“如果这些内容完全公开，我是否介意？”
 
-  - point: Think of All Interactions as Permanent
-    priority: Essential
-    details: >-
-      Pretty much every post, comment, photo etc is being continuously backed up by a myriad of third-party
-      services, who archive this data and make it indexable and publicly available almost forever.
+    - point: 所有互动都视为永久
+      priority: 基本
+      details: >-
+        几乎所有的帖子、评论、照片等都会被第三方服务持续备份、归档并公开检索，几乎永久可查。
 
-  - point: Don't Reveal too Much
-    priority: Essential
-    details: >-
-      Profile information creates a goldmine of info for hackers, the kind of data that helps them personalize
-      phishing scams. Avoid sharing too much detail (DoB, Hometown, School etc).
+    - point: 不要泄露过多信息
+      priority: 基本
+      details: >-
+        个人资料信息为黑客提供了丰富的线索，有助于他们定制钓鱼攻击。避免分享过多细节（如生日、家乡、学校等）。
 
-  - point: Be Careful what you Upload
-    priority: Essential
-    details: >-
-      Status updates, comments, check-ins and media can unintentionally reveal a lot more than you intended
-      them to. This is especially relevant to photos and videos, which may show things in the background.
+    - point: 谨慎上传内容
+      priority: 基本
+      details: >-
+        状态、评论、签到和媒体内容可能无意中泄露超出你预期的信息，尤其是照片和视频背景。
 
-  - point: Don't Share Email or Phone Number
-    priority: Essential
-    details: >-
-      Posting your real email address or mobile number, gives hackers, trolls and spammers more munition to
-      use against you, and can also allow separate aliases, profiles or data points to be connected.
+    - point: 不要公开邮箱或手机号
+      priority: 基本
+      details: >-
+        公开真实邮箱或手机号会让黑客、喷子和垃圾信息制造者有机可乘，也容易将你的不同身份关联起来。
 
-  - point: Don't Grant Unnecessary Permissions
-    priority: Essential
-    details: >-
-      By default many of the popular social networking apps will ask for permission to access your contacts,
-      call log, location, messaging history etc. If they don’t need this access, don’t grant it.
+    - point: 不要授予不必要的权限
+      priority: 基本
+      details: >-
+        很多社交应用默认请求访问你的联系人、通话记录、定位、消息等。如果不需要这些权限，请拒绝。
 
-  - point: Be Careful of 3rd-Party Integrations
-    priority: Essential
-    details: >-
-      Avoid signing up for accounts using a Social Network login, revoke access to social apps you no longer
-      use.
+    - point: 谨慎第三方集成
+      priority: 基本
+      details: >-
+        避免用社交账号注册其它服务，及时撤销不再使用的社交应用授权。
 
-  - point: Avoid Publishing Geo Data while still Onsite
-    priority: Essential
-    details: >-
-      If you plan to share any content that reveals a location, then wait until you have left that place.
-      This is particularly important when you are taking a trip, at a restaurant, campus, hotel/resort, public
-      building or airport.
+    - point: 避免在现场时发布地理位置
+      priority: 基本
+      details: >-
+        如果你要分享带有地理位置的内容，建议离开该地点后再发布。尤其是在旅行、餐厅、学校、酒店、公共建筑或机场等场所。
 
-  - point: Remove metadata before uploading media
-    priority: Optional
-    details: >-
-      Most smartphones and some cameras automatically attach a comprehensive set of additional data (called
-      EXIF data) to each photograph. Remove this data before uploading.
+    - point: 上传前移除媒体元数据
+      priority: 可选
+      details: >-
+        大多数智能手机和部分相机会自动为照片附加详细的EXIF元数据。上传前请移除这些信息。
 
-  - point: Implement Image Cloaking
-    priority: Advanced
-    details: >-
-      Tools like Fawkes can be used to very subtly, slightly change the structure of faces within photos in a
-      way that is imperceptible by humans, but will prevent facial recognition systems from being able to recognize
-      a given face.
+    - point: 实施图像防识别
+      priority: 高级
+      details: >-
+        可用 Fawkes 等工具对照片中的人脸做微小调整，人眼难以察觉，但可防止人脸识别系统识别。
 
-  - point: Consider Spoofing GPS in home vicinity
-    priority: Advanced
-    details: >-
-      Even if you yourself never use social media, there is always going to be others who are not as careful,
-      and could reveal your location.
+    - point: 家附近考虑伪造GPS
+      priority: 高级
+      details: >-
+        即使你自己不用社交媒体，其他人也可能不够谨慎，间接暴露你的位置信息。
 
-  - point: Consider False Information
-    priority: Advanced
-    details: >-
-      If you just want to read, and do not intend on posting too much- consider using an alias name, and false
-      contact details.
+    - point: 考虑使用虚假信息
+      priority: 高级
+      details: >-
+        如果只是浏览，不打算频繁发帖，可考虑用化名和虚假联系方式注册。
 
-  - point: Don’t have any social media accounts
-    priority: Advanced
-    details: >-
-      Social media is fundamentally un-private, so for maximum online security and privacy, avoid using any
-      mainstream social networks.
+    - point: 不使用任何社交媒体账户
+      priority: 高级
+      details: >-
+        社交媒体本质上不隐私，若追求极致安全和隐私，建议完全不使用主流社交网络。
 
   softwareLinks:
-    - title: Alternative Social Media
+    - title: 替代性社交平台
       url: https://github.com/Lissy93/awesome-privacy#social-networks
-    - title: Alternative Video Platforms
+    - title: 替代性视频平台
       url: https://github.com/Lissy93/awesome-privacy#video-platforms
-    - title: Alternative Blogging Platforms
+    - title: 替代性博客平台
       url: https://github.com/Lissy93/awesome-privacy#blogging-platforms
-    - title: News Readers and Aggregation
+    - title: 新闻聚合工具
       url: https://github.com/Lissy93/awesome-privacy#news-readers-and-aggregation
   color: blue
 
-- title: Networks
-  slug: networks
-  description: Safeguarding your network traffic
-  icon: network
-  intro: >
-    This section covers how you connect your devices to the internet securely,
-    including configuring your router and setting up a VPN.
-  checklist:
-  - point: Use a VPN
-    priority: Essential
-    details: >-
-      Use a reputable, paid-for VPN. This can help protect sites you visit from logging your real IP, reduce
-      the amount of data your ISP can collect, and increase protection on public WiFi.
-
-  - point: Change your Router Password
-    priority: Essential
-    details: >-
-      After getting a new router, change the password. Default router passwords are publicly available,
-      meaning anyone within proximity would be able to connect.
-
-  - point: Use WPA2, and a strong password
-    priority: Essential
-    details: >-
-      There are different authentication protocols for connecting to WiFi. Currently, the most secure options
-      are WPA2 and WPA3 (on newer routers).
-
-  - point: Keep router firmware up-to-date
-    priority: Essential
-    details: >-
-      Manufacturers release firmware updates that fix security vulnerabilities, implement new standards, and
-      sometimes add features or improve the performance of your router.
-
-  - point: Implement a Network-Wide VPN
-    priority: Optional
-    details: >-
-      If you configure your VPN on your router, firewall, or home server, then traffic from all devices will
-      be encrypted and routed through it, without needing individual VPN apps.
-
-  - point: Protect against DNS leaks
-    priority: Optional
-    details: >-
-      When using a VPN, it is extremely important to exclusively use the DNS server of your VPN provider or
-      secure service.
-
-  - point: Use a secure VPN Protocol
-    priority: Optional
-    details: >-
-      OpenVPN and WireGuard are open source, lightweight, and secure tunneling protocols. Avoid using PPTP
-      or SSTP.
-
-  - point: Secure DNS
-    priority: Optional
-    details: >-
-      Use DNS-over-HTTPS which performs DNS resolution via the HTTPS protocol, encrypting data between you
-      and your DNS resolver.
-
-  - point: Avoid the free router from your ISP
-    priority: Optional
-    details: >-
-      Typically they’re manufactured cheaply in bulk in China, with insecure propriety firmware that doesn't
-      receive regular security updates.
-
-  - point: Whitelist MAC Addresses
-    priority: Optional
-    details: >-
-      You can whitelist MAC addresses in your router settings, disallowing any unknown devices to immediately
-      connect to your network, even if they know your credentials.
-
-  - point: Change the Router’s Local IP Address
-    priority: Optional
-    details: >-
-      It is possible for a malicious script in your web browser to exploit a cross-site scripting vulnerability,
-      accessing known-vulnerable routers at their local IP address and tampering with them.
-
-  - point: Don't Reveal Personal Info in SSID
-    priority: Optional
-    details: >-
-      You should update your network name, choosing an SSID that does not identify you, include your flat
-      number/address, and does not specify the device brand/model.
-
-  - point: Opt-Out Router Listings
-    priority: Optional
-    details: >-
-      WiFi SSIDs are scanned, logged, and then published on various websites, which is a serious privacy
-      concern for some.
-
-  - point: Hide your SSID
-    priority: Optional
-    details: >-
-      Your router's Service Set Identifier is simply the network name. If it is not visible, it may receive
-      less abuse.
-
-  - point: Disable WPS
-    priority: Optional
-    details: >-
-      Wi-Fi Protected Setup provides an easier method to connect, without entering a long WiFi password, but
-      WPS introduces a series of major security issues.
-
-  - point: Disable UPnP
-    priority: Optional
-    details: >-
-      Universal Plug and Play allows applications to automatically forward a port on your router, but it has
-      a long history of serious security issues.
-
-  - point: Use a Guest Network for Guests
-    priority: Optional
-    details: >-
-      Do not grant access to your primary WiFi network to visitors, as it enables them to interact with other
-      devices on the network.
-
-  - point: Change your Router's Default IP
-    priority: Optional
-    details: >-
-      Modifying your router admin panel's default IP address will make it more difficult for malicious scripts
-      targeting local IP addresses.
-
-  - point: Kill unused processes and services on your router
-    priority: Optional
-    details: >-
-      Services like Telnet and SSH that provide command-line access to devices should never be exposed to the
-      internet and should also be disabled on the local network unless they're actually needed.
-
-  - point: Don't have Open Ports
-    priority: Optional
-    details: >-
-      Close any open ports on your router that are not needed. Open ports provide an easy entrance for hackers.
-
-  - point: Disable Unused Remote Access Protocols
-    priority: Optional
-    details: >-
-      When protocols such as PING, Telnet, SSH, UPnP, and HNAP etc are enabled, they allow your router to be
-      probed from anywhere in the world.
-
-  - point: Disable Cloud-Based Management
-    priority: Optional
-    details: >-
-      You should treat your router's admin panel with the utmost care, as considerable damage can be caused
-      if an attacker is able to gain access.
-
-  - point: Manage Range Correctly
-    priority: Optional
-    details: >-
-      It's common to want to pump your router's range to the max, but if you reside in a smaller flat, your
-      attack surface is increased when your WiFi network can be picked up across the street.
-
-  - point: Route all traffic through [Tor](https://awesome-privacy.xyz/networking/mix-networks/tor)
-    priority: Advanced
-    details: >-
-      VPNs have their weaknesses. For increased security, route all your internet traffic through the [Tor](https://awesome-privacy.xyz/networking/mix-networks/tor)
-      network.
-
-  - point: Disable WiFi on all Devices
-    priority: Advanced
-    details: >-
-      Connecting to even a secure WiFi network increases your attack surface. Disabling your home WiFi and
-      connect each device via Ethernet.
-  color: violet
-  softwareLinks:
-  - title: Virtual Private Networks
-    url: https://github.com/Lissy93/awesome-privacy#virtual-private-networks
-  - title: Mix Networks
-    url: https://github.com/Lissy93/awesome-privacy#mix-networks
-  - title: Router Firmware
-    url: https://github.com/Lissy93/awesome-privacy#router-firmware
-  - title: Open Source Proxies
-    url: https://github.com/Lissy93/awesome-privacy#proxies
-  - title: DNS Providers
-    url: https://github.com/Lissy93/awesome-privacy#dns
-  - title: Firewalls
-    url: https://github.com/Lissy93/awesome-privacy#firewalls
-  - title: Network Analysis Tools
-    url: https://github.com/Lissy93/awesome-privacy#network-analysis
-  - title: Self-Hosted Network Security Tools
-    url: https://github.com/Lissy93/awesome-privacy#self-hosted-network-security
-
-- title: Mobile Devices
+- title: 移动设备
   slug: mobile-devices
-  description: Reduce invasive tracking for cells, smartphones and tablets
+  description: 减少手机、智能设备和平板的侵入性跟踪
   icon: mobile
-  intro: >
-    Smart phones have revolutionized so many aspects of life and brought the world
-    to our fingertips. For many of us, smart phones are our primary means of communication,
-    entertainment and access to knowledge. But while they've brought convenience
-    to whole new level, there's some ugly things going on behind the screen.
+  intro: >-
+    智能手机彻底改变了我们的生活，让世界触手可及。对许多人来说，手机是主要的通信、娱乐和信息获取工具。但在带来极大便利的同时，手机背后也隐藏着许多隐私风险。
 
-    Geo-tracking is used to trace our every move, and we have little control over
-    who has this data- your phone is even able to
-    [track your location without GPS](https://gizmodo.com/how-to-track-a-cellphone-without-gps-or-consent-1821125371).
-    Over the years numerous reports that surfaced, outlining ways in which your
-    phone's [mic can eavesdrop](https://www.independent.co.uk/life-style/gadgets-and-tech/news/smartphone-apps-listening-privacy-alphonso-shazam-advertising-pool-3d-honey-quest-a8139451.html),
-    and the [camera can watch you](https://www.businessinsider.com/hackers-governments-smartphone-iphone-camera-wikileaks-cybersecurity-hack-privacy-webcam-2017-6)- all without your knowledge or consent.
-    And then there's the malicious apps, lack of security patches and potential/ likely backdoors.
+    地理追踪可以记录我们的每一步，而我们几乎无法控制这些数据的归属——你的手机甚至可以[在没有 GPS 的情况下追踪你的位置](https://gizmodo.com/how-to-track-a-cellphone-without-gps-or-consent-1821125371)。
+    多年来，已经有大量报道揭示了手机[麦克风可被窃听](https://www.independent.co.uk/life-style/gadgets-and-tech/news/smartphone-apps-listening-privacy-alphonso-shazam-advertising-pool-3d-honey-quest-a8139451.html)，
+    [摄像头可被远程监控](https://www.businessinsider.com/hackers-governments-smartphone-iphone-camera-wikileaks-cybersecurity-hack-privacy-webcam-2017-6)，而你对此毫不知情。
+    此外，还有恶意应用、缺乏安全补丁和潜在后门等问题。
 
-    Using a smart phone generates a lot of data about you- from information you
-    intentionally share, to data silently generated from your actions.
-    It can be scary to see what Google, Microsoft, Apple and Facebook know about
-    us- sometimes they know more than our closest family. It's hard to comprehend
-    what your data will reveal, especially in conjunction with other data.
+    使用智能手机会产生大量关于你的数据——既有你主动分享的信息，也有你操作时悄然生成的数据。
+    很多人会惊讶于 Google、微软、苹果和 Facebook 掌握了多少关于我们的信息，有时甚至比家人还多。
+    这些数据的关联分析结果难以想象，尤其是与其他数据结合时。
 
-    This data is used for
-    [far more than just advertising](https://internethealthreport.org/2018/the-good-the-bad-and-the-ugly-sides-of-data-tracking/) -
-    more often it's used to rate people for finance, insurance and employment.
-    Targeted ads can even be used for fine-grained surveillance (see [ADINT](https://adint.cs.washington.edu))
+    这些数据用途远不止广告，[更多时候被用于金融、保险、就业等评分](https://internethealthreport.org/2018/the-good-the-bad-and-the-ugly-sides-of-data-tracking/)，
+    定向广告甚至可用于精细化监控（见 [ADINT](https://adint.cs.washington.edu)）。
 
-    More of us are concerned about how
-    [governments use collect and use our smart phone data](https://www.statista.com/statistics/373916/global-opinion-online-monitoring-government/),
-    and rightly so, federal agencies often
-    [request our data from Google](https://www.statista.com/statistics/273501/global-data-requests-from-google-by-federal-agencies-and-governments/),
-    [Facebook](https://www.statista.com/statistics/287845/global-data-requests-from-facebook-by-federal-agencies-and-governments/),
-    Apple, Microsoft, Amazon, and other tech companies. Sometimes requests are
-    made in bulk, returning detailed information on everybody within a certain geo-fence,
-    [often for innocent people](https://www.nytimes.com/interactive/2019/04/13/us/google-location-tracking-police.html).
-    And this doesn't include all of the internet traffic that intelligence agencies around the world have unhindered access to.
+    越来越多的人担心[政府如何收集和使用我们的手机数据](https://www.statista.com/statistics/373916/global-opinion-online-monitoring-government/)，
+    各国机构经常[向 Google](https://www.statista.com/statistics/273501/global-data-requests-from-google-by-federal-agencies-and-governments/)、[Facebook](https://www.statista.com/statistics/287845/global-data-requests-from-facebook-by-federal-agencies-and-governments/)、苹果、微软、亚马逊等科技公司索要数据。
+    有时这些请求是批量的，返回某地理范围内所有人的详细信息，[很多是无辜用户](https://www.nytimes.com/interactive/2019/04/13/us/google-location-tracking-police.html)。
+    这还不包括全球情报机构对互联网流量的无障碍访问。
   checklist:
-  - point: Encrypt your Device
-    priority: Essential
-    details: >-
-      In order to keep your data safe from physical access, use file encryption. This will mean if your
-      device is lost or stolen, no one will have access to your data.
+    - point: 加密你的设备
+      priority: 基本
+      details: >-
+        为防止物理访问导致数据泄露，请开启文件加密。这样即使设备丢失或被盗，数据也不会被他人访问。
 
-  - point: Turn off connectivity features that aren’t being used
-    priority: Essential
-    details: >-
-      When you're not using WiFi, Bluetooth, NFC etc, turn those features off. There are several common threats
-      that utilise these features.
+    - point: 关闭未使用的连接功能
+      priority: 基本
+      details: >-
+        不用时请关闭 WiFi、蓝牙、NFC 等功能。这些接口常被利用进行攻击。
 
-  - point: Keep app count to a minimum
-    priority: Essential
-    details: >-
-      Uninstall apps that you don’t need or use regularly. As apps often run in the background, slowing your
-      device down, but also collecting data.
+    - point: 保持应用数量最少
+      priority: 基本
+      details: >-
+        卸载不常用或不需要的应用。应用常在后台运行，不仅拖慢设备，还会收集数据。
 
-  - point: App Permissions
-    priority: Essential
-    details: >-
-      Don’t grant apps permissions that they don’t need. For Android, [Bouncer](https://awesome-privacy.xyz/security-tools/mobile-apps/bouncer) is an app that allows you to grant
-      temporary/ 1-off permissions.
+    - point: 管理应用权限
+      priority: 基本
+      details: >-
+        不要授予应用不必要的权限。Android 用户可用 [Bouncer](https://awesome-privacy.xyz/security-tools/mobile-apps/bouncer) 等工具临时授权。
 
-  - point: Only install Apps from official source
-    priority: Essential
-    details: >-
-      Applications on Apple App Store and Google Play Store are scanned and cryptographically signed, making them
-      less likely to be malicious.
+    - point: 只从官方渠道安装应用
+      priority: 基本
+      details: >-
+        App Store 和 Google Play 的应用经过签名和安全检测，恶意软件风险较低。
 
-  - point: Be Careful of Phone Charging Threats
-    priority: Optional
-    details: >-
-      Juice Jacking is when hackers use public charging stations to install malware on your smartphone or tablet
-      through a compromised USB port.
+    - point: 警惕手机充电威胁
+      priority: 可选
+      details: >-
+        “充电劫持”是指黑客通过公共充电口植入恶意软件。尽量避免在公共场所用 USB 口充电。
 
-  - point: Set up a mobile carrier PIN
-    priority: Essential
-    details: >-
-      SIM hijacking is when a hacker is able to get your mobile number transferred to their sim. The easiest way
-      to protect against this is to set up a PIN through your mobile provider.
+    - point: 设置运营商 PIN 码
+      priority: 基本
+      details: >-
+        SIM 劫持是黑客将你的手机号转移到他们的 SIM 卡上的攻击。设置运营商 PIN 码可有效防护。
 
-  - point: Opt-out of Caller ID Listings
-    priority: Optional
-    details: >-
-      To keep your details private, you can unlist your number from caller ID apps like TrueCaller, CallApp, SyncMe,
-      and Hiya.
+    - point: 退出来电显示数据库
+      priority: 可选
+      details: >-
+        可将你的号码从 TrueCaller、CallApp、SyncMe、Hiya 等来电识别应用中移除，保护隐私。
 
-  - point: Use Offline Maps
-    priority: Optional
-    details: >-
-      Consider using an offline maps app, such as OsmAnd or Organic Maps, to reduce data leaks from map apps.
+    - point: 使用离线地图
+      priority: 可选
+      details: >-
+        使用 OsmAnd、Organic Maps 等离线地图应用，减少地图应用的数据泄露。
 
-  - point: Opt-out of personalized ads
-    priority: Optional
-    details: >-
-      You can slightly reduce the amount of data collected by opting-out of seeing personalized ads.
+    - point: 关闭个性化广告
+      priority: 可选
+      details: >-
+        关闭个性化广告可略微减少被收集的数据量。
 
-  - point: Erase after too many login attempts
-    priority: Optional
-    details: >-
-      To protect against an attacker brute forcing your pin, set your device to erase after too many failed
-      login attempts.
+    - point: 设置多次输错自动清除
+      priority: 可选
+      details: >-
+        设置设备在多次解锁失败后自动清除数据，防止暴力破解 PIN 码。
 
-  - point: Monitor Trackers
-    priority: Optional
-    details: >-
-      [εxodus](https://awesome-privacy.xyz/security-tools/online-tools/εxodus) is a great service which
-      lets you search for any app and see which trackers are embedded in it.
+    - point: 检查应用跟踪器
+      priority: 可选
+      details: >-
+        [εxodus](https://awesome-privacy.xyz/security-tools/online-tools/εxodus) 可查询应用内嵌的跟踪器。
 
-  - point: Use a Mobile Firewall
-    priority: Optional
-    details: >-
-      To prevent applications from leaking privacy-sensitive data, you can install a firewall app.
+    - point: 使用移动防火墙
+      priority: 可选
+      details: >-
+        安装防火墙应用，防止应用泄露隐私数据。
 
-  - point: Reduce Background Activity
-    priority: Optional
-    details: >-
-      For Android, SuperFreeze makes it possible to entirely freeze all background activities on a per-app basis.
+    - point: 降低后台活动
+      priority: 可选
+      details: >-
+        Android 用户可用 SuperFreeze 等工具按应用冻结后台活动。
 
-  - point: Sandbox Mobile Apps
-    priority: Optional
-    details: >-
-      Prevent permission-hungry apps from accessing your private data with [Island](https://awesome-privacy.xyz/security-tools/mobile-apps/island), a sandbox environment.
+    - point: 沙盒隔离应用
+      priority: 可选
+      details: >-
+        用 [Island](https://awesome-privacy.xyz/security-tools/mobile-apps/island) 等沙盒工具隔离权限敏感应用。
 
-  - point: Tor Traffic
-    priority: Advanced
-    details: >-
-      [Orbot](https://awesome-privacy.xyz/security-tools/mobile-apps/orbot) provides
-      a system-wide Tor connection, which will help protect you from surveillance and public WiFi threats.
+    - point: 使用 Tor 流量
+      priority: 高级
+      details: >-
+        [Orbot](https://awesome-privacy.xyz/security-tools/mobile-apps/orbot) 可为全局流量提供 Tor 代理，防止监控和公共 WiFi 威胁。
 
-  - point: Avoid Custom Virtual Keyboards
-    priority: Optional
-    details: >-
-      It is recommended to stick with your device's stock keyboard. If you choose to use a third-party keyboard app,
-      ensure it is reputable.
+    - point: 避免自定义输入法
+      priority: 可选
+      details: >-
+        建议使用系统自带输入法。若用第三方输入法，请确保其信誉良好。
 
-  - point: Restart Device Regularly
-    priority: Optional
-    details: >-
-      Restarting your phone at least once a week will clear the app state cached in memory and may run more smoothly
-      after a restart.
+    - point: 定期重启设备
+      priority: 可选
+      details: >-
+        每周至少重启一次手机，可清理内存缓存，让设备运行更流畅。
 
-  - point: Avoid SMS
-    priority: Optional
-    details: >-
-      SMS should not be used to receive 2FA codes or for communication, instead use an encrypted messaging app,
-      such as [Signal](https://awesome-privacy.xyz/communication/encrypted-messaging/signal).
+    - point: 避免用短信
+      priority: 可选
+      details: >-
+        不要用短信收取 2FA 验证码或通信，建议用加密通讯应用如 [Signal](https://awesome-privacy.xyz/communication/encrypted-messaging/signal)。
 
-  - point: Keep your Number Private
-    priority: Optional
-    details: >-
-      [MySudo](https://awesome-privacy.xyz/finance/virtual-credit-cards/mysudo) allows
-      you to create and use virtual phone numbers for different people or groups. This is great for
-      compartmentalisation.
+    - point: 保持手机号私密
+      priority: 可选
+      details: >-
+        [MySudo](https://awesome-privacy.xyz/finance/virtual-credit-cards/mysudo) 可生成虚拟手机号，实现分组隔离。
 
-  - point: Watch out for Stalkerware
-    priority: Optional
-    details: >-
-      Stalkerware is malware that is installed directly onto your device by someone you know.
-      The best way to get rid of it is through a factory reset.
+    - point: 警惕跟踪软件
+      priority: 可选
+      details: >-
+        跟踪软件通常由熟人直接安装。最有效的清除方法是恢复出厂设置。
 
-  - point: Favor the Browser, over Dedicated App
-    priority: Optional
-    details: >-
-      Where possible, consider using a secure browser to access sites,
-      rather than installing dedicated applications.
+    - point: 优先用浏览器而非专用 App
+      priority: 可选
+      details: >-
+        能用浏览器访问的网站尽量不用专用 App，提升安全性。
 
-  - point: Consider running a custom ROM (Android)
-    priority: Advanced
-    details: >-
-      If you're concerned about your device manufacturer collecting too much
-      personal information, consider a privacy-focused custom ROM.
+    - point: 考虑刷隐私定制 ROM（Android）
+      priority: 高级
+      details: >-
+        如果担心设备厂商收集过多信息，可考虑刷入注重隐私的第三方 ROM。
   color: fuchsia
   softwareLinks:
-  - title: Mobile Apps, for Security + Privacy
-    url: https://github.com/Lissy93/awesome-privacy#mobile-apps
-  - title: Encrypted Messaging
-    url: https://github.com/Lissy93/awesome-privacy#encrypted-messaging
-  - title: Mobile Operation Systems
-    url: https://github.com/Lissy93/awesome-privacy#mobile-operating-systems
+    - title: 移动安全与隐私应用
+      url: https://github.com/Lissy93/awesome-privacy#mobile-apps
+    - title: 加密通讯
+      url: https://github.com/Lissy93/awesome-privacy#encrypted-messaging
+    - title: 移动操作系统
+      url: https://github.com/Lissy93/awesome-privacy#mobile-operating-systems
 
-- title: Personal Computers
+- title: 个人电脑
   slug: personal-computers
-  description: Securing your PC's operating system, data & activity
+  description: 保护你的操作系统、数据和活动安全
   icon: computer
-  intro: >
-    Although Windows and OS X are easy to use and convenient, they both are far from secure.
-    Your OS provides the interface between hardware and your applications, so if
-    compromised can have detrimental effects.
+  intro: >-
+    虽然 Windows 和 macOS 使用方便，但它们距离“安全”还有很大差距。
+    操作系统是硬件与应用之间的桥梁，一旦被攻破，后果极其严重。
   checklist:
-  - point: Keep your System up-to-date
-    priority: Essential
-    details: >-
-      System updates contain fixes/patches for security issues, improve performance, and sometimes add new
-      features. Install new updates when prompted.
+    - point: 保持系统及时更新
+      priority: 基本
+      details: >-
+        系统更新包含安全补丁、性能改进和新功能。收到更新提示时请及时安装。
 
-  - point: Encrypt your Device
-    priority: Essential
-    details: >-
-      Use BitLocker for Windows, FileVault on MacOS, or LUKS on Linux, to enable full disk encryption. This
-      prevents unauthorized access if your computer is lost or stolen.
+    - point: 加密你的设备
+      priority: 基本
+      details: >-
+        Windows 可用 BitLocker，MacOS 用 FileVault，Linux 用 LUKS 启用全盘加密。这样即使电脑丢失或被盗，数据也不会被非法访问。
 
-  - point: Backup Important Data
-    priority: Essential
-    details: >-
-      Maintaining encrypted backups prevents loss due to ransomware, theft, or damage. Consider using
-      [Cryptomator](https://awesome-privacy.xyz/security-tools/mobile-apps/cryptomator)
-      for cloud files or [VeraCrypt](https://awesome-privacy.xyz/essentials/file-encryption/veracrypt) for USB drives.
+    - point: 备份重要数据
+      priority: 基本
+      details: >-
+        定期加密备份可防止因勒索软件、盗窃或损坏导致的数据丢失。云端文件可用 [Cryptomator](https://awesome-privacy.xyz/security-tools/mobile-apps/cryptomator)，U盘可用 [VeraCrypt](https://awesome-privacy.xyz/essentials/file-encryption/veracrypt)。
 
-  - point: Be Careful Plugging USB Devices into your Computer
-    priority: Essential
-    details: >-
-      USB devices can pose serious threats. Consider making a USB sanitizer with CIRCLean to safely check USB
-      devices.
+    - point: 谨慎插入 USB 设备
+      priority: 基本
+      details: >-
+        USB 设备可能带来严重威胁。可用 CIRCLean 制作 USB 杀毒器，先检查再使用。
 
-  - point: Activate Screen-Lock when Idle
-    priority: Essential
-    details: >-
-      Lock your computer when away and set it to require a password on resume from screensaver or sleep to
-      prevent unauthorized access.
+    - point: 离开时锁屏
+      priority: 基本
+      details: >-
+        离开电脑时请锁屏，并设置屏保/睡眠唤醒需输入密码，防止他人操作。
 
-  - point: Disable Cortana or Siri
-    priority: Essential
-    details: >-
-      Voice-controlled assistants can have privacy implications due to data sent back for processing. Disable
-      or limit their listening capabilities.
+    - point: 禁用 Cortana 或 Siri
+      priority: 基本
+      details: >-
+        语音助手会将数据上传处理，存在隐私风险。建议关闭或限制其监听能力。
 
-  - point: Review your Installed Apps
-    priority: Essential
-    details: >-
-      Keep installed applications to a minimum to reduce exposure to vulnerabilities and regularly clear
-      application caches.
+    - point: 定期检查已安装应用
+      priority: 基本
+      details: >-
+        保持应用数量最少，减少漏洞暴露面，并定期清理应用缓存。
 
-  - point: Manage Permissions
-    priority: Essential
-    details: >-
-      Control which apps have access to your location, camera, microphone, contacts, and other sensitive
-      information.
+    - point: 管理应用权限
+      priority: 基本
+      details: >-
+        控制哪些应用可访问定位、摄像头、麦克风、联系人等敏感信息。
 
-  - point: Disallow Usage Data from being sent to the Cloud
-    priority: Essential
-    details: >-
-      Limit the amount of usage information or feedback sent to the cloud to protect your privacy.
+    - point: 禁止使用数据上传到云端
+      priority: 基本
+      details: >-
+        限制使用数据或反馈上传到云端，保护隐私。
 
-  - point: Avoid Quick Unlock
-    priority: Essential
-    details: >-
-      Use a strong password instead of biometrics or short PINs for unlocking your computer to enhance
-      security.
+    - point: 避免“快速解锁”
+      priority: 基本
+      details: >-
+        解锁电脑建议用强密码，不要用生物识别或短 PIN，提升安全性。
 
-  - point: Power Off Computer, instead of Standby
-    priority: Essential
-    details: >-
-      Shut down your device when not in use, especially if your disk is encrypted, to keep data secure.
+    - point: 建议关机而非待机
+      priority: 基本
+      details: >-
+        不用电脑时建议关机，尤其是已加密磁盘，关机可最大限度保护数据。
 
-  - point: Don't link your PC with your Microsoft or Apple Account
-    priority: Optional
-    details: >-
-      Use a local account only to prevent data syncing and exposure. Avoid using sync services that compromise
-      privacy.
+    - point: 不要用微软/苹果账户登录电脑
+      priority: 可选
+      details: >-
+        只用本地账户，避免数据同步和隐私泄露。避免使用会上传数据的同步服务。
 
-  - point: Check which Sharing Services are Enabled
-    priority: Optional
-    details: >-
-      Disable network sharing features you are not using to close gateways to common threats.
+    - point: 检查已启用的共享服务
+      priority: 可选
+      details: >-
+        关闭不需要的网络共享功能，减少被攻击入口。
 
-  - point: Don't use Root/Admin Account for Non-Admin Tasks
-    priority: Optional
-    details: >-
-      Use an unprivileged user account for daily tasks and only elevate permissions for administrative changes
-      to mitigate vulnerabilities.
+    - point: 日常操作不用管理员账户
+      priority: 可选
+      details: >-
+        日常用普通账户，只有需要时才提升权限，降低系统被攻破的风险。
 
-  - point: Block Webcam + Microphone
-    priority: Optional
-    details: >-
-      Cover your webcam when not in use and consider blocking unauthorized audio recording to protect privacy.
+    - point: 屏蔽摄像头和麦克风
+      priority: 可选
+      details: >-
+        不用时用物理遮挡摄像头，必要时屏蔽麦克风，防止隐私泄露。
 
-  - point: Use a Privacy Filter
-    priority: Optional
-    details: >-
-      Use a screen privacy filter in public spaces to prevent shoulder surfing and protect sensitive
-      information.
+    - point: 公共场所用防窥膜
+      priority: 可选
+      details: >-
+        公共场合使用防窥屏，防止“偷窥肩膀”泄露敏感信息。
 
-  - point: Physically Secure Device
-    priority: Optional
-    details: >-
-      Use a Kensington Lock to secure your laptop in public spaces and consider port locks to prevent
-      unauthorized physical access.
+    - point: 物理加固设备
+      priority: 可选
+      details: >-
+        公共场所用防盗锁固定笔记本，必要时用端口锁防止物理接入。
 
-  - point: Don't Charge Devices from your PC
-    priority: Optional
-    details: >-
-      Use a power bank or AC wall charger instead of your PC to avoid security risks associated with USB
-      connections.
+    - point: 不用电脑为其他设备充电
+      priority: 可选
+      details: >-
+        用充电宝或插座充电，避免 USB 连接带来的安全风险。
 
-  - point: Randomize your hardware address on Wi-Fi
-    priority: Optional
-    details: >-
-      Modify or randomize your MAC address to protect against tracking across different WiFi networks.
+    - point: WiFi 随机化硬件地址
+      priority: 可选
+      details: >-
+        修改或随机化 MAC 地址，防止在不同 WiFi 网络间被跟踪。
 
-  - point: Use a Firewall
-    priority: Optional
-    details: >-
-      Install a firewall app to monitor and block unwanted internet access by certain applications, protecting
-      against remote access attacks and privacy breaches.
+    - point: 启用防火墙
+      priority: 可选
+      details: >-
+        安装防火墙应用，监控并阻止不需要的网络访问，防止远程攻击和隐私泄露。
 
-  - point: Protect Against Software Keyloggers
-    priority: Optional
-    details: >-
-      Use key stroke encryption tools to protect against software keyloggers recording your keystrokes.
+    - point: 防范软件键盘记录器
+      priority: 可选
+      details: >-
+        可用按键加密工具防止软件键盘记录器窃取输入内容。
 
-  - point: Check Keyboard Connection
-    priority: Optional
-    details: >-
-      Be vigilant for hardware keyloggers when using public or unfamiliar computers by checking keyboard
-      connections.
+    - point: 检查键盘连接
+      priority: 可选
+      details: >-
+        在公共或陌生电脑上使用时，检查键盘接口，警惕硬件键盘记录器。
 
-  - point: Prevent Keystroke Injection Attacks
-    priority: Optional
-    details: >-
-      Lock your PC when away and consider using USBGuard or similar tools to protect against keystroke
-      injection attacks.
+    - point: 防止按键注入攻击
+      priority: 可选
+      details: >-
+        离开电脑时锁屏，可用 USBGuard 等工具防止按键注入攻击。
 
-  - point: Don't use commercial "Free" Anti-Virus
-    priority: Optional
-    details: >-
-      Rely on built-in security tools and avoid free anti-virus applications due to their potential for
-      privacy invasion and data collection.
+    - point: 不用商业“免费”杀毒软件
+      priority: 可选
+      details: >-
+        建议用系统自带安全工具，避免免费杀毒软件带来的隐私和数据收集风险。
 
-  - point: Periodically check for Rootkits
-    priority: Advanced
-    details: >-
-      Regularly check for rootkits to detect and mitigate full system control threats using tools like
-      [chkrootkit](https://awesome-privacy.xyz/operating-systems/linux-defenses/chkrootkit).
+    - point: 定期检查 Rootkit
+      priority: 高级
+      details: >-
+        定期用 [chkrootkit](https://awesome-privacy.xyz/operating-systems/linux-defenses/chkrootkit) 等工具检查 Rootkit，防止系统被完全控制。
 
-  - point: BIOS Boot Password
-    priority: Advanced
-    details: >-
-      Enable a BIOS or UEFI password to add an additional security layer during boot-up, though be aware of
-      its limitations.
+    - point: 设置 BIOS 启动密码
+      priority: 高级
+      details: >-
+        启用 BIOS/UEFI 密码，为开机增加一道安全防线（但有一定局限性）。
 
-  - point: Use a Security-Focused Operating System
-    priority: Advanced
-    details: >-
-      Consider switching to Linux or a security-focused distro like QubeOS or
-      [Tails](https://awesome-privacy.xyz/operating-systems/desktop-operating-systems/tails)
-      for enhanced privacy and
-      security.
+    - point: 使用安全操作系统
+      priority: 高级
+      details: >-
+        可考虑切换到 Linux 或安全型发行版，如 QubeOS 或 [Tails](https://awesome-privacy.xyz/operating-systems/desktop-operating-systems/tails)，提升隐私和安全性。
 
-  - point: Make Use of VMs
-    priority: Advanced
-    details: >-
-      Use virtual machines for risky activities or testing suspicious software to isolate potential threats
-      from your primary system.
+    - point: 使用虚拟机
+      priority: 高级
+      details: >-
+        风险操作或测试可疑软件时用虚拟机隔离，防止主系统被感染。
 
-  - point: Compartmentalize
-    priority: Advanced
-    details: >-
-      Isolate different programs and data sources from one another as much as possible to limit the extent of
-      potential breaches.
+    - point: 分区隔离
+      priority: 高级
+      details: >-
+        尽量让不同程序和数据源相互隔离，降低被攻破后的影响范围。
 
-  - point: Disable Undesired Features (Windows)
-    priority: Advanced
-    details: >-
-      Disable unnecessary Windows "features" and services that run in the background to reduce data collection
-      and resource use.
+    - point: 禁用不需要的 Windows 功能
+      priority: 高级
+      details: >-
+        关闭不必要的 Windows 功能和后台服务，减少数据收集和资源占用。
 
-  - point: Secure Boot
-    priority: Advanced
-    details: >-
-      Ensure that Secure Boot is enabled to prevent malware from replacing your boot loader and other critical
-      software.
+    - point: 启用安全启动
+      priority: 高级
+      details: >-
+        启用 Secure Boot，防止恶意软件替换启动加载器和关键系统文件。
 
-  - point: Secure SSH Access
-    priority: Advanced
-    details: >-
-      Take steps to protect SSH access from attacks by changing the default port, using SSH keys, and
-      configuring firewalls.
+    - point: 加固 SSH 访问
+      priority: 高级
+      details: >-
+        修改默认端口、用 SSH 密钥、配置防火墙等措施保护 SSH 远程访问。
 
-  - point: Close Un-used Open Ports
-    priority: Advanced
-    details: >-
-      Turn off services listening on external ports that are not needed to protect against remote exploits and
-      improve security.
+    - point: 关闭未用端口
+      priority: 高级
+      details: >-
+        关闭所有不需要的外部端口监听，防止远程漏洞利用。
 
-  - point: Implement Mandatory Access Control
-    priority: Advanced
-    details: >-
-      Restrict privileged access to limit the damage that can be done if a system is compromised.
+    - point: 强制访问控制
+      priority: 高级
+      details: >-
+        限制高权限访问，防止系统被攻破后造成更大损失。
 
-  - point: Use Canary Tokens
-    priority: Advanced
-    details: >-
-      Deploy canary tokens to detect unauthorized access to your files or emails faster and gather
-      information about the intruder.
+    - point: 使用蜜罐令牌
+      priority: 高级
+      details: >-
+        部署蜜罐令牌（Canary Token），可在文件或邮件被非法访问时第一时间获知并追踪入侵者信息。
   color: pink
   softwareLinks:
-  - title: Secure Operating Systems
-    url: https://github.com/Lissy93/awesome-privacy#desktop-operating-systems
-  - title: Linux Defenses
-    url: https://github.com/Lissy93/awesome-privacy#linux-defences
-  - title: Windows Defenses
-    url: https://github.com/Lissy93/awesome-privacy#windows-defences
-  - title: Mac OS Defenses
-    url: https://github.com/Lissy93/awesome-privacy#mac-os-defences
-  - title: Anti-Malware
-    url: https://github.com/Lissy93/awesome-privacy#anti-malware
-  - title: Firewalls
-    url: https://github.com/Lissy93/awesome-privacy#firewalls-1
-  - title: File Encryption
-    url: https://github.com/Lissy93/awesome-privacy#file-encryption
+    - title: 安全操作系统
+      url: https://github.com/Lissy93/awesome-privacy#desktop-operating-systems
+    - title: Linux 防护
+      url: https://github.com/Lissy93/awesome-privacy#linux-defences
+    - title: Windows 防护
+      url: https://github.com/Lissy93/awesome-privacy#windows-defences
+    - title: Mac OS 防护
+      url: https://github.com/Lissy93/awesome-privacy#mac-os-defences
+    - title: 反恶意软件
+      url: https://github.com/Lissy93/awesome-privacy#anti-malware
+    - title: 防火墙
+      url: https://github.com/Lissy93/awesome-privacy#firewalls-1
+    - title: 文件加密
+      url: https://github.com/Lissy93/awesome-privacy#file-encryption
 
-- title: Smart Home
+- title: 智能家居
   slug: smart-home
-  description: Using IoT devices without compromising your privacy
+  description: 使用物联网设备时保护你的隐私
   icon: home
   intro: >-
-    Home assistants (such as Google Home, Alexa and Siri) and other internet connected
-    devices collect large amounts of personal data (including voice samples, location data,
-    home details and logs of all interactions). Since you have limited control on what is
-    being collected, how it's stored, and what it will be used for, this makes it hard to
-    recommend any consumer smart-home products to anyone who cares about privacy and security.
+    家庭助理（如 Google Home、Alexa 和 Siri）及其他联网设备会收集大量个人数据（包括语音样本、位置信息、家庭细节和所有交互日志）。你对这些数据的收集、存储和用途几乎无法控制，因此对于重视隐私和安全的用户，不建议使用任何消费级智能家居产品。
 
-    Security vs Privacy: There are many smart devices on the market that claim to increase
-    the security of your home while being easy and convenient to use (Such as Smart Burglar
-    Alarms, Internet Security Cameras, Smart Locks and Remote access Doorbells to name a few).
-    These devices may appear to make security easier, but there is a trade-off in terms of
-    privacy: as they collect large amounts of personal data, and leave you without control
-    over how this is stored or used. The security of these devices is also questionable,
-    since many of them can be (and are being) hacked, allowing an intruder to bypass
-    detection with minimum effort.
+    安全 vs 隐私：市面上许多智能设备声称能提升家庭安全且易用（如智能防盗报警器、网络摄像头、智能门锁和远程门铃等）。这些设备看似让安全更简单，但隐私却是巨大的代价：它们会收集大量个人数据，你无法掌控这些数据的存储和用途。这些设备的安全性也值得怀疑，许多设备已被攻破，入侵者可轻松绕过检测。
 
-    The most privacy-respecting option, would be to not use "smart" internet-connected
-    devices in your home, and not to rely on a security device that requires an internet
-    connection. But if you do, it is important to fully understand the risks of any given
-    product, before buying it. Then adjust settings to increase privacy and security.
-    The following checklist will help mitigate the risks associated with
-    internet-connected home devices.
+    最尊重隐私的做法是：家中不使用任何“智能”联网设备，也不依赖需要联网的安全设备。但如果你确实需要使用，务必在购买前充分了解产品的风险，并调整设置以提升隐私和安全。以下清单可帮助你降低智能家居设备带来的风险。
   checklist:
-  - point: Rename devices to not specify brand/model
-    priority: Essential
-    details: >-
-      Change default device names to something generic to prevent targeted attacks by obscuring brand or model information.
+    - point: 重命名设备，避免包含品牌/型号
+      priority: 基本
+      details: >-
+        修改设备默认名称为通用名称，避免泄露品牌或型号信息，降低被定向攻击的风险。
 
-  - point: Disable microphone and camera when not in use
-    priority: Essential
-    details: >-
-      Use hardware switches to turn off microphones and cameras on smart devices to protect against accidental recordings or targeted access.
+    - point: 不用时关闭麦克风和摄像头
+      priority: 基本
+      details: >-
+        使用硬件开关关闭智能设备的麦克风和摄像头，防止被误录或被远程访问。
 
-  - point: Understand what data is collected, stored and transmitted
-    priority: Essential
-    details: >-
-      Research and ensure comfort with the data handling practices of smart home devices before purchase, avoiding devices that share data with third parties.
+    - point: 了解设备收集、存储和传输的数据
+      priority: 基本
+      details: >-
+        购买前请查阅并确认设备的数据处理政策，避免选择会与第三方共享数据的产品。
 
-  - point: Set privacy settings, and opt out of sharing data with third parties
-    priority: Essential
-    details: >-
-      Adjust app settings for strictest privacy controls and opt-out of data sharing with third parties wherever possible.
+    - point: 设置隐私选项并拒绝数据共享
+      priority: 基本
+      details: >-
+        在应用中调整为最严格的隐私设置，并尽可能选择不与第三方共享数据。
 
-  - point: Don't link your smart home devices to your real identity
-    priority: Essential
-    details: >-
-      Use anonymous usernames and passwords, avoiding sign-up/log-in via social media or other third-party services to maintain privacy.
+    - point: 不要用真实身份注册智能家居设备
+      priority: 基本
+      details: >-
+        使用匿名用户名和密码注册，避免用社交媒体或第三方服务登录，保护个人隐私。
 
-  - point: Keep firmware up-to-date
-    priority: Essential
-    details: >-
-      Regularly update smart device firmware to apply security patches and enhancements.
+    - point: 固件保持最新
+      priority: 基本
+      details: >-
+        定期更新智能设备固件，及时修复安全漏洞和提升安全性。
 
-  - point: Protect your Network
-    priority: Essential
-    details: >-
-      Secure your home WiFi and network to prevent unauthorized access to smart devices.
+    - point: 保护你的家庭网络
+      priority: 基本
+      details: >-
+        加固家庭 WiFi 和局域网，防止未授权访问智能设备。
 
-  - point: Be wary of wearables
-    priority: Optional
-    details: >-
-      Consider the extensive data collection capabilities of wearable devices and their implications for privacy.
+    - point: 谨慎使用可穿戴设备
+      priority: 可选
+      details: >-
+        可穿戴设备的数据收集能力极强，使用前请充分考虑其隐私影响。
 
-  - point: Don't connect your home's critical infrastructure to the Internet
-    priority: Optional
-    details: >-
-      Evaluate the risks of internet-connected thermostats, alarms, and detectors due to potential remote access by hackers.
+    - point: 不要让家庭关键基础设施联网
+      priority: 可选
+      details: >-
+        评估联网温控器、报警器、探测器等设备的风险，避免被黑客远程控制。
 
-  - point: Mitigate Alexa/ Google Home Risks
-    priority: Optional
-    details: >-
-      Consider privacy-focused alternatives like
-      [Mycroft](https://awesome-privacy.xyz/smart-home-and-iot/voice-assistants/mycroft) or use
-      Project Alias to prevent idle listening by voice-activated assistants.
+    - point: 降低 Alexa/Google Home 风险
+      priority: 可选
+      details: >-
+        可考虑使用注重隐私的替代方案（如 [Mycroft](https://awesome-privacy.xyz/smart-home-and-iot/voice-assistants/mycroft)），或用 Project Alias 阻止语音助手常时监听。
 
-  - point: Monitor your home network closely
-    priority: Optional
-    details: >-
-      Use tools like FingBox or router features to monitor for unusual network activity.
+    - point: 监控家庭网络
+      priority: 可选
+      details: >-
+        使用 FingBox 或路由器自带功能监控异常网络活动。
 
-  - point: Deny Internet access where possible
-    priority: Advanced
-    details: >-
-      Use firewalls to block internet access for devices that don't need it, limiting operation to local network use.
+    - point: 能断网就断网
+      priority: 高级
+      details: >-
+        对不需要联网的设备用防火墙阻断其互联网访问，仅允许本地网络通信。
 
-  - point: Assess risks
-    priority: Advanced
-    details: >-
-      Consider the privacy implications for all household members and adjust device settings for security and privacy, such as disabling devices at certain times.
+    - point: 评估风险
+      priority: 高级
+      details: >-
+        考虑所有家庭成员的隐私需求，合理调整设备设置，如定时关闭设备等。
   color: red
   softwareLinks:
-  - title: Home Automation
-    url: https://github.com/Lissy93/awesome-privacy#home-automation
-  - title: AI Voice Assistants
-    url: https://github.com/Lissy93/awesome-privacy#ai-voice-assistants
+    - title: 家庭自动化
+      url: https://github.com/Lissy93/awesome-privacy#home-automation
+    - title: AI 语音助手
+      url: https://github.com/Lissy93/awesome-privacy#ai-voice-assistants
 
-- title: Personal Finance
+- title: 个人理财
   slug: personal-finance
-  description: Protecting your funds, financial accounts and transactions
+  description: 保护你的资金、金融账户和交易安全
   icon: finance
   intro: >-
-    Credit card fraud is the most common form of identity theft (with [133,015 reports in the
-    US in 2017 alone](https://www.experian.com/blogs/ask-experian/identity-theft-statistics/)),
-    and a total loss of $905 million, which was a 26% increase from the previous year.
-    The with a median amount lost per person was $429 in 2017.
-    It's more important than ever to take basic steps to protect yourself from falling victim
+    信用卡欺诈是最常见的身份盗窃形式（仅2017年美国就有[133,015起报告](https://www.experian.com/blogs/ask-experian/identity-theft-statistics/)，
+    损失总额达9.05亿美元，比上一年增长26%。2017年人均损失中位数为429美元。
+    因此采取基本措施保护自己免受金融欺诈比以往任何时候都更重要。
 
-    Note about credit cards: Credit cards have technological methods in place to
-    detect and stop some fraudulent transactions. Major payment processors implement
-    this, by mining huge amounts of data from their card holders, in order to know
-    a great deal about each persons spending habits. This data is used to identify
-    fraud, but is also sold onto other data brokers. Credit cards are therefore good
-    for security, but terrible for data privacy.
+    关于信用卡的说明：信用卡具备一定的技术手段来检测和阻止部分欺诈交易。主要支付处理商会通过分析持卡人大量数据，了解每个人的消费习惯。这些数据既用于识别欺诈，也会被出售给其他数据经纪公司。因此，信用卡在安全性上表现不错，但在数据隐私方面却很糟糕。
   checklist:
-  - point: Sign up for Fraud Alerts and Credit Monitoring
-    priority: Essential
-    details: >-
-      Enable fraud alerts and credit monitoring through Experian, TransUnion, or Equifax to be alerted of suspicious activity.
+    - point: 开通欺诈提醒和信用监控
+      priority: 基本
+      details: >-
+        通过 Experian、TransUnion 或 Equifax 启用欺诈提醒和信用监控服务，及时获知可疑活动。
 
-  - point: Apply a Credit Freeze
-    priority: Essential
-    details: >-
-      Prevent unauthorized credit inquiries by freezing your credit through Experian, TransUnion, and Equifax.
+    - point: 冻结信用报告
+      priority: 基本
+      details: >-
+        通过 Experian、TransUnion 和 Equifax 冻结信用报告，防止未经授权的信用查询。
 
-  - point: Use Virtual Cards
-    priority: Optional
-    details: >-
-      Utilize virtual card numbers for online transactions to protect your real banking details. Services like [Privacy.com](https://awesome-privacy.xyz/finance/virtual-credit-cards/privacy.com) and [MySudo](https://awesome-privacy.xyz/finance/virtual-credit-cards/mysudo) offer such features.
+    - point: 使用虚拟信用卡
+      priority: 可选
+      details: >-
+        在线购物时使用虚拟卡号，保护真实银行信息。可用 [Privacy.com](https://awesome-privacy.xyz/finance/virtual-credit-cards/privacy.com) 和 [MySudo](https://awesome-privacy.xyz/finance/virtual-credit-cards/mysudo) 等服务。
 
-  - point: Use Cash for Local Transactions
-    priority: Optional
-    details: >-
-      Pay with [Cash](https://awesome-privacy.xyz/finance/other-payment-methods/cash) for local and everyday purchases to avoid financial profiling by institutions.
+    - point: 本地消费优先用现金
+      priority: 可选
+      details: >-
+        日常和本地消费尽量用[现金](https://awesome-privacy.xyz/finance/other-payment-methods/cash)，避免被金融机构画像。
 
-  - point: Use Cryptocurrency for Online Transactions
-    priority: Optional
-    details: >-
-      Opt for privacy-focused cryptocurrencies like
-      [Monero](https://awesome-privacy.xyz/finance/cryptocurrencies/monero) for
-      online transactions to maintain anonymity. Use cryptocurrencies wisely to ensure privacy.
+    - point: 在线支付可用加密货币
+      priority: 可选
+      details: >-
+        在线支付时可选择注重隐私的加密货币，如 [Monero](https://awesome-privacy.xyz/finance/cryptocurrencies/monero)，以保护匿名性。合理使用加密货币以确保隐私。
 
-  - point: Store Crypto Securely
-    priority: Advanced
-    details: >-
-      Securely store cryptocurrencies using offline wallet generation, hardware wallets
-      like [Trezor](https://awesome-privacy.xyz/finance/crypto-wallets/trezor) or
-      [ColdCard](https://awesome-privacy.xyz/finance/crypto-wallets/coldcard), or
-      consider long-term storage solutions like
-      [CryptoSteel](https://awesome-privacy.xyz/finance/crypto-wallets/cryptosteel).
+    - point: 安全存储加密货币
+      priority: 高级
+      details: >-
+        使用离线钱包、硬件钱包（如 [Trezor](https://awesome-privacy.xyz/finance/crypto-wallets/trezor) 或 [ColdCard](https://awesome-privacy.xyz/finance/crypto-wallets/coldcard)）安全存储加密货币，或用 [CryptoSteel](https://awesome-privacy.xyz/finance/crypto-wallets/cryptosteel) 等方案长期保存助记词。
 
-  - point: Buy Crypto Anonymously
-    priority: Advanced
-    details: >-
-      Purchase cryptocurrencies without linking to your identity through services
-      like [LocalBitcoins](https://awesome-privacy.xyz/finance/crypto-exchanges/localbitcoins),
-      [Bisq](https://awesome-privacy.xyz/finance/crypto-exchanges/bisq), or Bitcoin ATMs.
+    - point: 匿名购买加密货币
+      priority: 高级
+      details: >-
+        通过 [LocalBitcoins](https://awesome-privacy.xyz/finance/crypto-exchanges/localbitcoins)、[Bisq](https://awesome-privacy.xyz/finance/crypto-exchanges/bisq) 或比特币ATM等服务匿名购买加密货币，避免与身份绑定。
 
-  - point: Tumble/ Mix Coins
-    priority: Advanced
-    details: >-
-      Use a bitcoin mixer or CoinJoin before converting Bitcoin to currency to obscure transaction trails.
+    - point: 混币/混合交易
+      priority: 高级
+      details: >-
+        在将比特币兑换为法币前，使用比特币混币器或 CoinJoin 混合交易，模糊交易链条。
 
-  - point: Use an Alias Details for Online Shopping
-    priority: Advanced
-    details: >-
-      For online purchases, consider using alias details, forwarding email addresses, VOIP numbers, and secure delivery methods to protect your identity.
+    - point: 网购使用别名信息
+      priority: 高级
+      details: >-
+        网购时可用别名、转发邮箱、VOIP 虚拟号码和安全收货方式，保护真实身份。
 
-  - point: Use alternate delivery address
-    priority: Advanced
-    details: >-
-      Opt for deliveries to non-personal addresses such as PO Boxes, forwarding addresses, or local pickup locations to avoid linking purchases directly to you.
+    - point: 使用替代收货地址
+      priority: 高级
+      details: >-
+        选择非个人住址（如邮政信箱、转运地址或自提点）收货，避免购物记录直接关联到本人。
   color: purple
   softwareLinks:
-  - title: Virtual Credit Cards
-    url: https://github.com/Lissy93/awesome-privacy#virtual-credit-cards
-  - title: Cryptocurrencies
-    url: https://github.com/Lissy93/awesome-privacy#cryptocurrencies
-  - title: Crypto Wallets
-    url: https://github.com/Lissy93/awesome-privacy#crypto-wallets
-  - title: Crypto Exchanges
-    url: https://github.com/Lissy93/awesome-privacy#crypto-exchanges
-  - title: Other Payment Methods
-    url: https://github.com/Lissy93/awesome-privacy#other-payment-methods
-  - title: Budgeting Tools
-    url: https://github.com/Lissy93/awesome-privacy#budgeting-tools
+    - title: 虚拟信用卡
+      url: https://github.com/Lissy93/awesome-privacy#virtual-credit-cards
+    - title: 加密货币
+      url: https://github.com/Lissy93/awesome-privacy#cryptocurrencies
+    - title: 加密货币钱包
+      url: https://github.com/Lissy93/awesome-privacy#crypto-wallets
+    - title: 加密货币交易所
+      url: https://github.com/Lissy93/awesome-privacy#crypto-exchanges
+    - title: 其他支付方式
+      url: https://github.com/Lissy93/awesome-privacy#other-payment-methods
+    - title: 预算管理工具
+      url: https://github.com/Lissy93/awesome-privacy#budgeting-tools
 
-- title: Human Aspect
+- title: 人为因素
   slug: human-aspect
-  description: Avoiding social engineering security risks
+  description: 避免社会工程学带来的安全风险
   icon: human
   intro: >-
-    Many data breaches, hacks and attacks are caused by human error.
-    The following list contains steps you should take, to reduce the risk of this
-    happening to you. Many of them are common sense, but it's worth takin note of.
+    许多数据泄露、黑客攻击和安全事件都是由人为失误造成的。
+    以下清单包含了你应采取的措施，以降低此类风险。很多建议看似常识，但值得反复提醒。
 
   checklist:
-  - point: Verify Recipients
-    priority: Essential
-    details: >-
-      Emails can be easily spoofed. Verify the sender's authenticity, especially for sensitive actions, and prefer entering URLs manually rather than clicking links in emails.
+    - point: 核实收件人身份
+      priority: 基本
+      details: >-
+        邮件很容易被伪造。尤其在涉及敏感操作时，请核实发件人身份，尽量手动输入网址而不是点击邮件中的链接。
 
-  - point: Don't Trust Your Popup Notifications
-    priority: Essential
-    details: >-
-      Fake pop-ups can be deployed by malicious actors. Always check the URL before entering any information on a popup.
+    - point: 不要轻信弹窗通知
+      priority: 基本
+      details: >-
+        恶意分子可能伪造弹窗。输入任何信息前务必检查网址，确保弹窗来源可信。
 
-  - point: Never Leave Device Unattended
-    priority: Essential
-    details: >-
-      Unattended devices can be compromised even with strong passwords. Use encryption and remote erase features like Find My Phone for lost devices.
+    - point: 设备切勿无人看管
+      priority: 基本
+      details: >-
+        即使设置了强密码，设备无人看管时也可能被攻破。请启用加密和远程擦除功能（如“查找我的手机”）以防丢失。
 
-  - point: Prevent Camfecting
-    priority: Essential
-    details: >-
-      Protect against camfecting by using webcam covers and microphone blockers. Mute home assistants when not in use or discussing sensitive matters.
+    - point: 防范摄像头劫持
+      priority: 基本
+      details: >-
+        使用摄像头物理遮挡和麦克风屏蔽器。闲置或讨论敏感内容时关闭家庭助理的麦克风。
 
-  - point: Stay protected from shoulder surfers
-    priority: Essential
-    details: >-
-      Use privacy screens on laptops and mobiles to prevent others from reading your screen in public spaces.
+    - point: 防止“偷窥肩膀”
+      priority: 基本
+      details: >-
+        在公共场所使用隐私屏，防止他人偷看你的屏幕内容。
 
-  - point: Educate yourself about phishing attacks
-    priority: Essential
-    details: >-
-      Be cautious of phishing attempts. Verify URLs, context of received messages, and employ good security practices like using 2FA and not reusing passwords.
+    - point: 学习识别钓鱼攻击
+      priority: 基本
+      details: >-
+        警惕钓鱼攻击。核实网址、消息上下文，养成良好安全习惯，如使用2FA、不重复用密码等。
 
-  - point: Watch out for Stalkerware
-    priority: Essential
-    details: >-
-      Be aware of stalkerware installed by acquaintances for spying. Look out for signs like unusual battery usage and perform factory resets if suspected.
+    - point: 警惕跟踪软件
+      priority: 基本
+      details: >-
+        熟人可能会安装跟踪软件进行监控。注意异常耗电等迹象，怀疑时可恢复出厂设置。
 
-  - point: Install Reputable Software from Trusted Sources
-    priority: Essential
-    details: >-
-      Only download software from legitimate sources and check files with tools
-      like [Virus Total](https://awesome-privacy.xyz/security-tools/online-tools/virus-total) before installation.
+    - point: 只从可信渠道安装软件
+      priority: 基本
+      details: >-
+        只从正规渠道下载软件，安装前可用 [Virus Total](https://awesome-privacy.xyz/security-tools/online-tools/virus-total) 等工具检测文件。
 
-  - point: Store personal data securely
-    priority: Essential
-    details: >-
-      Ensure all personal data on devices or in the cloud is encrypted to protect against unauthorized access.
+    - point: 个人数据加密存储
+      priority: 基本
+      details: >-
+        设备或云端的所有个人数据都应加密，防止未授权访问。
 
-  - point: Obscure Personal Details from Documents
-    priority: Essential
-    details: >-
-      When sharing documents, obscure personal details with opaque rectangles to prevent information leakage.
+    - point: 文档脱敏处理
+      priority: 基本
+      details: >-
+        分享文档前用不透明矩形遮盖个人信息，防止信息泄露。
 
-  - point: Do not assume a site is secure, just because it is `HTTPS`
-    priority: Essential
-    details: >-
-      HTTPS does not guarantee a website's legitimacy. Verify URLs and exercise caution with personal data.
+    - point: 不要因 HTTPS 就信任网站
+      priority: 基本
+      details: >-
+        HTTPS 不能保证网站真实可信。务必核实网址，谨慎输入个人信息。
 
-  - point: Use Virtual Cards when paying online
-    priority: Optional
-    details: >-
-      Use virtual cards for online payments to protect your banking details and limit transaction risks.
+    - point: 在线支付优先用虚拟卡
+      priority: 可选
+      details: >-
+        在线支付时用虚拟信用卡，保护真实银行信息，降低交易风险。
 
-  - point: Review application permissions
-    priority: Optional
-    details: >-
-      Regularly review and manage app permissions to ensure no unnecessary access to sensitive device features.
+    - point: 定期检查应用权限
+      priority: 可选
+      details: >-
+        定期检查和管理应用权限，避免不必要的敏感功能被访问。
 
-  - point: Opt-out of public lists
-    priority: Optional
-    details: >-
-      Remove yourself from public databases and marketing lists to reduce unwanted contacts and potential risks.
+    - point: 退出公开名单
+      priority: 可选
+      details: >-
+        从公开数据库和营销名单中移除自己，减少骚扰和风险。
 
-  - point: Never Provide Additional PII When Opting-Out
-    priority: Optional
-    details: >-
-      Do not provide additional personal information when opting out of data services to avoid further data collection.
+    - point: 退出时勿额外提供个人信息
+      priority: 可选
+      details: >-
+        退出数据服务时不要再提供额外个人信息，避免被进一步收集。
 
-  - point: Opt-out of data sharing
-    priority: Optional
-    details: >-
-      Many apps and services default to data sharing settings. Opt out to protect your data from being shared with third parties.
+    - point: 关闭数据共享
+      priority: 可选
+      details: >-
+        很多应用和服务默认开启数据共享。主动关闭，防止数据被第三方获取。
 
-  - point: Review and update social media privacy
-    priority: Optional
-    details: >-
-      Regularly check and update your social media settings due to frequent terms updates that may affect your privacy settings.
+    - point: 定期检查社交媒体隐私设置
+      priority: 可选
+      details: >-
+        社交平台条款常变，建议定期检查和更新隐私设置。
 
-  - point: Compartmentalize
-    priority: Advanced
-    details: >-
-      Keep different areas of digital activity separate to limit data exposure in case of a breach.
+    - point: 区隔不同数字身份
+      priority: 高级
+      details: >-
+        将不同领域的数字活动分开，降低某一身份被攻破时的整体风险。
 
-  - point: WhoIs Privacy Guard
-    priority: Advanced
-    details: >-
-      Use WhoIs Privacy Guard for domain registrations to protect your personal information from public searches.
+    - point: 域名注册用 WhoIs 隐私保护
+      priority: 高级
+      details: >-
+        注册域名时使用 WhoIs 隐私保护，防止个人信息被公开查询。
 
-  - point: Use a forwarding address
-    priority: Advanced
-    details: >-
-      Use a PO Box or forwarding address for mail to prevent companies from knowing your real address, adding a layer of privacy protection.
+    - point: 使用转发地址
+      priority: 高级
+      details: >-
+        邮件和快递可用邮政信箱或转发地址，防止公司获取你的真实住址，提升隐私保护。
 
-  - point: Use anonymous payment methods
-    priority: Advanced
-    details: >-
-      Opt for anonymous payment methods like cryptocurrencies to avoid entering identifiable information online.
-
+    - point: 使用匿名支付方式
+      priority: 高级
+      details: >-
+        在线支付时可用加密货币等匿名方式，避免暴露身份信息。
   color: indigo
 
-- title: Physical Security
+- title: 物理安全
   slug: physical-security
-  description: Taking measures to prevent IRL security incidents
+  description: 采取措施防止现实世界中的安全事件
   icon: physical
   intro: >-
-    Public records often include sensitive personal data (full name, date of birth,
-    phone number, email, address, ethnicity etc), and are gathered from a range of
-    sources (census records, birth/ death/ marriage certificates, voter registrants,
-    marketing information, customer databases, motor vehicle records, professional/
-    business licenses and all court files in full detail). This sensitive personal
-    information is
-    [easy and legal to access](https://www.consumerreports.org/consumerist/its-creepy-but-not-illegal-for-this-website-to-provide-all-your-public-info-to-anyone/),
-    which raises some [serious privacy concerns](https://privacyrights.org/resources/public-records-internet-privacy-dilemma)
-    (identity theft, personal safety risks/ stalkers, destruction of reputations, dossier society)
+    许多公共记录包含敏感的个人数据（如全名、出生日期、电话号码、邮箱、住址、族裔等），这些信息来自多种渠道（人口普查、出生/死亡/结婚证、选民登记、营销信息、客户数据库、机动车记录、职业/营业执照以及所有法院档案等）。这些敏感信息[很容易且合法地被获取](https://www.consumerreports.org/consumerist/its-creepy-but-not-illegal-for-this-website-to-provide-all-your-public-info-to-anyone/)，这带来了[严重的隐私风险](https://privacyrights.org/resources/public-records-internet-privacy-dilemma)（身份盗窃、人身安全风险/跟踪、名誉受损、档案社会）。
 
+    闭路电视（CCTV）是企业、个人和政府追踪你行踪的主要方式之一。在英国伦敦，普通人每天大约会被摄像头拍到500次。这个网络还在不断扩展，许多城市正在部署人脸识别，意味着政府可以实时识别录像中的居民身份。
 
-    CCTV is one of the major ways that the corporations, individuals and the government
-    tracks your movements. In London, UK the average person is caught on camera about
-    500 times per day. This network is continuing to grow, and in many cities around
-    the world, facial recognition is being rolled out, meaning the state can know
-    the identity of residents on the footage in real-time.
-
-    Strong authentication, encrypted devices, patched software and anonymous web
-    browsing may be of little use if someone is able to physically compromise you,
-    your devices and your data. This section outlines some basic methods for physical security
+    即使你采用了强身份验证、设备加密、及时打补丁和匿名上网，如果有人能物理接触你、你的设备和数据，这些措施也可能失效。本节介绍了一些基础的物理安全方法。
 
   checklist:
-  - point: Destroy Sensitive Documents
-    priority: Essential
-    details: |
-      Shred or redact sensitive documents before disposal to protect against
-      identity theft and maintain confidentiality.
+    - point: 销毁敏感文件
+      priority: 基本
+      details: >-
+        丢弃前请将敏感文件粉碎或涂黑关键信息，以防身份盗窃和信息泄露。
 
-  - point: Opt-Out of Public Records
-    priority: Essential
-    details: |
-      Contact people search websites to opt-out from listings that show persona
-      information, using guides like Michael Bazzell's Personal Data Removal Workbook.
+    - point: 申请移除公开记录
+      priority: 基本
+      details: >-
+        联系“人肉搜索”类网站，申请移除包含个人信息的公开条目。可参考 Michael Bazzell 的个人数据移除手册。
 
-  - point: Watermark Documents
-    priority: Essential
-    details: |
-      Add a watermark with the recipient's name and date to digital copies of
-      personal documents to trace the source of a breach.
+    - point: 文件加水印
+      priority: 基本
+      details: >-
+        给电子版个人文件添加收件人姓名和日期水印，便于泄露时追溯来源。
 
-  - point: Don't Reveal Info on Inbound Calls
-    priority: Essential
-    details: |
-      Only share personal data on calls you initiate and verify the recipient's phone number.
+    - point: 不在来电中泄露信息
+      priority: 基本
+      details: >-
+        只在你主动拨打的电话中分享个人信息，并核实对方号码。
 
-  - point: Stay Alert
-    priority: Essential
-    details: Be aware of your surroundings and assess potential risks in new environments.
+    - point: 保持警觉
+      priority: 基本
+      details: >-
+        注意周围环境，在陌生场所评估潜在风险。
 
-  - point: Secure Perimeter
-    priority: Essential
-    details: Ensure physical security of locations storing personal info devices, minimizing external access and using intrusion detection systems.
+    - point: 加固物理边界
+      priority: 基本
+      details: >-
+        存放个人信息和设备的场所应加强物理安全，减少外部访问，并使用入侵检测系统。
 
-  - point: Physically Secure Devices
-    priority: Essential
-    details: Use physical security measures like Kensington locks, webcam covers, and privacy screens for devices.
+    - point: 物理加固设备
+      priority: 基本
+      details: >-
+        为设备配备物理安全措施，如防盗锁、摄像头遮挡和隐私屏。
 
-  - point: Keep Devices Out of Direct Sight
-    priority: Essential
-    details: Prevent devices from being visible from outside to mitigate risks from lasers and theft.
+    - point: 避免设备暴露在视线中
+      priority: 基本
+      details: >-
+        防止设备从窗外可见，降低被激光攻击或盗窃的风险。
 
-  - point: Protect your PIN
-    priority: Essential
-    details: Shield your PIN entry from onlookers and cameras, and clean touchscreens after use.
+    - point: 保护你的 PIN
+      priority: 基本
+      details: >-
+        输入 PIN 时用手遮挡，防止被旁人或摄像头看到。使用后清洁触摸屏。
 
-  - point: Check for Skimmers
-    priority: Essential
-    details: Inspect ATMs and public devices for skimming devices and tampering signs before use.
+    - point: 检查是否有盗刷器
+      priority: 基本
+      details: >-
+        使用 ATM 或公共设备前，检查是否有盗刷器或被篡改的迹象。
 
-  - point: Protect your Home Address
-    priority: Optional
-    details: Use alternative locations, forwarding addresses, and anonymous payment methods to protect your home address.
+    - point: 保护家庭住址
+      priority: 可选
+      details: >-
+        可用替代地址、转发地址和匿名支付方式保护真实住址。
 
-  - point: Use a PIN, Not Biometrics
-    priority: Advanced
-    details: Prefer PINs over biometrics for device security in situations where legal coercion to unlock devices may occur.
+    - point: 优先用 PIN 而非生物识别
+      priority: 高级
+      details: >-
+        在可能被强制解锁的场景下，优先用 PIN 而非生物识别保护设备。
 
-  - point: Reduce exposure to CCTV
-    priority: Advanced
-    details: Wear disguises and choose routes with fewer cameras to avoid surveillance.
+    - point: 减少被监控摄像头拍摄
+      priority: 高级
+      details: >-
+        可通过伪装或选择摄像头较少的路线，减少被监控的概率。
 
-  - point: Anti-Facial Recognition Clothing
-    priority: Advanced
-    details: Wear clothing with patterns that trick facial-recognition technology.
+    - point: 抗人脸识别服饰
+      priority: 高级
+      details: >-
+        穿戴带有特殊图案的服饰，干扰人脸识别技术。
 
-  - point: Reduce Night Vision Exposure
-    priority: Advanced
-    details: Use IR light sources or reflective glasses to obstruct night vision cameras.
+    - point: 降低夜视曝光
+      priority: 高级
+      details: >-
+        使用红外光源或反光眼镜，阻挡夜视摄像头。
 
-  - point: Protect your DNA
-    priority: Advanced
-    details: Avoid sharing DNA with heritage websites and be cautious about leaving DNA traces.
-
+    - point: 保护你的 DNA
+      priority: 高级
+      details: >-
+        不要随意将 DNA 提交给家谱网站，注意避免在公共场所留下 DNA 痕迹。
   color: lime
