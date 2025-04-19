@@ -1,173 +1,113 @@
-# Personal Cyber Security | TLDR [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![License](https://img.shields.io/badge/LICENSE-CC_BY_4.0-00a2ff?&style=flat-square)](https://creativecommons.org/licenses/by/4.0/)[![Contributors](https://img.shields.io/github/contributors/lissy93/personal-security-checklist?color=%23ffa900&style=flat-square)](/ATTRIBUTIONS.md#contributors-)
+# 个人网络安全 | TLDR [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re) [![欢迎 PR](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![许可证](https://img.shields.io/badge/LICENSE-CC_BY_4.0-00a2ff?&style=flat-square)](https://creativecommons.org/licenses/by/4.0/)[![贡献者](https://img.shields.io/github/contributors/lissy93/personal-security-checklist?color=%23ffa900&style=flat-square)](/ATTRIBUTIONS.md#contributors-)
 
-#### Contents
-- [Personal Security Checklist](#personal-security-checklist)
-- [Privacy-focused Software](#open-source-privacy-focused-software)
-- [Security Hardware](#security-hardware)
+#### 目录
+- [个人安全清单](#personal-security-checklist)
+- [注重隐私的软件](#open-source-privacy-focused-software)
+- [安全硬件](#security-hardware)
 
-## PERSONAL SECURITY CHECKLIST
+## 个人安全清单
 
-> This checklist of privacy and security tips, is a summarized version of [The Complete Personal Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md). It lays out the most essential steps you should take to protect your digital life.
+> 这份隐私与安全提示清单，是[完整个人安全清单](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md)的简要版。它列出了保护你数字生活最重要的步骤。
 
-### Authentication
-- Use a long, strong and unique password for each of your accounts (see [HowSecureIsMyPassword.net](https://howsecureismypassword.net))
-- Use a secure [password manager](https://github.com/Lissy93/awesome-privacy#password-managers), to encrypt, store and fill credentials, such as [BitWarden](https://bitwarden.com) or [KeePass](https://keepass.info) / [KeePassXC](https://keepassxc.org)
-- Enable 2-Factor authentication where available, and use an [authenticator app](https://github.com/Lissy93/awesome-privacy#2-factor-authentication) or [hardware token](/6_Privacy_and-Security_Gadgets.md#fido-u2f-keys)
-- When you enable multi-factor authentication, you will usually be given several codes that you can use if your 2FA method is lost, broken or unavailable. You should store these on paper or in a safe place on disk (e.g. in offline storage or as in an encrypted file/drive).
-- Sign up for breach alerts (with [Firefox Monitor](https://monitor.firefox.com) or [HaveIBeenPwned](https://haveibeenpwned.com)), and update passwords of compromised accounts
+### 认证
+- 为每个账户使用长、强且唯一的密码（参见 [HowSecureIsMyPassword.net](https://howsecureismypassword.net)）
+- 使用安全的[密码管理器](https://github.com/Lissy93/awesome-privacy#password-managers)来加密、存储和填写凭据，如 [BitWarden](https://bitwarden.com) 或 [KeePass](https://keepass.info) / [KeePassXC](https://keepassxc.org)
+- 在可用时启用双因素认证，并使用[身份验证器应用](https://github.com/Lissy93/awesome-privacy#2-factor-authentication)或[硬件令牌](/6_Privacy_and-Security_Gadgets.md#fido-u2f-keys)
+- 启用多因素认证时，通常会获得若干备用码，以防2FA方式丢失、损坏或不可用。应将这些码写在纸上或安全地保存在磁盘上（如离线存储或加密文件/驱动器中）
+- 注册数据泄露提醒（如 [Firefox Monitor](https://monitor.firefox.com) 或 [HaveIBeenPwned](https://haveibeenpwned.com)），并及时更新被泄露账户的密码
 
+### 浏览
+- 使用注重隐私的浏览器，[Brave](https://brave.com) 和 [Firefox](https://www.mozilla.org/en-US/exp/firefox/new) 是不错的选择。将默认搜索引擎设置为不追踪的引擎，如 [DuckDuckGo](https://duckduckgo.com)
 
-### Browsing
-- Use a Privacy-Respecting Browser, [Brave](https://brave.com) and [Firefox](https://www.mozilla.org/en-US/exp/firefox/new) are good options. Set your default search to a non-tracking engine, such as [DuckDuckGo](https://duckduckgo.com)
-- Do not enter any information on a non-HTTPS website (look for the lock icon). Firefox, Chrome, Edge and Safari now have integrated HTTPS security features; if you do not know if it's enabled, check out this [guide](https://www.eff.org/deeplinks/2021/09/https-actually-everywhere) to learn where to look.
-- Block invasive 3rd-party trackers and ads using an extension like [Privacy Badger](https://privacybadger.org) or [uBlock](https://github.com/gorhill/uBlock)
-- Keep your browser up-to-date, explore the privacy settings and remove unnecessary add-ons/ extensions
-- Consider using compartmentalization to separate different areas of your browsing (such as work, social, shopping etc), in order to reduce tracking. This can be done with [Firefox Containers](https://support.mozilla.org/en-US/kb/containers), or by using separate browsers or browser profiles
-- Don't allow your browser to save your passwords or auto-fill personal details (instead use a [password manager](https://github.com/Lissy93/awesome-privacy#password-managers), and [disable your browsers own auto-fill](https://www.computerhope.com/issues/ch001377.htm))
-- Clear your cookies, session data and cache regularly. An extension such as [Cookie-Auto-Delete](https://github.com/Cookie-AutoDelete/Cookie-AutoDelete) can be used to automate this
-- Don't sign into your browser, as it can link further data to your identity. If you need to, you can use an open source [bookmark sync](https://github.com/Lissy93/awesome-privacy#browser-sync) app
-- Consider using [Decentraleyes](https://decentraleyes.org) to decrease the number of trackable CDN requests your device makes
-- Test your browser using a tool like [Panopticlick](https://panopticlick.eff.org) to ensure there are no major issues. [BrowserLeaks](https://browserleaks.com) and [Am I Unique](https://amiunique.org/fp) are also useful for exploring what device info you are exposing to websites
-- For anonymous browsing use [The Tor Browser](https://www.torproject.org/), and avoid logging into any of your personal accounts
+## 开源且注重隐私的软件
 
+切换到开源、注重隐私的替代应用和服务，这些软件不会收集你的数据、跟踪你或推送定向广告。
 
-### Phone
-- Set a device PIN, ideally use a long passcode. If supported, configure fingerprint authentication, but avoid face unlock
-- Encrypt your device, in order to keep your data safe from physical access. To enable, for Android: `Settings --> Security --> Encryption`, or for iOS: `Settings --> TouchID & Passcode --> Data Protection`
-- Keep device up-to-date. System updates often contain patches for recently-discovered security vulnerabilities. You should install updates when prompted
-- Review application permissions. Don't grant access permissions to apps that do not need it. (For Android, see also [Bouncer](https://play.google.com/store/apps/details?id=com.samruston.permission&hl=en_US) - an app that allows you to grant temporary permissions)
-- Disable connectivity features that aren't being used, and 'forget' WiFi networks that you no longer need
-- Disable location tracking. By default, both Android and iOS logs your GPS location history. You can disable this, for Android: `Maps --> Settings --> Location History`, and iOS: `Settings --> Privacy --> Location Services --> System Services --> Places`. Be aware that third-party apps may still log your position, and that there are other methods of determining your location other than GPS (Cell tower, WiFi, Bluetooth etc)
-- Use an application firewall to block internet connectivity for apps that shouldn't need it. Such as [NetGuard](https://www.netguard.me/) (Android) or [Lockdown](https://apps.apple.com/in/app/lockdown-apps/id1469783711) (iOS)
-- Understand that apps contain trackers that collect, store and sometimes share your data. For Android, you could use [Exodus](https://exodus-privacy.eu.org/en/page/what/) to reveal which trackers your installed apps are using.
+#### 安全
+- 密码管理器：[BitWarden] | [1Password]（专有）| [KeePassXC]（本地离线）| [LessPass]（无状态）
+- 双因素认证：[Aegis]（Android）| [Authenticator]（iOS）| [AndOTP]（Android）
+- 文件加密：[VeraCrypt] | [Cryptomator]（适用于云端）
+- 加密消息：[Signal] | [KeyBase]（适合群组/社区）
+- 加密邮件：[ProtonMail] | [MailFence] | [Tutanota] | （以及 [33Mail]、[anonaddy] 用于邮箱别名）
+- 注重隐私的浏览器：[Brave Browser] | [Firefox]（可参考[优化建议](https://restoreprivacy.com/firefox-privacy/)）| [Tor]
+- 非追踪搜索引擎：[DuckDuckGo] | [StartPage] | [SearX]（自建）| [Qwant]
+- VPN：[Mullvad] | [ProtonVPN] | [Windscribe] | [IVPN]（更进一步可用 [Tor] 匿名）。另见 [VPN 注意事项]
+- 应用防火墙：[NetGuard]（Android）| [Lockdown]（iOS）| [OpenSnitch]（Linux）| [LuLu]（MacOS）
 
+#### 浏览器扩展
+- [Privacy Badger] - 阻止追踪器
+- [HTTPS Everywhere] - 自动升级为 HTTPS
+- [uBlock Origin] - 屏蔽广告、追踪器和恶意软件
+- [ScriptSafe] - 阻止特定脚本执行
+- [WebRTC Leak Prevent] - 防止 IP 泄露
+- [Vanilla Cookie Manager] - 自动清理不需要的 Cookie
+- [Privacy Essentials] - 显示哪些网站不安全
 
-### Email
-It's important to protect your email account, as if a hacker gains access to it they will be able to pose as you, and reset the passwords for your other online accounts. One of the biggest threats to digital security is still phishing, and it can sometimes be incredibly convincing, so remain vigilant, and understand [how to spot malicious emails](https://heimdalsecurity.com/blog/abcs-detecting-preventing-phishing), and avoid publicly sharing your email address
+#### 移动应用
+- [Exodus] - 显示设备上有哪些追踪器
+- [Orbot] - 全局 Tor 代理
+- [Island] - 应用沙盒环境
+- [NetGuard] - 控制哪些应用可访问网络
+- [Bouncer] - 临时授权权限
+- [Greenify] - 控制哪些应用可在后台运行
+- [1.1.1.1] - 使用 CloudFlare 的 DNS over HTTPS
+- [Fing App] - 监控家庭 WiFi 网络是否有入侵者
 
-- Use a long, strong and unique password and enable 2FA
-- Consider switching to a secure and encrypted mail provider using, such as [ProtonMail](https://protonmail.com) or [Tutanota](https://tutanota.com)
-- Use email aliasing to protect your real mail address, with a provider such as [Anonaddy](https://anonaddy.com) or [SimpleLogin](https://simplelogin.io/?slref=bridsqrgvrnavso). This allows you to keep your real address private, yet still have all messages land in your primary inbox
-- Disable automatic loading of remote content, as it is often used for detailed tracking but can also be malicious
-- Using a custom domain, will mean you will not lose access to your email address if your current provider disappears. If you need to back up messages, use a secure IMAP client [Thunderbird](https://www.thunderbird.net)
+#### 在线工具
+- [εxodus] - 检查应用包含哪些追踪器
+- [';--have i been pwned?] - 检查你的信息是否在数据泄露中被曝光
+- [EXIF Remover] - 移除图片或文件的元数据
+- [Redirect Detective] - 显示链接跳转路径
+- [Virus Total] - 检查文件或网址是否含有恶意软件
+- [Panopticlick]、[Browser Leak Test] 和 [IP Leak Test] - 检查系统和浏览器是否存在隐私泄露
 
+#### 效率工具
+- 文件存储：[NextCloud]
+- 文件同步：[Syncthing]
+- 文件投递：[FilePizza]
+- 笔记：[Standard Notes]、[Cryptee]、[Joplin]
+- 博客：[Write Freely]
+- 日历/联系人同步：[ETE Sync]
 
-### Secure Messaging
-- Use a [secure messaging app](https://github.com/Lissy93/awesome-privacy#encrypted-messaging) that is both fully open source and end-to-end encrypted with perfect forward secrecy (e.g. [Signal](https://www.signal.org/))
-- Ensure that both your device, and that of your recipient(s) is secure (free from malware, encrypted and has a strong password)
-- Disable cloud services, such as web app companion or cloud backup feature, both of which increases attack surface
-- Strip meta data from media before sharing, as this can lead to unintentionally revealing more data than you intended
-- Verify your recipient is who they claim to be, either physically or cryptographically by using an app that offers contact verification
-- Avoid SMS, but if you must use it then encrypt your messages, e.g. using the [Silence](https://silence.im/) app
-- Opt for a stable and actively maintained messaging platform, that is backed by reputable developers and have a transparent revenue model or are able to account for where funding has originated from. It should ideally be based in a friendly jurisdiction and have undergone an independent security audit. 
-- In some situations, it may be appropriate to use an app that supports disappearing messages, and/ or allows for anonymous sign up (without any PII: phone number, email address etc). A [decentralized platform](https://github.com/Lissy93/awesome-privacy#p2p-messaging) can offer additional security and privacy benefits in some circumstances, as there is no single entity governing it, e.g. [Matrix](https://matrix.org/), [Session](https://getsession.org/), [Tox](https://tox.chat/) or [Briar](https://briarproject.org/)
-
-
-### Networking
-- Use a reputable VPN to keep your IP protected and reduce the amount of browsing data your ISP can log, but understand their [limitations](5_Privacy_Respecting_Software.md#word-of-warning-4).  Good options include [ProtonVPN](https://protonvpn.com) and [Mullvad](https://mullvad.net), see [thatoneprivacysite.net](https://thatoneprivacysite.net/) for detailed comparisons
-- Change your routers default password. Anyone connected to your WiFi is able to listen to network traffic, so in order to prevent people you don't know from connecting, use WPA2 and set a strong password.
-- Use a [secure DNS](https://github.com/Lissy93/awesome-privacy#dns) provider, (such as [Cloudflare's 1.1.1.1](https://1.1.1.1/dns/)) to reduce tracking. Ideally configure this on your router, but if that's not possible, then it can be done on each device. 
-
-
-**📜 See More**: [The Complete Personal Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md)
-
-----
-
-
-## OPEN-SOURCE, PRIVACY-FOCUSED SOFTWARE
-Switch to alternative open-source, privacy-respecting apps and services, which won't collect your data, track you or show targetted ads.
-
-#### Security
-- Password Managers: [BitWarden] | [1Password] *(proprietary)* | [KeePassXC] *(offline)* | [LessPass] *(stateless)*
-- 2-Factor Authentication: [Aegis] *(Android)* | [Authenticator] *(iOS)* | [AndOTP] *(Android)*
-- File Encryption: [VeraCrypt] | [Cryptomator] *(for cloud)*
-- Encrypted Messaging: [Signal] | [KeyBase] *(for groups/ communities)*
-- Encrypted Email: [ProtonMail] | [MailFence] | [Tutanota] | (+ also [33Mail] | [anonaddy] for aliasing)
-- Private Browsers: [Brave Browser] | [Firefox] *with [some tweaks](https://restoreprivacy.com/firefox-privacy/)* | [Tor]
-- Non-Tracking Search Engines: [DuckDuckGo] | [StartPage] | [SearX] *(self-hosted)* | [Qwant]
-- VPN: [Mullvad] | [ProtonVPN]  | [Windscribe] | [IVPN] *(better still, use [Tor] for anonimity)*. See also [VPN Warning Note]
-- App Firewall: [NetGuard] (Android) | [Lockdown] (iOS) | [OpenSnitch] (Linux) | [LuLu] (MacOS)
-
-#### Browser Extensions
-- [Privacy Badger] - Blocks trackers.
-- [HTTPS Everywhere] - Upgrades requests to HTTPS.
-- [uBlock Origin] - Blocks ads, trackers and malwares.
-- [ScriptSafe] - Block execution of certain scripts.
-- [WebRTC Leak Prevent] - Prevents IP leaks.
-- [Vanilla Cookie Manager] - Auto-removes unwanted cookies.
-- [Privacy Essentials] - Shows which sites are insecure
-
-#### Mobile Apps
-- [Exodus] - Shows which trackers are on your device.
-- [Orbot]- System-wide Tor Proxy.
-- [Island] - Sand-box environment for apps.
-- [NetGuard] - Controll which apps have network access.
-- [Bouncer] - Grant temporary permissions.
-- [Greenify] - Control which apps can run in the background.
-- [1.1.1.1] - Use CloudFlare's DNS over HTTPS.
-- [Fing App] - Monitor your home WiFi network for intruders
-
-#### Online Tools
-- [εxodus] - Shows which trackers an app has.
-- [';--have i been pwned?] - Check if your details have been exposed in a breach.
-- [EXIF Remover] - Removes meta data from image or file.
-- [Redirect Detective] - Shows where link redirects to.
-- [Virus Total] - Scans file or URL for malware.
-- [Panopticlick], [Browser Leak Test] and [IP Leak Test] - Check for system and browser leaks
-
-#### Productivity Tools
-- File Storage: [NextCloud].
-- File Sync: [Syncthing].
-- File Drop: [FilePizza].
-- Notes: [Standard Notes], [Cryptee], [Joplin].
-- Blogging: [Write Freely].
-- Calendar/ Contacts Sync: [ETE Sync]
-
-📜 **See More**: [Complete List of Privacy-Respecting Sofware](https://github.com/Lissy93/awesome-privacy)
+📜 **查看更多**：[完整隐私友好软件列表](https://github.com/Lissy93/awesome-privacy)
 
 ----
 
-## SECURITY HARDWARE
+## 安全硬件
 
-There are also some gadgets that can help improve your physical and digital security.
+还有一些硬件设备可以帮助提升你的物理和数字安全。
 
-- **Blockers & Shields**: [PortaPow] - USB Data Blocker | [Mic Block] - Physically disables microphone | [Silent-Pocket] - Signal-blocking faraday pouches | [Lindy] - Physical port blockers | [RFID Shields] | [Webcam Covers] | [Privacy Screen]
-- **Crypto Wallets**: [Trezor] - Hardware wallet | [CryptoSteel] - Indestructible steel crypto wallet
-- **FIDO U2F Keys**: [Solo Key] | [Nitro Key] | [Librem Key]
-- **Data Blockers**: [PortaPow] - Blocks data to protect against malware upload attacks, enables FastCharge.
-- **Hardware-encrypted storage**:  [iStorage]- PIN-authenticated 256-bit hardware encrypted storage | [Encrypted Drive Enclosure]
-- **Networking**: [Anonabox] - Plug-and-play Tor router | [FingBox] - Easy home network automated security monitoring
-- **Paranoid Gadgets!** [Orwl]- Self-destroying PC | [Hunter-Cat]- Card-skim detector | [Adversarial Fashion]- Anti-facial-recognition clothing | [DSTIKE Deauth Detector] - Detect deauth attacks, from [Spacehuhn] | [Reflectacles]- Anti-surveillance glasses | [Armourcard]- Active RFID jamming | [Bug-Detector]- Check for RF-enabled eavesdropping equipment | [Ultrasonic Microphone Jammer] - Emits signals that's silent to humans, but interfere with recording equipment.
+- **阻断器与屏蔽器**：[PortaPow] - USB 数据阻断器 | [Mic Block] - 物理禁用麦克风 | [Silent-Pocket] - 信号屏蔽法拉第袋 | [Lindy] - 物理端口阻断器 | [RFID 屏蔽卡] | [摄像头遮挡] | [防窥屏幕]
+- **加密钱包**：[Trezor] - 硬件钱包 | [CryptoSteel] - 不可摧毁的钢制加密钱包
+- **FIDO U2F 密钥**：[Solo Key] | [Nitro Key] | [Librem Key]
+- **数据阻断器**：[PortaPow] - 阻断数据传输，防止恶意软件上传攻击，同时支持快速充电
+- **硬件加密存储**：[iStorage] - PIN 认证的 256 位硬件加密存储 | [加密硬盘盒]
+- **网络设备**：[Anonabox] - 即插即用 Tor 路由器 | [FingBox] - 家庭网络自动安全监控
+- **极客安全设备！** [Orwl] - 自毁型电脑 | [Hunter-Cat] - 信用卡盗刷检测器 | [Adversarial Fashion] - 反人脸识别服饰 | [DSTIKE Deauth Detector] - 检测断开攻击，来自 [Spacehuhn] | [Reflectacles] - 反监控眼镜 | [Armourcard] - 主动 RFID 干扰 | [Bug-Detector] - 检查射频窃听设备 | [超声波麦克风干扰器] - 发出人耳听不到但能干扰录音设备的信号
 
+大多数产品无需花钱——这些设备大多可以用开源软件在家自制。这里有一份 [DIY 安全硬件清单](/6_Privacy_and-Security_Gadgets.md#diy-security-products)。
 
-There's no need to spend money - Most of these products can be made at home with open source software. Here's a list of [DIY Security Gadgets](/6_Privacy_and-Security_Gadgets.md#diy-security-products).
-
-📜 **See More**: [Privacy and Security Gadgets](/6_Privacy_and-Security_Gadgets.md)
-
-----
-
-*Thanks for visiting, hope you found something useful here :) Contributions are welcome, and much appreciated - to propose an edit [raise an issue](https://github.com/Lissy93/personal-security-checklist/issues/new/choose), or [open a PR](https://github.com/Lissy93/personal-security-checklist/pull/new/master). See: [`CONTRIBUTING.md`](/.github/CONTRIBUTING.md).*
+📜 **查看更多**：[隐私与安全硬件](/6_Privacy_and-Security_Gadgets.md)
 
 ----
 
-Found this helpful? Consider sharing, to help others improve their digital security 😇
+*感谢你的访问，希望你在这里有所收获 :) 欢迎贡献内容，非常感谢——如需提出修改建议，请[提交 issue](https://github.com/Lissy93/personal-security-checklist/issues/new/choose)，或[发起 PR](https://github.com/Lissy93/personal-security-checklist/pull/new/master)。参见：[《贡献指南》](/.github/CONTRIBUTING.md)。*
 
-[![Share on Twitter](https://img.shields.io/badge/Share-Twitter-17a2f3?style=flat-square&logo=Twitter)](http://twitter.com/share?text=Check%20out%20the%20Personal%20Cyber%20Security%20Checklist-%20an%20ultimate%20list%20of%20tips%20for%20protecting%20your%20digital%20security%20and%20privacy%20in%202020%2C%20with%20%40Lissy_Sykes%20%F0%9F%94%90%20%20%F0%9F%9A%80&url=https://github.com/Lissy93/personal-security-checklist)
-[![Share on LinkedIn](https://img.shields.io/badge/Share-LinkedIn-0077b5?style=flat-square&logo=LinkedIn)](
+----
+
+觉得有用？欢迎分享给他人，帮助他们提升数字安全 😇
+
+[![分享到 Twitter](https://img.shields.io/badge/Share-Twitter-17a2f3?style=flat-square&logo=Twitter)](http://twitter.com/share?text=Check%20out%20the%20Personal%20Cyber%20Security%20Checklist-%20an%20ultimate%20list%20of%20tips%20for%20protecting%20your%20digital%20security%20and%20privacy%20in%202020%2C%20with%20%40Lissy_Sykes%20%F0%9F%94%90%20%20%F0%9F%9A%80&url=https://github.com/Lissy93/personal-security-checklist)
+[![分享到 LinkedIn](https://img.shields.io/badge/Share-LinkedIn-0077b5?style=flat-square&logo=LinkedIn)](
 http://www.linkedin.com/shareArticle?mini=true&url=https://github.com/Lissy93/personal-security-checklist&title=The%20Ultimate%20Personal%20Cyber%20Security%20Checklist&summary=%F0%9F%94%92%20A%20curated%20list%20of%20100%2B%20tips%20for%20protecting%20digital%20security%20and%20privacy%20in%202020&source=https://github.com/Lissy93)
-[![Share on Facebook](https://img.shields.io/badge/Share-Facebook-4267b2?style=flat-square&logo=Facebook)](https://www.linkedin.com/shareArticle?mini=true&url=https%3A//github.com/Lissy93/personal-security-checklist&title=The%20Ultimate%20Personal%20Cyber%20Security%20Checklist&summary=%F0%9F%94%92%20A%20curated%20list%20of%20100%2B%20tips%20for%20protecting%20digital%20security%20and%20privacy%20in%202020&source=)
-[![Share on Mastodon](https://img.shields.io/badge/Share-Mastodon-56a7e1?style=flat-square&logo=Mastodon)](https://mastodon.social/web/statuses/new?text=Check%20out%20the%20Ultimate%20Personal%20Cyber%20Security%20Checklist%20by%20%40Lissy93%20on%20%23GitHub%20%20%F0%9F%94%90%20%E2%9C%A8)
+[![分享到 Facebook](https://img.shields.io/badge/Share-Facebook-4267b2?style=flat-square&logo=Facebook)](https://www.linkedin.com/shareArticle?mini=true&url=https%3A//github.com/Lissy93/personal-security-checklist&title=The%20Ultimate%20Personal%20Cyber%20Security%20Checklist&summary=%F0%9F%94%92%20A%20curated%20list%20of%20100%2B%20tips%20for%20protecting%20digital%20security%20and%20privacy%20in%202020&source=)
+[![分享到 Mastodon](https://img.shields.io/badge/Share-Mastodon-56a7e1?style=flat-square&logo=Mastodon)](https://mastodon.social/web/statuses/new?text=Check%20out%20the%20Ultimate%20Personal%20Cyber%20Security%20Checklist%20by%20%40Lissy93%20on%20%23GitHub%20%20%F0%9F%94%90%20%E2%9C%A8)
 
-
-
-
-
-*Licensed under [Creative Commons, CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), © [Alicia Sykes](https://aliciasykes.com) 2020*
+*本作品采用 [知识共享署名 4.0 国际许可协议](https://creativecommons.org/licenses/by/4.0/) 授权，© [Alicia Sykes](https://aliciasykes.com) 2020*
 
 <a href="https://twitter.com/intent/follow?screen_name=Lissy_Sykes">
-  <img src="https://img.shields.io/twitter/follow/Lissy_Sykes?style=social&logo=twitter" alt="Follow Alicia Sykes on Twitter">
+  <img src="https://img.shields.io/twitter/follow/Lissy_Sykes?style=social&logo=twitter" alt="关注 Alicia Sykes 的 Twitter">
 </a>
-
 
 [//]: # (SECURITY SOFTWARE LINKS)
 [BitWarden]: https://bitwarden.com

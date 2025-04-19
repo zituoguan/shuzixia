@@ -24,11 +24,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Digital Defense",
+  title: "数字侠",
   meta: [
     {
       name: "description",
-      content: "The ultimate personal security checklist, for securing your digital life.",
+      content: "终极增强安全和隐私清单，用于保护您的数字生活。",
     },
   ],
 };

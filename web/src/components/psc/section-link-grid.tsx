@@ -57,13 +57,13 @@ export default component$((props: { sections: Section[] }) => {
           <div class="flex-shrink-0 flex flex-col py-4 h-auto items-stretch justify-evenly">
             <Icon icon={section.icon || 'star'} color={section.color} />
             {(done.value && done.value[index]) ? (
-              <p class={`text-${section.color}-400 pt-2 pb-0 px-0 mx-0 my-0`}>
-                {done.value[index]}/{section.checklist.length} Done
-              </p>
+                <p class={`text-${section.color}-400 pt-2 pb-0 px-0 mx-0 my-0`}>
+                {done.value[index]}/{section.checklist.length} 已完成
+                </p>
             ) : (
-              <p class={`text-${section.color}-400 pt-2 pb-0 px-0 mx-0 my-0`}>
-                {section.checklist.length} Items
-              </p>
+                <p class={`text-${section.color}-400 pt-2 pb-0 px-0 mx-0 my-0`}>
+                {section.checklist.length} 项目
+                </p>
             )}
           </div>
           <div class="card-body flex-grow py-2 pl-4 pr-0">
@@ -79,9 +79,9 @@ export default component$((props: { sections: Section[] }) => {
                   <span class="text-xs">{completions.value[index]}%</span>
               </div>
             ) : (
-              <span class="absolute right-2 top-2 opacity-30 text-xs">
-                Not yet started
-              </span>
+                <span class="absolute right-2 top-2 opacity-30 text-xs">
+                尚未开始
+                </span>
             )}
           </div>
         </a>

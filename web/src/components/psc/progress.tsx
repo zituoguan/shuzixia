@@ -151,9 +151,9 @@ export default component$(() => {
         totalProgress.value = progress;
     })
 
-    makeDataAndDrawChart('essential', 'hsl(var(--su, 158 64% 52%))');
-    makeDataAndDrawChart('optional', 'hsl(var(--wa, 43 96% 56%))');
-    makeDataAndDrawChart('advanced', 'hsl(var(--er, 0 91% 71%))');
+    makeDataAndDrawChart('基本', 'hsl(var(--su, 158 64% 52%))');
+    makeDataAndDrawChart('可选', 'hsl(var(--wa, 43 96% 56%))');
+    makeDataAndDrawChart('高级', 'hsl(var(--er, 0 91% 71%))');
   }));
 
 
@@ -210,9 +210,9 @@ export default component$(() => {
   
     // Wait on each set to resolve, and return the final data object
     return Promise.all([
-      buildDataForPriority('advanced', 'hsl(0 91% 71%/75%)'),
-      buildDataForPriority('optional', 'hsl(43 96% 56%/75%)'),
-      buildDataForPriority('essential', 'hsl(158 64% 52%/75%)'),      
+      buildDataForPriority('高级', 'hsl(0 91% 71%/75%)'),
+      buildDataForPriority('可选', 'hsl(43 96% 56%/75%)'),
+      buildDataForPriority('基本', 'hsl(158 64% 52%/75%)'),      
     ]).then(datasets => ({
       labels,
       datasets,
@@ -262,7 +262,7 @@ export default component$(() => {
               },
               tooltip: {
                 callbacks: {
-                  label: (ctx) => `Completed ${Math.round(ctx.parsed.r)}% of ${ctx.dataset.label || ''} items`,
+                  label: (ctx) => `完成了 ${ctx.dataset.label || ''} 个项目的 ${Math.round(ctx.parsed.r)}%`,
                 }
               }
             },
@@ -274,9 +274,9 @@ export default component$(() => {
   }));
 
   const items = [
-    { id: 'essential-container', label: 'Essential' },
-    { id: 'optional-container', label: 'Optional' },
-    { id: 'advanced-container', label: 'Advanced' },
+    { id: '基本-container', label: '基本' },
+    { id: '可选-container', label: '可选' },
+    { id: '高级-container', label: '高级' },
   ];
 
   // Beware, some god-awful markup ahead (thank Tailwind for that!)
@@ -291,18 +291,18 @@ export default component$(() => {
           class="absolute top-1 right-1 btn btn-sm opacity-50"
           onClick$={() => setIgnoreDialog(true)}
           >Close</button>
-        <p class="text-xl block text-center font-bold">No stats yet</p>
-        <p class="w-md text-left my-2">You'll see your progress here, once you start ticking items off the checklists</p>
-        <p class="w-md text-left my-2">Get started, by selecting a checklist below</p>
+        <p class="text-xl block text-center font-bold">暂无统计数据</p>
+        <p class="w-md text-left my-2">一旦您开始勾选清单中的项目，您将在这里看到您的进度</p>
+        <p class="w-md text-left my-2">开始吧，选择下面的一个清单</p>
       </div>
     )}
 
     <div class="flex justify-center flex-col items-center gap-6">
       {/* Progress Percent */}
       <div class="rounded-box bg-front shadow-md w-96 p-4">
-        <h3 class="text-primary text-2xl">Your Progress</h3>
+        <h3 class="text-primary text-2xl">你的进度</h3>
         <p class="text-lg">
-          You've completed <b>{totalProgress.value.completed} out of {totalProgress.value.outOf}</b> items
+          你完成了 <b>{totalProgress.value.completed} / {totalProgress.value.outOf}</b> 个项目
         </p>
         <progress
           class="progress w-80"
@@ -326,12 +326,11 @@ export default component$(() => {
       {/* Something ??? */}
       <div class="p-4 rounded-box bg-front shadow-md w-96 flex-grow">
         <p class="text-sm opacity-80 mb-2">
-          Next up, consider switching to more secure and
-          privacy-respecting apps and services.
+          接下来，考虑切换到更安全和更注重隐私的应用程序和服务。
         </p>
         <p class="text-lg">
-          View our directory of recommended software,
-          at <a class="link link-secondary font-bold" href="https://awesome-privacy.xyz">awesome-privacy.xyz</a>
+          查看我们推荐的软件目录，
+          请访问 <a class="link link-secondary font-bold" href="https://shuziditu.com">数字地图</a>
         </p>
       </div>
     </div>
@@ -353,7 +352,7 @@ export default component$(() => {
                     'my-2 w-80 flex justify-between items-center tooltip transition',
                     `hover:text-${section.color}-400`
                   ]}
-                  data-tip={`Completed ${sectionCompletion.value[index]}% of ${section.checklist.length} items.`}
+                  data-tip={`完成了 ${section.checklist.length} 个项目的 ${sectionCompletion.value[index]}%`}
                 >
                 <p class="text-sm m-0 flex items-center text-left gap-1 text-nowrap overflow-hidden max-w-40">
                   <Icon icon={section.icon} width={14} />

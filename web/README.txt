@@ -1,10 +1,7 @@
+这是 https://digital-defense.io 网站的源代码，该网站以交互方式显示清单数据。
 
-This is the source for the https://digital-defense.io website, which displays the checklist data interactively
+有关构建、开发和部署说明，请参阅主 README。
 
-For build, development and deploy instructions, see the main README
+如果您希望更改内容，只需编辑仓库根目录下的 `personal-security-checklist.yml` 文件。
 
-If you wish to make content changes, the only file you need to edit is `personal-security-checklist.yml`, in the repo's root
-
-All code here is licensed under MIT
-
-
+此处所有代码均采用 MIT 许可证。

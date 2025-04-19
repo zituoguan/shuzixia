@@ -1,7 +1,7 @@
-name: 🐙 Update gh-pages site
+name: 🐙 更新 gh-pages 站点
 
 on:
-  workflow_dispatch: # Manual dispatch
+  workflow_dispatch: # 手动触发
   push:
     branches: [ master ]
     paths: ['CHECKLIST.md']
@@ -11,35 +11,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: 检出代码库
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
-      - name: Configure git
+      - name: 配置 git
         run: |
           git config --global user.email "liss-bot@d0h.co"
           git config --global user.name "Liss.Bot"
 
-      - name: Copy CHECKLIST.md to gh-pages
+      - name: 复制 CHECKLIST.md 到 gh-pages
         run: |
-          # Fetch all branches
+          # 获取所有分支
           git fetch --all
           
-          # Switch to gh-pages branch
+          # 切换到 gh-pages 分支
           git checkout gh-pages
           
-          # Copy CHECKLIST from master branch
+          # 从 master 分支复制 CHECKLIST.md
           git checkout master -- CHECKLIST.md
           
-          # Move and rename CHECKLIST.md to the root
+          # 移动并重命名 CHECKLIST.md 到根目录
           mv CHECKLIST.md README.md
           
-          # Check if there are changes, if so commit and push
+          # 检查是否有更改，如有则提交并推送
           if [ -n "$(git status --porcelain)" ]; then
             git add README.md
-            git commit -m "Update README.md from master branch"
+            git commit -m "从 master 分支更新 README.md"
             git push origin gh-pages
           else
-            echo "No changes in README.md"
+            echo "README.md 没有变化"
           fi
+

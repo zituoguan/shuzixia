@@ -1,30 +1,30 @@
-# Inserts list of community members into ./README.md
-name: 💓 Inserts Contributors & Sponsors
+# 将社区成员列表插入到 ./README.md
+name: 💓 插入贡献者和赞助者
 on:
-  workflow_dispatch: # Manual dispatch
+  workflow_dispatch: # 手动触发
   schedule:
-    - cron: '45 1 * * 0' # At 01:45 on Sunday.
+    - cron: '45 1 * * 0' # 每周日01:45
 
 jobs:
-  # Job #1 - Fetches sponsors and inserts table into readme
+  # 任务1 - 获取赞助者并将表格插入readme
   insert-sponsors:
     runs-on: ubuntu-latest
-    name: Inserts Sponsors 💓
+    name: 插入赞助者 💓
     steps:
-      - name: Checkout
+      - name: 检出代码
         uses: actions/checkout@v2
-      - name: Updates readme with sponsors
+      - name: 用赞助者更新readme
         uses: JamesIves/github-sponsors-readme-action@1.0.5
         with:
           token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           file: .github/README.md
 
-  # Job #2 - Fetches contributors and inserts table into readme
+  # 任务2 - 获取贡献者并将表格插入readme
   insert-contributors:
     runs-on: ubuntu-latest
-    name: Inserts Contributors 💓
+    name: 插入贡献者 💓
     steps:
-      - name: Updates readme with contributors
+      - name: 用贡献者更新readme
         uses: akhilmhdh/contributors-readme-action@v2.3.4
         env:
           GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
@@ -32,7 +32,6 @@ jobs:
           image_size: 80
           readme_path: .github/README.md
           columns_per_row: 6
-          commit_message: 'docs: Updates contributors list'
+          commit_message: 'docs: 更新贡献者列表'
           committer_username: liss-bot
           committer_email: liss-bot@d0h.co
-          

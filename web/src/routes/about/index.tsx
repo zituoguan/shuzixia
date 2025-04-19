@@ -24,25 +24,25 @@ export default component$(() => {
     const url = 'https://api.github.com/repos/lissy93/personal-security-checklist/contributors?per_page=100';
     const response = await fetch(url);
     if (!response.ok) {
-      throw new Error('Failed to fetch contributors');
+      throw new Error('获取贡献者失败');
     }
     return await response.json();
   });
 
-  const sponsorsResource = useResource$<Contributor[]>(async () => {
-    const url = 'https://github-sponsors.as93.workers.dev/lissy93';
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('Failed to fetch sponsors');
-    }
-    return await response.json();
-  });
+  // const sponsorsResource = useResource$<Contributor[]>(async () => {
+  //   const url = 'https://github-sponsors.as93.workers.dev/lissy93';
+  //   const response = await fetch(url);
+  //   if (!response.ok) {
+  //     throw new Error('获取赞助者失败');
+  //   }
+  //   return await response.json();
+  // });
 
 
   return (
     <div class="m-4 md:mx-16">
       <article class="bg-back p-8 mx-auto max-w-[1200px] m-8 rounded-lg shadow-md">
-        <h2 class="text-3xl mb-2">About the Security Checklist</h2>
+        <h2 class="text-3xl mb-2">关于安全清单</h2>
         {intro.map((paragraph, index) => (
           <p class="mb-2" key={index}>{paragraph}</p>
         ))}        
@@ -50,7 +50,7 @@ export default component$(() => {
       <div class="divider"></div>
 
       <article class="bg-back p-8 mx-auto max-w-[1200px] m-8 rounded-lg shadow-md">
-        <h2 class="text-3xl mb-2">Contributing</h2>
+        <h2 class="text-3xl mb-2">贡献指南</h2>
         {contributing.map((paragraph, index) => (
           <p class="mb-2" key={index} dangerouslySetInnerHTML={parseMarkdown(paragraph)}></p>
         ))}        
@@ -58,19 +58,18 @@ export default component$(() => {
       <div class="divider"></div>
 
       <article class="bg-back p-8 mx-auto max-w-[1200px] m-8 rounded-lg shadow-md">
-        <h2 class="text-3xl mb-2">Acknowledgments</h2>
+        <h2 class="text-3xl mb-2">致谢</h2>
 
-
-        <h3 class="text-2xl mb-2">Sponsors</h3>
+        <h3 class="text-2xl mb-2">赞助者</h3>
 
         <p>
-          Huge thanks to the following sponsors, for their ongoing support 💖
+          衷心感谢以下赞助者对本项目的持续支持 💖
         </p>
-
+{/* 
         <div class="flex flex-wrap gap-4 my-4 mx-auto">
           <Resource
               value={sponsorsResource}
-              onPending={() => <p>Loading...</p>}
+              onPending={() => <p>加载中...</p>}
               onResolved={(contributors: Contributor[]) => (
                 contributors.map((contributor: Contributor) => (
                   <a
@@ -79,7 +78,7 @@ export default component$(() => {
                     target="_blank"
                     rel="noopener noreferrer"
                     key={contributor.login}
-                    data-tip={`Thank you @${contributor.login}`}
+                    data-tip={`感谢 @${contributor.login}`}
                   >
                     <img
                       class="avatar rounded"
@@ -94,19 +93,19 @@ export default component$(() => {
                 ))
               )}
             />
-          </div>
+          </div> */}
 
         <div class="divider"></div>
 
-        <h3 class="text-2xl mb-2">Contributors</h3>
+        <h3 class="text-2xl mb-2">贡献者</h3>
         <p>
-          This project exists thanks to all the people who've helped build and maintain it.<br />
-          Special thanks to the below, top-100 contributors 🌟
+          感谢所有帮助构建和维护本项目的人。<br />
+          特别感谢以下前100名贡献者 🌟
         </p>
         <div class="flex flex-wrap gap-4 my-4 mx-auto">
           <Resource
             value={contributorsResource}
-            onPending={() => <p>Loading...</p>}
+            onPending={() => <p>加载中...</p>}
             onResolved={(contributors: Contributor[]) => (
               contributors.map((contributor: Contributor) => (
                 <a
@@ -115,7 +114,7 @@ export default component$(() => {
                   target="_blank"
                   rel="noopener noreferrer"
                   key={contributor.login}
-                  data-tip={`@${contributor.login} has contributed ${contributor.contributions} times\n\nClick to view their profile`}
+                  data-tip={`@${contributor.login} 贡献了 ${contributor.contributions} 次\n\n点击查看其主页`}
                 >
                   <img
                     class="avatar rounded"
@@ -136,11 +135,11 @@ export default component$(() => {
       <div class="divider"></div>
 
       <article class="bg-back p-8 mx-auto max-w-[1200px] my-8 rounded-lg shadow-md">
-        <h2 class="text-3xl mb-2" id="author">About the Author</h2>
+        <h2 class="text-3xl mb-2" id="author">关于作者</h2>
           <p>
-            This project was originally started by
-            me, <a href="https://aliciasykes.com" class="link link-primary">Alicia Sykes</a>
-            - with a lot of help from the community.
+            本项目最初由
+            <a href="https://aliciasykes.com" class="link link-primary">Alicia Sykes</a> 发起，
+            并得到了社区的大力帮助。
           </p>
           <br />
           <div class="ml-4 float-right">
@@ -156,12 +155,12 @@ export default component$(() => {
             </div>
           </div>
           <p class="text-lg italic font-thin">
-            I write apps which aim to help people <b>escape big tech, secure their data, and protect their privacy</b>.
+            我致力于开发帮助人们<b>摆脱大科技公司、保护数据安全和隐私</b>的应用。
           </p>
           <br />
           <p>
-            I have a particular interest in self-hosting, Linux, security and OSINT.<br />
-            So if this type of stuff interests you, check out these other projects:
+            我对自托管、Linux、安全和OSINT有浓厚兴趣。<br />
+            如果你也喜欢这些内容，欢迎关注我的其他项目：
           </p>
           <ul class="list-disc pl-8">
             {
@@ -177,9 +176,9 @@ export default component$(() => {
           </ul>
           <br />
           <p>
-            For a more open source apps I've published,
-            see <a href="https://apps.aliciasykes.com/" class="link link-primary">apps.aliciasykes.com</a>,
-            or <a href="https://github.com/lissy93" class="link link-primary">follow me on GitHub</a>
+            更多我发布的开源应用，请访问
+            <a href="https://apps.aliciasykes.com/" class="link link-primary">apps.aliciasykes.com</a>，
+            或 <a href="https://github.com/lissy93" class="link link-primary">在 GitHub 上关注我</a>
           </p>
 
       </article>
@@ -187,32 +186,30 @@ export default component$(() => {
       <div class="divider"></div>
 
       <article class="bg-back p-8 mx-auto max-w-[1200px] m-8 rounded-lg shadow-md">
-        <h2 class="text-3xl mb-2">License</h2>
+        <h2 class="text-3xl mb-2">许可证</h2>
         <p>
-          This project is split-licensed, with the checklist content (located
-          in <a class="link" href="https://github.com/Lissy93/personal-security-checklist/blob/HEAD/personal-security-checklist.yml">
+          本项目采用双重许可，清单内容（位于
+          <a class="link" href="https://github.com/Lissy93/personal-security-checklist/blob/HEAD/personal-security-checklist.yml">
             <code>personal-security-checklist.yml</code>
-          </a>) being licensed
-          under <b><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></b>.
-          And everything else (including all the code), licensed
-          under <b><a href="https://gist.github.com/Lissy93/143d2ee01ccc5c052a17">MIT</a></b>.
+          </a>）采用
+          <b><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></b> 许可。
+          其他所有内容（包括代码）均采用
+          <b><a href="https://gist.github.com/Lissy93/143d2ee01ccc5c052a17">MIT</a></b> 许可。
         </p>
         <pre class="bg-front whitespace-break-spaces rounded text-xs my-2 mx-auto p-2">
           {license}
         </pre>
         <details class="collapse">
           <summary class="collapse-title">
-            <h3 class="mt-2">What does this means for you?</h3>
+            <h3 class="mt-2">这对你意味着什么？</h3>
           </summary>
           <div class="collapse-content">
             <p class="mb-2">
-              This means that for everything (except the checklist YAML file), you have almost unlimited freedom to
-              use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this software.
-              All that we ask is that you include the original copyright notice and permission notice in any copies of the software
+              这意味着除清单 YAML 文件外，你几乎可以无限制地使用、复制、修改、合并、发布、分发、再授权和/或销售本软件的副本。
+              只需在任何副本中保留原始版权声明和许可声明即可。
             </p>
             <p class="mb-2">
-              And for the security-list content you can share and adapt this content as long as you give appropriate credit,
-              don't use it for commercial purposes, and distribute your contributions under the same license.
+              对于安全清单内容，你可以在注明出处、不用于商业用途、并以相同许可分发贡献的前提下自由分享和修改。
             </p>
           </div>
         </details>
@@ -224,11 +221,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "About | Digital Defense",
+  title: "关于 | 数字侠",
   meta: [
     {
       name: "description",
-      content: "This project aims to give you practical guidance on how to improve your digital security, and protect your privacy online",
+      content: "本项目旨在为你提供实用的数字安全和隐私保护建议。",
     },
   ],
 };

@@ -18,7 +18,7 @@ export interface Section {
   furtherResources?: Link[],
 }
 
-export type Priority = 'essential' | 'optional' | 'advanced';
+export type Priority = '基本' | '可选' | '高级';
 
 export interface Checklist {
   point: string,

@@ -1,26 +1,26 @@
 <!--
-Thank you for contributing the The Personal Security Checklist 🫶
-So that your PR can be reviewed quickly, please complete the following sections:
+感谢您为《个人安全清单》做出贡献 🫶
+为了让您的 PR 能够被快速审核，请完成以下部分：
 -->
 
-#### Category
-<!-- Indicate the type of PR (delete as necessary) -->
-Checklist addition or deletion / Spelling, grammatical or link updates / website code changes / other
+#### 类别
+<!-- 指明 PR 的类型（请保留适用项并删除其他项） -->
+清单新增或删除 / 拼写、语法或链接更新 / 网站代码更改 / 其他
 
-#### Overview
-<!-- Briefly outline your new changes -->
+#### 概述
+<!-- 简要说明您的更改内容 -->
 
-#### Issue Number _(if applicable)_
-<!-- If this PR is related to an issue, please include ticket number. -->
+#### 相关 Issue 编号 _(如适用)_
+<!-- 如果此 PR 关联到某个 Issue，请填写对应编号。 -->
 
-#### Supporting Material _(if applicable)_
-<!-- For any content changes, additions or deletions, please include links to relevant references or supported materials -->
+#### 支持材料 _(如适用)_
+<!-- 对于任何内容更改、添加或删除，请附上相关参考链接或支持材料 -->
 
-#### Association _(if applicable)_
-<!-- If you are affiliated with a product or service that relates to this PR, please disclose this for transparency -->
+#### 关联信息 _(如适用)_
+<!-- 如果您与本 PR 相关的软件或服务有任何关联，请在此处披露，以保证透明度 -->
 
-#### Checklist
-<!-- Please complete the following checklist 😇 -->
-- [ ] I have performed a self-review (valid links, formatting, spelling and grammar)
-- [ ] I have indicated whether I have any affiliation with any software/ services edited
-- [ ] I have read the [Contributing Guidelines](.github/CONTRIBUTING.md), and agree to follow the [Code of Conduct](/.github/CODE_OF_CONDUCT.md)
+#### 检查清单
+<!-- 请完成以下检查清单 😇 -->
+- [ ] 我已自查（有效链接、格式、拼写和语法）
+- [ ] 我已说明是否与所编辑的软件/服务有任何关联
+- [ ] 我已阅读[贡献指南](.github/CONTRIBUTING.md)，并同意遵守[行为准则](/.github/CODE_OF_CONDUCT.md)

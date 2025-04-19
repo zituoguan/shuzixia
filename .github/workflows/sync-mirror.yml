@@ -1,5 +1,5 @@
-# Pushes the contents of the repo to the Codeberg mirror
-name: 🪞 Mirror to Codeberg
+# 将仓库内容推送到 Codeberg 镜像
+name: 🪞 镜像到 Codeberg
 on:
   workflow_dispatch:
   schedule:
@@ -14,4 +14,3 @@ jobs:
         with:
           target_repo_url: git@codeberg.org:alicia/personal-security-checklist.git
           ssh_private_key: ${{ secrets.CODEBERG_SSH }}
- 

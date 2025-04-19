@@ -1,56 +1,55 @@
-name: Amendment
-description: ✏️ Suggest an edit or bring attention to a mistake
-title: '[AMENDMENT] <title>'
-labels: ['Suggested Amendment', 'Awaiting Review']
+name: 修正
+description: ✏️ 建议编辑或指出错误
+title: '[修正] <标题>'
+labels: ['建议修正', '待审核']
 assignees:
   - lissy93
 body:
-  # Location
+  # 位置
   - type: input
     id: location
     attributes:
-      label: Location
+      label: 位置
       description: >-
-        Indicate which section (and if applicable sub-section) the amendment should be made
+        请指出应进行修正的章节（如适用，也请注明子章节）
       placeholder:
     validations:
       required: true
 
-  # Amendments description
+  # 修正描述
   - type: textarea
     id: amendments
     attributes:
-      label: Amendments
+      label: 修正内容
       description: |
-        Please describe what amendments should be made.
-        If relating to content change, please also provide links to backup any information
+        请描述需要进行哪些修正。
+        如果涉及内容更改，请提供相关信息的备份链接
       placeholder: 
     validations:
       required: true
 
-  # Can user submit PR
+  # 是否愿意提交 PR
   - type: dropdown
     id: canImplement
     attributes:
-      label: Would you like to submit a PR?
-      description: Is this amendment something that you are willing to submit a pull request for?
+      label: 您愿意提交 PR 吗？
+      description: 您是否愿意为此修正提交一个 pull request？
       options:
-        - 'No'
-        - 'Maybe'
-        - 'Yes'
+        - '否'
+        - '可能'
+        - '是'
     validations:
       required: false
 
-
-  # Confirmation checkboxes
+  # 确认复选框
   - type: checkboxes
     id: idiot-check
     attributes:
-      label: Please tick the boxes
+      label: 请勾选以下选项
       options:
-        - label: To the best of my knowledge, the information I've provided is correct
+        - label: 据我所知，我提供的信息是正确的
           required: true
-        - label: I have checked that a similar ticket has not previously been opened
+        - label: 我已确认没有类似的问题被提出
           required: true
-        - label: I agree to the repositories [Code of Conduct](https://github.com/Lissy93/personal-security-checklist/blob/master/.github/CODE_OF_CONDUCT.md)
+        - label: 我同意遵守本仓库的[行为准则](https://github.com/Lissy93/personal-security-checklist/blob/master/.github/CODE_OF_CONDUCT.md)
           required: true

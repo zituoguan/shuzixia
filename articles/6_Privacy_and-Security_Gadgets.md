@@ -2,278 +2,261 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![License](https://img.shields.io/badge/LICENSE-CC_BY_4.0-00a2ff?&style=flat-square)](https://creativecommons.org/licenses/by/4.0/)
 
-# Hardware for Protecting Privacy and Security
-A curated list of (DIY and pre-built) devices, to help preserve privacy and improve physical cyber security 🔐
+# 用于保护隐私和安全的硬件
+一个精选的（DIY 和预制）设备列表，帮助保护隐私并提升物理网络安全 🔐
 
-**Too long? 🦒** See the [TLDR version](/2_TLDR_Short_List.md#security-hardware) instead.
+**太长不看？🦒** 请查看[简明版 TLDR](/2_TLDR_Short_List.md#security-hardware)。
 
-See Also, [The Hackers Hardware Toolkit](https://raw.githubusercontent.com/yadox666/The-Hackers-Hardware-Toolkit/master/TheHackersHardwareToolkit.pdf) by [@yadox666](https://github.com/yadox666)- Ultimate guide of gadgets for Red Team pentesters and security researchers
+另见 [The Hackers Hardware Toolkit](https://raw.githubusercontent.com/yadox666/The-Hackers-Hardware-Toolkit/master/TheHackersHardwareToolkit.pdf) by [@yadox666](https://github.com/yadox666) —— 红队渗透测试和安全研究人员的终极硬件指南。
 
-**Note**: This section is intended just to be a bit of fun, it is entirely possible to stay secure and anonymous, without having to build or buy anything. Now that more devices have been added, it's not been possible to test everything here, so these products should not be taken as recommendations, just interesting ideas, and a bit of fun
-
+**注意**：本节内容仅供娱乐，完全可以在不购买或自制任何设备的情况下保持安全和匿名。由于添加了更多设备，无法全部亲测，因此这些产品不构成推荐，仅供参考和娱乐。
 
 ---
 
-#### Contents
-- [Basics](#basics)
-- [DIY Security Products](#diy-security-products)
-- [Paranoid Security Gadgets](#paranoid-security-gadgets)
-- [Network Security](#network-security)
-- [Secure Computing Devices](#secure-computing-devices)
-- [Hardware Encrypted Storage](#hardware-encrypted-storage)
-- [USB Data Blockers](#usb-data-blockers)
-- [FIDO U2F Keys](#fido-u2f-keys)
-- [Crypto Wallets](#crypto-wallets)
+#### 目录
+- [基础](#basics)
+- [DIY 安全产品](#diy-security-products)
+- [偏执级安全设备](#paranoid-security-gadgets)
+- [网络安全](#network-security)
+- [安全计算设备](#secure-computing-devices)
+- [硬件加密存储](#hardware-encrypted-storage)
+- [USB 数据隔离器](#usb-data-blockers)
+- [FIDO U2F 密钥](#fido-u2f-keys)
+- [加密钱包](#crypto-wallets)
 
+## 基础
+（本节所有产品均已测试。）
 
-## Basics
-(All products in this section have been tested.)
-
-**Item** | **Description**
+**项目** | **描述**
 --- | ---
-**USB Data Blocker**<br>[![Data Blocker](https://i.ibb.co/jG3dpGW/1.jpg)](https://amzn.to/2HDArRP) | There are many exploits that allow an attacker to infect your device with malware and/ or steal data, when you plug it in to what appears to be a USB power outlet. If you are charging your phone while travelling, a USB data blocker will prevent anything other than power from getting to your device, by removing the connection between the 2 data wires. The PortaPower brand, also comes with a fast charging chip, since without the data connection your device would otherwise charge at minimum speed
-**Microphone Blocker**<br>[![__](https://i.ibb.co/BKQTCbQ/2.jpg)](https://amzn.to/2uQ3r5L) | A microphone blocker is a device that prohibits audio hacking, in the form of a hardware accessory for a smartphones, laptops etc. It functions as a dummy mic jack, so the device thinks it has a microphone plugged in, and hence disables the internal one
-**Faraday Pouch**<br>[![__](https://i.ibb.co/HBBG0QL/3.jpg)](https://amzn.to/3bIkfw4) | [Faraday Shield](https://en.wikipedia.org/wiki/Faraday_cage) is an enclosure that blocks electromagnetic fields. It is useful to keep any device which could be hacked through sending or receiving signals in such a case, such as car keys, or a smart phone. [Larger](https://amzn.to/2UTZOGM) versions are availible for tablets and latops.
-**RFID Blocking Cards**<br>[![__](https://i.ibb.co/m4GtMdj/4.jpg)](https://amzn.to/38ycMxN) | If you are concerned about card skimming, you can use an RFID blocking sleeve to protect your contactless payment and identity cards. However there are proportionately very few RFID-skimmer crimes reported, and most credit cards have a low contactless limit
-**Web Cam Covers**<br>[![__](https://i.ibb.co/X7B1WsH/5.jpg)](https://amzn.to/2uEz16H) | Web cam covers are quite self-explanatory, they physically conceal the lenses on your laptop or phone camera, to prevent a malicious actor (hacker, government, corporation etc) from watching you through the camera. It may sound paranoid, but unfortunately it happens, and it is a relatively simple process for someone to gain remote access to a webcam. Even Mark Zuckerberg [covers his webcam](https://www.geek.com/tech/mark-zuckerberg-tapes-up-his-webcam-and-snowden-says-you-should-too-1659083/)! Of course you could just use some tape, rather than buying a cover
-**Prokey Wallet**<br>[![__](https://i.ibb.co/m53MmCL/prokey.jpg)](https://prokey.io/?reflink=67e4a39bc5cd4c04bd7f38b50b041c1f) | Prokey Optimum is a secure, easy-to-use offline hardware wallet, that works directly through the browser (on Windows, Mac, Linux and Android), without the need for installing any apps. Both the firmware and browser app is [open source](https://github.com/prokey-io), and it natively supports [over 1000 coins and tokens](https://prokey.io/all-coins). It's affordably priced at £42/ $59, with free world-wide shipping and customer support
-**Port Blockers**<br>[![__](https://i.ibb.co/fYPVnK5/6.jpg)](https://amzn.to/327Yn9n) | There are many attacks that involve an attacker inserting a USB device (such as a BadUSB/ Rubber Ducky/ Malduino) to an open USB port. Adding a port blocker doesn't render you safe from this, since the attacker could take the time to try and remove it, but it could protect you for an opportunistic attack
-**Privacy Filter**<br>[![__](https://i.ibb.co/KjkTbGN/7.jpg)](https://amzn.to/3bAa9xv) | Privacy filters are polarized sheets of plastic, that when placed over a computer screen prevent screen visibility from any angle other than straight on. They make it harder for anyone to look over your shoulder and see your data confidential
-**YubiKey**<br>[![__](https://i.ibb.co/PGtbwxN/8.jpg)](https://amzn.to/38wcG9R) | The YubiKey is a small hardware device used to secure access on mobile devices, computers, and servers to all of your online accounts. It allows for second-factor authentication, hence protecting anyone other than you from logging in. It is said to be more convenient and more secure than using a mobile authenticator, but there are reasons for and against
-**Encrypted Kingston Data Traveler**<br>[![__](https://i.ibb.co/ScRFhdt/9.jpg)](https://amzn.to/38xsnO5) | Good value, easy-to-use with no installation required. Built-in hardware encryption and high password protection. Also optionally allows for automatic cloud backup option to protect against data loss (which doesn't say much about their faith in this USB device, but jokes aside-) this is a very affordable and well rated little device
-**Hardware Encrypted USB 3.0 Drive**<br>[![__](https://i.ibb.co/p3MzFHF/11.jpg)](https://amzn.to/2vD32Ug) | OS & Platform independent, with 100% hardware encryption, so it works perfectly with all operating systems. USB 3.0 with Read/Write Speeds of 116/43 MBps. GDPR complient and FIPS 140-2 Level 3, NLNCSA DEP-V & NATO Restricted Level Certified with real time military grade AES-XTS 256-bit hardware encryption
-**Hardware Encrypted External Hard Drive**<br>[![__](https://i.ibb.co/BV5k29v/12.jpg)](https://amzn.to/37pTmK8) | Similar to the iStorage hardware encrypted USB 3.1 drive, this external hard drive has high capacity and strong hardware encryption. Data is encrypted with FIPS PUB 197 Validated Encryption Algorithm, and against a 7 - 15 digit alpha-numeric pin, with erasing capabilities for multiple failed login attempts
-**Fingbox - Home Network Monitoring**<br>[![__](https://i.ibb.co/nkMxwz9/14.jpg)](https://amzn.to/2V5gATx) | Fing Box is an optional companion to the [Fing App](https://www.fing.com/products/fing-app). It provides network monitoring and security capabilities, to protect your home/ work network. As well as the functionality of the app, the FingBox allows you to block intruders and notify you about unknown devices as well as analyse your network for vulnerabilities, such as open ports. You can also see which devises are near your home at what time (even if they're not connected to your WiFi), and improve network speed with scheduled analysis and bandwidth allocation. Best to try out the Fing app alone, before buying the FindBox, but both are great products for netowrk monitoring and security
-**Bootable Drive Eraser**<br>[![__](https://i.ibb.co/P11d0YH/15.jpg)](https://amzn.to/2SsL67Y) | Easy-to-use bootable USB will completely erase your hard drive with military grade destruction, making it near-impossible for any files or personal data to be recovered. This should be done before you sell, or dispose of any hard drive. Of course there are various .ISOs you can download and flash to a USB yourself if you do not want to spend money, but this USB supports all devices and is quick and easy to use, with excellent results
-**Mobile Privacy Screen**<br>[![__](https://i.ibb.co/Zg9QG1j/17.jpg)](https://amzn.to/2OZO3Lc) | Similar to the laptop/ monitor privacy filter, this screen protector will prevent anyone from seeing what is on your screen when reading from an angle
-**Kensington Lock**<br>[![__](https://i.ibb.co/TKHV5d3/20.jpg)](https://amzn.to/38zu0e2) | Quite self-explanatory, this lock will make it harder for someone to steal your laptop, and get to your data. Of course it does require that your laptop has the [Kensington Security Slot](https://en.wikipedia.org/wiki/Kensington_Security_Slot), which many do
-**Anti-Surveillance Clothing**<br>[![__](https://i.ibb.co/Gk8jBBm/21.jpg)](https://adversarialfashion.com) | Facial recognition is being rolled out in most countries now, the patterns on these clothes, will confuse facial, object and number plate recognition, injecting junk data in to the systems, hence making it harder for automated systems to monitor and track you
-**Solo Key**<br>[![__](https://i.ibb.co/8PFQRDy/26.jpg)](https://amzn.to/37CsOpj) | Another FIDO2 physical security key for 2-facto authentication and storing encryption keys. SoloKeys have both open source hardware and software, they are easy to use out of the box, but can also be used for developers and makers, since there is a well documented CLI
-**Nano Ledger**<br>[![__](https://i.ibb.co/HdVyPzb/22.jpg)](https://amzn.to/37q1cn6) | If you are in possession of Bitcoin or other crypto then one of the most secure ways to store, send and receive coins is with a hardware wallet. Ledger has a solid reputation when it comes to hardware encryption, and the main principle behind their wallets is to provide full isolation between the private keys and your easy-to-hack computer or smartphone
-**Cold Storage**<br>[![__](https://i.ibb.co/nj6xyv1/23.jpg)](https://amzn.to/2HqVy9x) | If you are not planning on spending your crypto any time soon, and do not want to trust a tech-based solution, then consider this metal cold storage wallet. Unlike writing your private key down on paper, this will not fade, and cannot be destroyed by water, fire of other environmental circumstances. Of course you could just engrave your key on a small sheet of aluminium
-**Anonabox**<br>[![__](https://i.ibb.co/L177XDJ/24.jpg)](https://amzn.to/2UWtP8E) | Plug-and-play Tor router, that can be used with public WiFi while travelling, or at home. Anonabox provides easy access to the deep web and lets you bypass censorship, protect your location, deter data collection and more. It can also be used with a VPN, or for online hosting. Of course you could build a similar product your self using a Raspberry Pi and a WiFi range extender
-**Deauth Detector**<br>[![__](https://i.ibb.co/BqNGRCW/19.jpg)](https://amzn.to/2HtUy4B) | Most WiFi hacks begin by sending deauth packets, so that connected clients will briefly be disconnected to the network. This [ESP8266](https://en.wikipedia.org/wiki/ESP8266) comes pre-flashed with [@SpaceHuhn's](https://github.com/spacehuhn) deauth detector (which you can view [here, on GitHub](https://github.com/spacehuhn/DeauthDetector)). Once it detects [deauthentication or disassociation frames](https://mrncciew.com/2014/10/11/802-11-mgmt-deauth-disassociation-frames), it will activate a speaker to notify you
-**WiPhone**<br>[![__](https://i.ibb.co/grnJjKt/wiphone.jpg)](https://www.wiphone.io/) | A fully open source, modular and easily customizable phone for VOIP and LoRa. Great for making free calls over WiFi, communicating locally over LoRa, or just tinkering thanks to its ESP32 pinouts
-**Librem 5**<br>[![__](https://i.ibb.co/3TNh5Vt/l5-v1-front-100x100.png)](https://shop.puri.sm/shop/librem-5/) | Security and Privacy focused smart phone by Purism. With hardware kill switches and specially designed software, this device runs Linux, and does not track you. It Separates CPU from Cellular Baseband, uses IP-Native Communication First and Decentralized Communication by Default. The source code is user-controlled, and has layered security protection. Purism also have [other security-focused products](https://puri.sm/products)
-**Slate Travel Router**<br>[![__](https://i.ibb.co/Nt7hmfW/ar750s-ext-1000x1000.jpg)](https://www.gl-inet.com/products/gl-ar750s/) | The GL-AR750S-Ext can serve as a Wi-Fi access point, a pfSense firewall or a portable router with always-on VPN connectivity. It's great for controlling your network (firewall, VPN, ad-block, web filtering, data limits and more) when traveling or away from home
+**USB 数据隔离器**<br>[![Data Blocker](https://i.ibb.co/jG3dpGW/1.jpg)](https://amzn.to/2HDArRP) | 许多攻击者会利用 USB 电源插口传播恶意软件或窃取数据。USB 数据隔离器通过断开数据线，仅允许电源通过，防止数据泄露。PortaPower 品牌还带有快充芯片。
+**麦克风隔离器**<br>[![__](https://i.ibb.co/BKQTCbQ/2.jpg)](https://amzn.to/2uQ3r5L) | 麦克风隔离器是一种硬件配件，插入后设备会认为已连接外部麦克风，从而禁用内置麦克风，防止被窃听。
+**法拉第袋**<br>[![__](https://i.ibb.co/HBBG0QL/3.jpg)](https://amzn.to/3bIkfw4) | [法拉第笼](https://en.wikipedia.org/wiki/Faraday_cage)可屏蔽电磁信号，适用于防止车钥匙、手机等设备被远程攻击。也有适用于平板和笔记本的大号版本。
+**RFID 屏蔽卡**<br>[![__](https://i.ibb.co/m4GtMdj/4.jpg)](https://amzn.to/38ycMxN) | 担心银行卡被盗刷可使用 RFID 屏蔽套保护，但实际 RFID 盗刷案件较少。
+**摄像头遮挡盖**<br>[![__](https://i.ibb.co/X7B1WsH/5.jpg)](https://amzn.to/2uEz16H) | 物理遮挡摄像头，防止黑客或机构远程监控。甚至马克·扎克伯格也会遮挡摄像头。
+**Prokey 钱包**<br>[![__](https://i.ibb.co/m53MmCL/prokey.jpg)](https://prokey.io/?reflink=67e4a39bc5cd4c04bd7f38b50b041c1f) | Prokey Optimum 是一款安全易用的离线硬件钱包，支持 1000+ 种币种，固件和应用均为[开源](https://github.com/prokey-io)。
+**端口堵塞器**<br>[![__](https://i.ibb.co/fYPVnK5/6.jpg)](https://amzn.to/327Yn9n) | 防止攻击者插入恶意 USB 设备，虽不能完全杜绝，但可防止机会性攻击。
+**防窥膜**<br>[![__](https://i.ibb.co/KjkTbGN/7.jpg)](https://amzn.to/3bAa9xv) | 防窥膜仅允许正面可见屏幕内容，防止他人偷窥。
+**YubiKey**<br>[![__](https://i.ibb.co/PGtbwxN/8.jpg)](https://amzn.to/38wcG9R) | YubiKey 是一款硬件二次认证密钥，保护账户安全，比手机验证更安全便捷。
+**金士顿加密 U 盘**<br>[![__](https://i.ibb.co/ScRFhdt/9.jpg)](https://amzn.to/38xsnO5) | 硬件加密，易用且无需安装，支持云备份，性价比高。
+**硬件加密 USB 3.0 U 盘**<br>[![__](https://i.ibb.co/p3MzFHF/11.jpg)](https://amzn.to/2vD32Ug) | 100% 硬件加密，兼容所有操作系统，军用级 AES-XTS 256 位加密。
+**硬件加密外置硬盘**<br>[![__](https://i.ibb.co/BV5k29v/12.jpg)](https://amzn.to/37pTmK8) | 大容量，强加密，支持多次错误输入自动擦除。
+**Fingbox 家庭网络监控**<br>[![__](https://i.ibb.co/nkMxwz9/14.jpg)](https://amzn.to/2V5gATx) | FingBox 提供网络监控和安全功能，可阻止入侵、分析漏洞等。
+**可启动硬盘擦除器**<br>[![__](https://i.ibb.co/P11d0YH/15.jpg)](https://amzn.to/2SsL67Y) | 启动后可彻底擦除硬盘数据，防止数据恢复。
+**手机防窥膜**<br>[![__](https://i.ibb.co/Zg9QG1j/17.jpg)](https://amzn.to/2OZO3Lc) | 类似于电脑防窥膜，防止侧面偷窥。
+**肯辛通锁**<br>[![__](https://i.ibb.co/TKHV5d3/20.jpg)](https://amzn.to/38zu0e2) | 防止笔记本被盗，需设备有肯辛通安全插槽。
+**反监控服饰**<br>[![__](https://i.ibb.co/Gk8jBBm/21.jpg)](https://adversarialfashion.com) | 特殊图案可干扰人脸、物体和车牌识别，防止被自动跟踪。
+**Solo Key**<br>[![__](https://i.ibb.co/8PFQRDy/26.jpg)](https://amzn.to/37CsOpj) | FIDO2 硬件密钥，开源硬件和软件，支持开发者自定义。
+**Nano Ledger**<br>[![__](https://i.ibb.co/HdVyPzb/22.jpg)](https://amzn.to/37q1cn6) | 硬件钱包，隔离私钥，安全存储加密货币。
+**冷存储**<br>[![__](https://i.ibb.co/nj6xyv1/23.jpg)](https://amzn.to/2HqVy9x) | 金属冷钱包，防水防火，适合长期保存私钥。
+**Anonabox**<br>[![__](https://i.ibb.co/L177XDJ/24.jpg)](https://amzn.to/2UWtP8E) | 即插即用 Tor 路由器，可搭配 VPN 使用，保护隐私。
+**Deauth Detector**<br>[![__](https://i.ibb.co/BqNGRCW/19.jpg)](https://amzn.to/2HtUy4B) | 检测 WiFi 去认证攻击，基于 ESP8266 和 SpaceHuhn 的开源代码。
+**WiPhone**<br>[![__](https://i.ibb.co/grnJjKt/wiphone.jpg)](https://www.wiphone.io/) | 开源、模块化 VOIP/LoRa 手机，适合自由通信和开发。
+**Librem 5**<br>[![__](https://i.ibb.co/3TNh5Vt/l5-v1-front-100x100.png)](https://shop.puri.sm/shop/librem-5/) | Purism 推出的安全隐私手机，硬件开关，运行 Linux，无跟踪。
+**Slate 旅行路由器**<br>[![__](https://i.ibb.co/Nt7hmfW/ar750s-ext-1000x1000.jpg)](https://www.gl-inet.com/products/gl-ar750s/) | 可作为 WiFi AP、防火墙或便携 VPN 路由器，适合旅行时保护网络。
 
+## DIY 安全产品
 
-## DIY Security Products
+不想花钱？上面大多数产品都可以用简单硬件和开源软件自制。以下是入门指引：
 
-Don't want to spend money? Most of the products above, plus some that wearn't included can be built at home with some pretty simple hardware and open source software. The following list will point you in the right direction to start making!
+另见 [DIY 网络硬件](#diy-networking-hardware)
 
-See Also [DIY Networking Hardware](#diy-networking-hardware)
+- **全网广告拦截** - [Pi Hole](https://pi-hole.net) 可安装在树莓派上，作为 DNS 服务器拦截广告和恶意资源。
+- **USB 杀毒器** - [CIRCLean](https://www.circl.lu/projects/CIRCLean) 自动清理不可信 USB 文件，输出安全副本。
+- **可启动硬盘擦除器** - 使用 [DBAN](https://dban.org) 或 [KillDisk](https://www.killdisk.com/bootablecd.htm) ISO 制作启动 U 盘，彻底擦除硬盘。
+- **Deauth Detector** - 用 ESP8266 刷入 [DeauthDetector](https://github.com/spacehuhn/DeauthDetector) 检测 WiFi 去认证攻击。
+- **AI 助理隐私改造** - [Project Alias](https://github.com/bjoernkarmann/project_alias) 运行于树莓派，拦截语音命令，提升隐私。
+- **Tor WiFi 网络** - 用 [OnionPi](https://github.com/breadtk/onion_pi) 创建 Tor 路由网络。
+- **密码卡** - [PasswordCard.org](https://www.passwordcard.org/en) 生成独特密码卡，便于记忆和生成强密码。
+- **法拉第盒** - 用[法拉第布](https://amzn.to/2ORKtTr)自制信号屏蔽盒。
+- **硬件钱包** - 用 Trezor Shield 或 [Trezor Core](https://github.com/trezor/trezor-firmware) 和树莓派自制硬件钱包。
+- **加密 U 盘** - 用 [VeraCrypt](https://www.veracrypt.fr/en/Home.html) 给普通 U 盘加密。
+- **家庭 VPN** - [Pi_VPN](https://www.pivpn.io) 让你随时远程安全访问家庭网络。
+- **USB 密码管理器** - [KeePass](https://keepass.info/help/v2/setup.html) 离线密码管理器，可便携运行于 U 盘。
+- **安全聊天平台** - Tinfoil Chat (TFC) 端到端加密，防止密钥泄露。[TFC](https://github.com/maqp/tfc)
+- **自动备份** - [Syncthing](https://syncthing.net) 隐私同步备份工具。
+- **GPS 欺骗器** - 用 SDR 设备和 [gps-sdr-sim](https://github.com/osqzss/gps-sdr-sim) 发送伪 GPS 信号（请遵守当地法律）。
+- **无麦克风笔记本** - 物理移除麦克风，或仅用外接麦克风。[教程](https://www.wired.com/story/remove-the-mic-from-your-phone/)
 
-- **Network-wide add-block** - [Pi Hole](https://pi-hole.net) is a simple yet powerful app, that can be installed on a [Raspberry Pi](https://amzn.to/36GNpsm), and once you've updated your routers DNS servers to point to it, all resources on the blacklist will be blocked, at the point of origin. This makes it much more powerful than a browser add-on, and will also speed your internet up
-- **USB Sanitiser** - [CIRCLean](https://www.circl.lu/projects/CIRCLean) is a hardware solution to clean documents from untrusted (obtained) USB drives. It automatically converts untrusted documents into a readable but disarmed format and stores these clean files on a trusted (user owned) USB key/stick.
-- **Bootable Drive Eraser** - You can flash the [DBAN](https://dban.org) or [KillDisk](https://www.killdisk.com/bootablecd.htm) ISO file onto a USB, boot from it and securly, fully wipe your hard drives. This is useful to do before selling or disposing of a PC.
-- **Deauth Detector** - Since most wireless attacked begin by sending out deauthentication packets, you can flash SpaceHuhns [DeauthDetector](https://github.com/spacehuhn/DeauthDetector), onto a standard [ESP8266 NodeMCU](https://amzn.to/2v5grV0), plug it in, and wait to be notified of wireless deauth attacks
-- **AI Assistant Mod** - [Project Alias](https://github.com/bjoernkarmann/project_alias) runs on a Pi, and gives you more control and increased privacy for both Google Home and Alexa, through intercepting voice commands, emitting noise interference + lots more. If your interested in voice assistants, then also check out [Mycroft](https://mycroft.ai)- an open source, Pi-based alternative to Google Home/ Alexa
-- **Tor WiFi Network** - Using [OnionPi](https://github.com/breadtk/onion_pi), you can create a second wireless network, that routed traffic through Tor. This is very light-weight so can be done with just a  [Pi Zero W](https://amzn.to/2Urc0hM). Here is a configuration [guide](https://www.sbprojects.net/projects/raspberrypi/tor.php)
-- **Credential Recall Card** - A password card is a unique grid of random letters and digits, that lets you generate, store and recall unique and strong passwords for your accounts. Generate your own unique password card, and read more via: [PasswordCard.org](https://www.passwordcard.org/en)
-- **Faraday Case** - If you want to block signals for devices such as car keys, smart phone, laptop or even just RFID-enabled cards and passports, you can line a box or pouch with [Faraday Fabric](https://amzn.to/2ORKtTr)
-- **Hardware Wallet** - Using the Trezor Shield or [Trezor Core](https://github.com/trezor/trezor-firmware) and a Raspberry Pi, you can create your own hardware wallet for safley storing your crypto currency private keys offline. See [this guide](https://github.com/Multibit-Legacy/multibit-hardware/wiki/Trezor-on-Raspberry-Pi-from-scratch) for building. If you enjoyed that, you can also run your own Bitcoin and  Lightning Node [Raspiblitz](https://github.com/rootzoll/raspiblitz)
-- **Encrypted USB** - You can use [VeraCrypt](https://www.veracrypt.fr/en/Home.html) to create an encrypted USB drive, using any off-the shelf [USB drive](https://amzn.to/2RykcLD)
-- **Home VPN** - [Pi_VPN](https://www.pivpn.io) lets you use [OpenVPN](https://openvpn.net) to connect to your home network from anywhere, through your [Pi](https://amzn.to/2uniPqa). See [this guide](https://pimylifeup.com/raspberry-pi-vpn-server) for set-up instructions. This will work particularly well in combination with Pi Hole.
-- **USB Password Manager** - Storing your passwords in the cloud may be convinient, but you cannot ever be certain they won't be breached. [KeePass](https://keepass.info/help/v2/setup.html) is an offline password manager, with a portable ddition that can run of a USB. There's also an [app](https://play.google.com/store/apps/details?id=com.korovan.kpass). See also [KeePassX](https://www.keepassx.org) and [KeePassXC](https://keepassxc.org) which are popular communnity forks with additional functionality
-- **Secure Chat Platform** Tinfoil Chat (TFC) is an onion-routed, endpoint secure messaging system, that relies on high assurance hardware architecture to protect users from passive collection, MITM attacks and most importantly, remote key exfiltration. See [TFC](https://github.com/maqp/tfc)
-- **Automated Backups** - [Syncthing](https://syncthing.net) is a privacy-focused continuous file synchronization program. You can use it to make on-site backups as well as encrypted and sync your data with your chosen cloud storage provider
-- **GPS Spoofer** - If you don't want to be tracked with GPS, then using a SDR you can send out spoof GPS signals, making near-by GPS-enabled devices think that they are in a totally different location. (Wouldn't recommend using this while on an airplane though!). You can use [gps-sdr-sim](https://github.com/osqzss/gps-sdr-sim) by [@osqzss](https://github.com/osqzss), and run it on a [Hacker RF](https://greatscottgadgets.com/hackrf) or similar SDR. Here's a [guide](https://www.rtl-sdr.com/tag/gps-spoofing) outlineing how to get started, you'll also need a [NooElec HackRF One](https://amzn.to/2Ta1s5J) or similar [SDR](https://amzn.to/39cLiOx). Check your local laws first, you may need a radio license.
-- **No-Mic Laptop** - You can go one step further than using a mic-blcoker, and physically remove the microphone from your laptop. (And then use a removable external mic when needed). See how, for [Apple MacBook and iPhone](https://www.wired.com/story/remove-the-mic-from-your-phone/) | [Video Guide](https://www.youtube.com/watch?v=Eo-IwQMeVLc). If that seems to extreme, there are [other options](https://security.stackexchange.com/a/130402)
+如果你熟悉电子，还可以自制：
+- **USB 数据隔离器** - 移除 USB 适配器的数据线即可。[教程](https://www.instructables.com/id/Making-a-USB-Condom)
+- **硬件加密密码管理器** - [hardpass0.2](https://bit.ly/3bg4Xi4) 基于 GnuPG 智能卡和树莓派。
+- **U2F USB 令牌** - [U2f-Zero](https://github.com/conorpp/u2f-zero) 用树莓派自制二次认证密钥。
+- **真随机数发生器** - [FST-01](https://www.gniibe.org/FST-01/fst-01.html) 开源硬件 RNG。
+- **PC 自动锁定 U 盘** - 用 U 盘作为电脑锁钥匙。
+- **无头树莓派 SSH 服务器** - [教程](https://openpunk.com/post/5)
 
-If you are confident with electronics, then you could also make:
-- **USB Data Blocker** - By simple removing the data wires from a USB adapter, you can create a protector to keep you safe while charing your device in public spaces. See [this guide](https://www.instructables.com/id/Making-a-USB-Condom) for more info (note: fast charge will not work)
-- **Hardware Encrypted Password Manager** - Even better than a software-encrypted password manager, is the [hardpass0.2](https://bit.ly/3bg4Xi4) which is a very simple hardware-encrypted USB store, using [GnuPG Smart card](https://www.g10code.com/p-card.html), [GNU Password Standard](https://www.passwordstore.org/) and this [source code](https://github.com/girst/hardpass-passwordmanager) all running on a [Pi Zero](https://amzn.to/2Sz0vU4). See also the [Zamek Project](https://bit.ly/36ZJrec), using this [source code](https://github.com/jareklupinski/zamek) to achive a similar functioning hardware-password manager
-- **U2F USB Token** - Similar to the FIDO2 2-factor authentication USB keys, [U2f-Zero](https://github.com/conorpp/u2f-zero) by Conor Patrick, lets you turn a Pi Zero into a second-factor auth method. Note: project no longer activley maintained, see [NitroKey](https://github.com/nitrokey) instead
-- **True Random Number Generator - Standalone** - The [FST-01](https://www.gniibe.org/FST-01/fst-01.html) is an open source hardware RNG with good documentation, and see the [neug source code](https://salsa.debian.org/gnuk-team/gnuk/neug)
-- **PC auto-lock Flash Drive** - Turn a flash drive into a lock/ unlock key for your PC, allowing you to quickly lock your device when needed [deprecated]
-- **Headless Pi Zero SSH server** - Create an small test server, that you can SSH into for development, in order to not have to run risky or potentially dangerous code or software directly on your PC, see [this artticle](https://openpunk.com/post/5) for getting started
+## 偏执级安全设备
 
+更极致的安全设备，虽非必需，但有趣且适合极端隐私需求：
 
-## Paranoid Security Gadgets
+- **自毁 PC** - ORWL PC 被入侵时自动擦除数据，需密码和密钥登录。[orwl.org](https://orwl.org)
+- **Tor 旅行路由器** - 即插即用，支持 VPN/Tor。[Anonabox.com](https://www.anonabox.com)
+- **硬件加密令牌** - Savvi Solutions Purrtec 需插入 USB 和密码双重认证。[Purrtec.com](http://www.purrtec.com/)
+- **主动 RFID 干扰卡** - Armour Card 主动干扰 RFID 读取。[ArmourCard 网站](https://armourcard.com)
+- **超声波麦克风干扰器** - 产生超声波干扰录音设备。[亚马逊](https://amzn.to/2Hnk63s)
+- **GPS 干扰器** - 干扰附近 GPS 设备定位。[AliExpress](https://www.aliexpress.com/item/4000214903055.html)
+- **音频干扰器/白噪声发生器** - 保护房间对话隐私。[SpyGadgets.com](https://www.spygadgets.com/rechargeable-audio-jammer-white-noise-generator-aj-40/)
+- **LibremKey: USB 令牌** - 便捷安全的加密和密钥管理。[Purism](https://puri.sm/products/librem-key/)
+- **Secalot: 多合一安全密钥** - 开源硬件钱包、PGP 卡、U2F 认证器。[Secalot](https://www.secalot.com/)
+- **Slim 硬件 OTP 生成器** - 信用卡大小的 TOTP 令牌。[Protectimus](https://www.protectimus.com/protectimus-slim-mini/)
+- **p@ss™ 手环** - 生成强密码的手环。[Tindie](https://www.tindie.com/products/russtopia/psstm-bracelet/)
+- **密码卡** - 生成和记忆安全密码的卡片。[PasswordCard.org](https://www.passwordcard.org/en)
+- **卡片盗刷检测器** - 检查 ATM 是否被加装盗刷设备。[Lab401](https://lab401.com/products/hunter-cat-card-skimmer-detector)
+- **Deauth Detector** - 检测 WiFi 去认证攻击。[Tindie](https://www.tindie.com/products/lspoplove/dstike-deauth-detector-pre-flashed-with-detector/)
+- **窃听器探测器** - 检测无线/有线窃听设备。[亚马逊](https://amzn.to/2V8z8C1)
+- **多频 RF 探测器** - 检测多种无线威胁。[spygadgets.com](https://www.spygadgets.com/1207i-multi-frequency-rf-bug-detector-cdma-gsm-bluetooth-wimax/)
+- **激光窃听防护器** - 干扰激光窃听。[shomer-tec](https://www.shomer-tec.com/laser-surveillance-defeater.html)
+- **变声器** - 伪装语音。[亚马逊](https://amzn.to/3bXqpsn)
+- **反人脸识别服饰** - 干扰人脸识别算法。[Redbubble](https://www.redbubble.com/people/naamiko/works/24714049-anti-surveillance-clothing?p=mens-graphic-t-shirt)
+- **反光眼镜** - 阻挡摄像头和人脸识别。[Reflectacles](https://www.reflectacles.com)
+- **硬件密码管理器** - MooltiPass 离线硬件加密密码管理器。[TheMooltiPass.com](https://www.themooltipass.com)
+- **QUANTUM** - 多功能加密设备，开源钱包和密码管理器。[crypto-arts.com](https://security-arts.com/)
+- **法拉第盒** - 屏蔽电磁信号，防止手机等设备被跟踪。[SilentPocket.com](https://silent-pocket.com/collections/all-products)
+- **DNA 隐形剂** - 开源配方，擦除和混淆 DNA 痕迹。[DNA Invisible](http://biogenfutur.es)
+- **滚轮印章** - 纸质数据擦除。[亚马逊](https://www.amazon.co.uk/Vantamo-Identity-Protection-Including-Refills/dp/B074MGBXLS/)
+- **取证桥接套件** - 写保护和镜像数据。[亚马逊](https://www.amazon.com/dp/B00Q76XG5W)
+- **Firewalla** - 开源智能防火墙，支持 VPN、广告拦截等。[Firewalla.com](https://firewalla.com)
+- **IoTMATE v2b-CL** - 开源家庭自动化模块，无需联网，隐私友好。[Tindie](https://www.tindie.com/products/iotmate/iotmate-v2b-cl-home-automation-with-alexa-support/)
+- **独立硬盘擦除器** - 无需连接电脑即可擦除硬盘。[亚马逊](https://www.amazon.com/StarTech-com-Hard-Drive-Eraser-Standalone/dp/B073X3YZNL)
+- **碎纸机** - 安全销毁含个人信息的文件。[亚马逊](https://www.amazon.com/AmazonBasics-6-Sheet-High-Security-Micro-Cut-Shredder/dp/B00Q3KFX8U)
+- **定时器** - 定时开关设备，防盗。[亚马逊](https://www.amazon.com/Century-Digital-Programmable-Packaging-Security/dp/B00MVF16JG)
+- **SurfEasy Key** - 便携加密浏览器。[fightforthefuture.org](https://shop.fightforthefuture.org/products/surfeasy-key)
+- **LoRa 私密短信收发器** | 脱离蜂窝网络的私密通信。[Tindie](https://www.tindie.com/products/DLSpectrum/two-private-texting-lora-transceivers/)
+- **TrueRNG** - 真随机数发生器。[Tindie](https://www.tindie.com/products/ubldit/truerng-v3/)
+- **电话窃听检测器** - 检查电话线路是否被窃听。[BrickHouseSecurity](https://www.brickhousesecurity.com/counter-surveillance/wiretap/)
+- **真随机数发生器** - FST-01SZ 开源 USB 随机数发生器。[Free Software Foundation: Shop](https://shop.fsf.org/storage-devices/neug-usb-true-random-number-generator)
 
-We can go even further, these products are far from essential and are maybe a little over-the-top. But fun to play around with, if you really want to avoid being tracked!
+## 网络安全
 
-- **Self-Destroying PC** - The ORWL PC will wipe all data if it is compromised, and has many other safeguards to ensure no one other than you can access anything from your drive. Comes with QubeOS, Windows or Linux, and requires both a password and fob to log in. See more: [orwl.org](https://orwl.org)
-- **Tor Travel-Router** - Plug-and-play travel router, providing WiFi with VPN or Tor for more private internet access, also has Wi-Fi uplink and range extender with a clear user interface. See more: [Anonabox.com](https://www.anonabox.com) | [Amazon](https://amzn.to/2HHV0fG) | [shop.itsfoss.com](https://shop.itsfoss.com/sales/anonabox-pro)
-- **Hardware Data Encryption Token** - Savvi Solutions Purrtec Encryption Keys provide an extra layer of protection for ofline data encryption, requiring the USB to be inserted as well as the password, in order to encrypt or decrypt files and data. [Purrtec.com](http://www.purrtec.com/) | [shop.itsfoss.com](https://shop.itsfoss.com/sales/purrtec-encryption-keys-2-pack)
-- **Active RFID Jamming** - Armour Card is a slim credit-card shaped device, which when in contact with any readers creates an electronic force field, strong enough to "jam" and readings from being taken by emmiting arbitrary data. Aimed at protecting cred cards, identity documents, key cards and cell phones. [US](https://amzn.to/38bJxB9) | [ArmourCard Website](https://armourcard.com)
-- **Ultra-Sonic Microphone Jammer** - Blocks phones, dictaphones, voice assistants and other recording devices. Uses built-in transducers to generate ultrasonic signals that can not be heard by humans, but cause indistinct noise, on redording devices, making it impossible to distinguish any details of the conversations. See more [UK](https://amzn.to/2Hnk63s) | [US](https://amzn.to/2v2fwVG)
-- **GPS Jammer** - In the DIY list, there was a link to how to build a GPS spoof device using an SDR. But you can also buy a GPS jammer, which may be useful if you fear that you are being tracked. They are aimed at preventing UAVs from operating in your area, but can also be used to confuse other tracking devices near by, there's a variety of models with varying power and range availible from $50 - $500. [AliExpress](https://www.aliexpress.com/item/4000214903055.html)
-- **Audio Jammer/ White Noise Generator** - protects your private room conversations by generating a un-filterable masking sound which desensitizes any near-by microphones. Sounds like random static to your ears but it is a variable oscillating frequency that masks your in person conversations. via [SpyGadgets.com](https://www.spygadgets.com/rechargeable-audio-jammer-white-noise-generator-aj-40/)
-- **LibremKey: USB Token** - A USB security token to make encryption, key management, and tamper detection convenient and secure. [Purism](https://puri.sm/products/librem-key/)
-- **Secalot: All-in-one Security Key** - An open source, small USB, that functions as a hardware Hardware cryptocurrency wallet, OpenPGP smart card, U2F authenticator, and one-time password generator. via [Secalot](https://www.secalot.com/)
-- **Slim Hardware OTP Generator** - A reprogrammable TOTP hardware token authenticator. Unlike USB security keys, this does not need to be connected, and instead is used like a mobile OTP generator, where you enter the 6-digit code. Useful as a backup, in case your phone is not accessible. Via [Protectimus](https://www.protectimus.com/protectimus-slim-mini/)
-- **p@ss™ Bracelet** - Fun password generator wristband, allowing you to generate hard to guess, unique passwords for each of your online accounts, and not have to remember them. [Tindie](https://www.tindie.com/products/russtopia/psstm-bracelet/)
-- **Credential Recall Cards** - An easy method for generating and recalling secure passwords. You could [make your own](https://www.passwordcard.org/en), or buy one such as the C@RD™ Mark II, available via: [Tindie](https://www.tindie.com/products/russtopia/crdtm-mark-ii-credential-ccess-recall-device/)
-- **Card Skimmer Detector** - Ensure an ATM or card reader does not have an integrated skimming device. See more at [Lab401](https://lab401.com/products/hunter-cat-card-skimmer-detector)
-- **Deauth Detector** - Most WiFi-based attacks involve sending deauth packets at some point, a deauth-detector will notify you whenever these packets are detected. This particular model uses SpaceHuhns code, running on an ESP8266. via: [Tindie](https://www.tindie.com/products/lspoplove/dstike-deauth-detector-pre-flashed-with-detector/) | [Amazon](https://www.amazon.com/MakerFocus-ESP8266-Detector-Pre-flashed-Deauther/dp/B07WKDPBRY)
-- **Bug Detector** - Able to  detect radio waves, magnetic fields,  in order to find hidden wired or wireless recording or camera equipment and transmitting devices, Note: has limited accuracy. See more: [UK](https://amzn.to/2V8z8C1) | [US](https://amzn.to/2V9AnkI)
-- **Advanced Multi-Frequency RF Detector** - Get instantly notified whenever a threat enters your environment. Detects the following frequencies: CDMA (824–849MHz), GSM(880-920MHz), GS-DCS(1710–1790MHz), WCDMA, 3G, GSM-PCS, DECT(1920–2480MHz), Bluetooth, WiFi(2400–2480MHz), Wi-Max(3000–7000MHz). via [spygadgets.com](https://www.spygadgets.com/1207i-multi-frequency-rf-bug-detector-cdma-gsm-bluetooth-wimax/)
-- **Laser Surveillance Defeater** - Sophisticated spies could potentially use a laser microphone, which bounces an invisible infrared laser off of a window and back to a light sensor. By measuring any interference in that reflected light, the laser microphone can detect vibrations in the window pane and reconstruct sound on the other side of the glass. A laser surveillance defeater creates small in-audible vibrations, which can stop all vibration-based evesdropping. [shomer-tec](https://www.shomer-tec.com/laser-surveillance-defeater.html) | [Amazon](https://www.amazon.com/Surveillance-Defeater-Countermeasure-Protection-Device/dp/B00383Z5L0)
-- **Voice Changer** - Useful to disguise voice, while chatting online. See more: [UK](https://amzn.to/3bXqpsn) | [US](https://amzn.to/2PqUEyz)
-- **Anti-Facial Recognition Clothing** - Carefully printed patterns that confuse common facial recognition algorithms. See more: [Amazon UK](https://amzn.to/32dnYgO) | [Redbubble](https://www.redbubble.com/people/naamiko/works/24714049-anti-surveillance-clothing?p=mens-graphic-t-shirt) | [Monoza](https://www.monoza.mobi/hyperface-anti-surveillance-shirt/?sku=1045-19321-423696-174028)
-- **Reflective Glasses** - Blocks faces from most CCTV and camera footage, and stops facial recognition from being able to map your face. See more: [Reflectacles](https://www.reflectacles.com)
-- **Hardware Password Manager** - MooltiPass is an offline, hardware encrypted USB password manager, with desktop and mobile browser integrations. You can export your KeePass database onto it, for secure authentication on the road, and the hardware is open source. See More: [TheMooltiPass.com](https://www.themooltipass.com) | [Hackaday](https://hackaday.com/tag/mooltipass/)
-- **QUANTUM** - Multifunctional crypto device, is an open source secure, reliable and simple cross-platform cryptocurrency wallet and password manager. See more: [crypto-arts.com](https://security-arts.com/) | [Tindie](https://www.tindie.com/products/security-arts/quantum-multifunctional-crypto-device/)
-- **Faraday Cases** - A Faraday cage or Faraday shield is an enclosure used to block electromagnetic fields. Useful for electronics, since many devices are constantly transmitting and receiving, which is the worst when you are trying to avoid being tracked. Their have been numerous reportings that governments can apparently track phones, even when they are [powered off](https://slate.com/technology/2013/07/nsa-can-reportedly-track-cellphones-even-when-they-re-turned-off.html), and since smart phones often do not have removable batteries, the only option is often to shield them from any em waves. See [SilentPocket.com](https://silent-pocket.com/collections/all-products) | [Faraday Box](https://amzn.to/3cj9z7r) | [Faraday Phone Pouch](https://amzn.to/38faum5)
-- **DNA Invisble** - An open source recipe that erases and deletes 99.5% of DNA left behind, and obfuscates the remaining 0.5%. You leave your DNA behind all the time, once analysed this is able to say a lot about your genetic makeup, and who you are. Learn more about this threat in [this video](https://youtu.be/MoX_BDWZUG0), See [DNA Invisible](http://biogenfutur.es)
-- **Roller Stamp** - Data eraser for paper. [Amazon](https://www.amazon.co.uk/Vantamo-Identity-Protection-Including-Refills/dp/B074MGBXLS/)
-- **Forensic bridge kit** - Allows for write blocking to prevent unauthorized writing to a device, and for crating images with out modifying data. See more: [Amazon](https://www.amazon.com/dp/B00Q76XG5W)
-- **Firewalla** - Tiny open source smart firewall. Has many useful features: VPN Server, Ad-blocker, powerful monitoring, security analysis and family controls. [Firewalla.com](https://firewalla.com) | [Tindie](https://www.tindie.com/products/firewallallc/firewalla-smart-internet-security-for-your-home/)
-- **IoTMATE v2b-CL** - Plug-and-play open source home automation module, does not require internet access and has some good privacy controls, making it a more secure alternative to big-name IoT hubs (Note: requires technical and electrical knowledge to install and configure). [Tindie](https://www.tindie.com/products/iotmate/iotmate-v2b-cl-home-automation-with-alexa-support/)
-- **Stand-alone Drive Eraser** - Allows you to erase drives, without connecting them to your PC. Availible in different modesls for different needs. See More: [Amazon](https://www.amazon.com/StarTech-com-Hard-Drive-Eraser-Standalone/dp/B073X3YZNL)
-- **Shredder** - It is important to safely dispose of any documents that contain personal information. This is a very affordable shredder - it cuts pieces into security level P-4 sizes (5/32" by 15/32"). It also shreds credit cards into the same size. [Amazon](https://www.amazon.com/AmazonBasics-6-Sheet-High-Security-Micro-Cut-Shredder/dp/B00Q3KFX8U)
-- **Device Timer** - This non-smart device can be used to turn various devices (such as lights or radio) on or off at certain times. It's useful to deter people when you are away. [Amazon](https://www.amazon.com/Century-Digital-Programmable-Packaging-Security/dp/B00MVF16JG)
-- **SurfEasy Key** - A portable web browser you can carry in your pocket for private and secure browsing on the go. Provides encrypted storage and anonymous browsing features. Again, you can make your own version with an encrypted USB, and a portable executable. [fightforthefuture.org](https://shop.fightforthefuture.org/products/surfeasy-key)
-- **Private Texting LoRa Transceivers** | A pack of 2 private texting unit, which are small companion radios for a smartphone, allowing you to communicate independently from celluar networks, great for privacy, security and when you have no service. [Tindie](https://www.tindie.com/products/DLSpectrum/two-private-texting-lora-transceivers/) 
-- **TrueRNG** - Generates a stream of True Random Numbers for use in Simulations, Security, and Gaming. [Tindie](https://www.tindie.com/products/ubldit/truerng-v3/)
-- **Wire Tap Detector** - Easily check both single and multi-line phone systems for series and parallel taps. Via [BrickHouseSecurity](https://www.brickhousesecurity.com/counter-surveillance/wiretap/)
-- **True Random Number Generator** - FST-01SZ is a tiny stand alone USB 32-bit computer based on a free hardware design. (NeuG is an implementation of a TRNG for GD32F103 MCU). See More: [Free Software Foundation: Shop](https://shop.fsf.org/storage-devices/neug-usb-true-random-number-generator)
+用于保护和匿名化网络、检测和防止入侵、提供更多网络控制的设备。部分产品价格较高，也可参考上文 DIY 自制。
 
+- **Anonabox** - 即插即用 Tor 路由器，支持 VPN 和文件共享。[Anonabox.com](anonabox.com)
+- **Turris Omnia 路由器** - 开源路由器，自动更新，分布式防火墙。[turris.com](https://www.turris.com/en/omnia/overview/)
+- **FingBox** - 网络监控与安全，配套免费 app。[Fing.com](https://www.fing.com/products/fingbox)
+- **BitdefenderBox** - 家庭防火墙，保护 IoT 设备。[亚马逊](https://amzn.to/2vrurZJ)
+- **Flashed-Routers** - 预装开源固件的品牌路由器。[flashrouters.com](https://www.flashrouters.com/routers)
+- **Firewalla** - 开源智能防火墙，支持 VPN、广告拦截等。[Firewalla.com](https://firewalla.com)
+- **Trend Micro Box** - 检测入侵和漏洞，家庭网络安全。[亚马逊](https://amzn.to/2wk3Y0s)
+- **AlwaysHome Duo** - USB VPN，突破地理限制。[亚马逊](https://amzn.to/2Ts6oSn)
+- **Firewalla Red** - 入侵检测与防护系统，带广告拦截和 VPN。[亚马逊](https://amzn.to/388BlAw)
+- **LibertyShield** - 预配置多国 VPN 路由器，需订阅。[亚马逊](https://amzn.to/2T89vzU)
+- **千兆旅行 VPN 路由器** - 双频 VPN 旅行路由器。[亚马逊](https://amzn.to/32HD1zU)
+- **Helios 64** - 开源 NAS，本地备份，安全可靠。[Kobol.io](https://kobol.io/)
+- **InvizBox** - Tor 路由器，提升所有设备的隐私安全。[Invizbox.com](https://www.invizbox.com)
+- **InviziBox Go** - 便携 VPN：[亚马逊](https://amzn.to/386ikPT)
+- **WatchGuard Firebox** - 商用级网络防火墙。[亚马逊](https://amzn.to/2VF0MqR)
 
-## Network Security
+#### DIY 网络硬件
+- **[Pi-Hole](https://pi-hole.net)** - 网络级广告和追踪拦截，带 Web 界面和移动端监控。
+- **[IPFire](https://www.ipfire.org)** - 基于 Linux 的开源防火墙，易用高性能。
+- **[PiVPN](https://pivpn.io)** - 在 Debian 服务器上快速搭建家庭 VPN，支持 OpenVPN 和 WireGuard。
+- **[E2guardian](http://e2guardian.org)** - 强大的开源网页内容过滤器。
+- **[OpenWRT](https://openwrt.org)** - 强大定制路由固件，安全高性能。
+- **[SquidGuard](http://www.squidguard.org)** - 网站内容控制插件，基于黑名单重定向。
+- **[PF Sense](https://www.pfsense.org)** - 广泛使用的开源防火墙/路由器。
+- **[Zeek](https://www.zeek.org)** - 网络分析与恶意软件检测框架。
 
-Gadgets that help protect and anonamise your internet, detect & prevent intrusions and provide additional network controlls, both at home and while traveling. There are many products like this availible, some of them are over-priced for what they are, others provide some really essential network security features. It is possible to re-create some of these solutions yourself, to save money [above](#diy-security-products).
+[查看更多](https://geekflare.com/best-open-source-firewall) 开源防火墙应用
 
-- **Anonabox** - Plug-and-play Tor router. Wi-Fi uplink and range extender with user interface, also has VPN options and USB ports for local file sharing.  [Amazon](https://amzn.to/38bwZIA) | [Anonabox.com](anonabox.com) | [shop.itsfoss.com](https://shop.itsfoss.com/sales/anonabox-pro)
-- **Turris Omnia Router** - Open source wireless router, running OpenWrt. Above average specs, and useful features including automatic updates, distributed adaptive firewall and virtual server. Via [turris.com](https://www.turris.com/en/omnia/overview/) | [Amazon](https://www.amazon.com/Turris-hi-Performance-printserver-Virtual-Dual-core/dp/B07XCKK146)
-- **FingBox** - Network monitoring and security, for what it offers Fing is very affordable, and there is a free [app](https://www.fing.com/products/fing-app) that you can use before purchasing the hardware to get started. [Fing.com](https://www.fing.com/products/fingbox) | [US](https://amzn.to/2wlXfCT) | [UK](https://amzn.to/2I63hKP)
-- **BitdefenderBox** - Cybersecurity home firewall hub, for protecting IoT and other devices. Has other features such as parental controlls and is easy to set up. [US](https://amzn.to/2vrurZJ) | [UK](https://amzn.to/34Ul54w)
-- **Flashed-Routers** - Pre-configured branded routers, flashed with custom open source firmware, for better security, privacy and performance. [flashrouters.com](https://www.flashrouters.com/routers)
-- **Firewalla** - Tiny open source smart firewall. Has many useful features: VPN Server, Ad-blocker, powerful monitoring, security analysis and family controls. [Firewalla.com](https://firewalla.com) | [Tindie](https://www.tindie.com/products/firewallallc/firewalla-smart-internet-security-for-your-home/)
-- **Trend Micro Box** - Protect home networks from external and internal cyber attacks. Detects intrusions, vulnrabbilities, remote access, web threats and provides other security features. [US](https://amzn.to/2wk3Y0s) | [US](https://amzn.to/2uqX4Wv)
-- **AlwaysHome Duo** - USB VPN with accelerated virtual networking to your home or office network, crossing geo-blocking and firewall mechanisms. [US](https://amzn.to/2Ts6oSn) | [UK](https://amzn.to/3bi4cF0)
-- **Firewalla Red** - An intrusion detection and intrusion prevention system, with a web and mobile interface. Also has Ad-block, VPN, internet controll features and insights. [US](https://amzn.to/388BlAw) | [Firewalla.com](https://firewalla.com)
-- **LibertyShield** - Pre-configured, plug-and-play multi-country VPN router, note that after 1 year there is a monthly subscription. [US](https://amzn.to/2T89vzU) | [UK](https://amzn.to/2twJlwM)
-- **Gigabit Travel AC VPN Router** - A fully-featured dual-band travel router with VPN capabilities. [US](https://amzn.to/32HD1zU) | [UK](https://amzn.to/2SkUxFg)
-- **Helios 64** - ARM-powered fully open source NAS. Using a local backup solution mitigates a lot of the privacy concerns of popular cloud storage providers, and Kobol's Helios 64 is a great option in terms of cost, reliability, functionality and security. High capacity (up to 80TB across 5-bays), with good network throughput (2.5GB multi-Gigabit Ethernet and dual LAN), adequate computing power and memory, great reliability, (with a built-in UPS, dual DC input). [Kobol.io](https://kobol.io/)
-- **InvizBox** - Tor router, that provides speed, privacy and security for all devices connected to it. [Invizbox.com](https://www.invizbox.com) | [Amazon](https://amzn.to/2w4v7V3) 
-- **InviziBox Go** - Portable VPN: https://amzn.to/386ikPT
-- **WatchGuard Firebox** - Business-grade network firewall. [US](https://amzn.to/2VF0MqR) | [UK](https://amzn.to/2VF12WR)
+大多数项目用树莓派 3 或 4 即可。也可自制硬件，见[此教程](https://www.instructables.com/id/Build-your-own-gateway-firewall)。
 
-#### DIY Networking Hardware
-- **[Pi-Hole](https://pi-hole.net)** - Network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole. Pi-Hole can significantly speed up your internet, remove ads and block malware. It comes with a nice web interface and a mobile app with monitoring features, it's open source, easy to install and very widley used
-- **[IPFire](https://www.ipfire.org)** - A hardened, versatile, state-of-the-art open source firewall based on Linux. Its ease of use, high performance and extensibility make it usable for everyone
-- **[PiVPN](https://pivpn.io)** - A simple way to set up a home VPN on a any Debian server. Supports OpenVPN and WireGuard with elliptic curve encryption keys up to 512 bit. Supports multiple DNS providers and custom DNS provividers - works nicley along-side PiHole
-- **[E2guardian](http://e2guardian.org)** - Powerful open source web content filter
-- **[OpenWRT](https://openwrt.org)** Powerful custom router firmware, with great security, performance and customization features. See more [custom router firmware](https://github.com/Lissy93/awesome-privacy#router-firmware)
-- **[SquidGuard](http://www.squidguard.org)** - A URL redirector software, which can be used for content control of websites users can access. It is written as a plug-in for Squid and uses blacklists to define sites for which access is redirected
-- **[PF Sense](https://www.pfsense.org)** - Widley used, open source firewall/router
-- **[Zeek](https://www.zeek.org)** -  Detect if you have a malware-infected computer on your network, and powerful network analysis framework and monitor
+## 安全计算设备
 
-[See more](https://geekflare.com/best-open-source-firewall) open source firewall apps
+- **ORWL PC** - 自毁 PC，被入侵时自动擦除数据。[orwl.org](https://orwl.org)
+- **Librem 5** - Purism 推出的开源安全手机。[puri.sm/products/librem-5](https://puri.sm/products/librem-5)
+- **Armadillo Phones** - 加密手机、SIM 卡和网络，开源密钥链软件。[ArmadilloPhone.com](https://www.armadillophone.com/store#diamond)
+- **KryptAll** - 加密移动网络，安全通话。[KryptAll.com](https://www.kryptall.com)
+- **WiPhone** - 开源 VOIP/LoRa 手机，适合开发和自由通信。[WiPhone.io](https://www.wiphone.io/)
+- **Ano-Phone** - 加强安全防护的安卓设备，非开源。[ano-phone.com](https://ano-phone.com)
+- **Secure Group** - 硬件加密智能手机。[SecureGroup.com](https://securegroup.com/hardware)
+- **Librem Laptop** - Purism 推出的开源加密笔记本，带物理开关和防篡改硬件。[puri.sm](https://puri.sm/products)
 
-For most projects, a Raspberry Pi 3 or 4 is more than enough. You could also build your own hardware, see [this guide](https://www.instructables.com/id/Build-your-own-gateway-firewall) on constructing a gateware firewall yourself.
+## 硬件加密存储
 
+硬件加密设备自带加密芯片，无需额外软件，跨平台安全。即使设备被盗，数据也安全。可与软件加密结合提升安全性。
 
-## Secure Computing Devices
+可靠选项包括：
 
-- **ORWL PC** - A self-destroying PC, that will wipe all data if it is compromised, and has many other safeguards to ensure no one other than you can access anything from your drive. Comes with QubeOS, Windows or Linux, and requires both a password and fob to log in. See more: [orwl.org](https://orwl.org)
-- **Librem 5** - An open source security and privacy-focused phone, running PureOS, built by Prism. See More: [puri.sm/products/librem-5](https://puri.sm/products/librem-5)
-- **Armadillo Phones** - Encrypted phones, SIMs and Networks, provide zero-trust  communications and pro-active defences. Their keychain software is open source, and they also provide encrypted SIMs, and servers.
-See More: [ArmadilloPhone.com](https://www.armadillophone.com/store#diamond)
-- **KryptAll** - Provides secure mobile networking, for encrypted celluar calling. However without being open source, these devices are harder to verify. See More: [KryptAll.com](https://www.kryptall.com)
-- **WiPhone** - A fully open source, modular and easily customizable phone for VOIP and LoRa. Great for making free calls over WiFi, communicating locally over LoRa, or just tinkering thanks to its ESP32 pinouts. See more: [WiPhone.io](https://www.wiphone.io/)
-- **Ano-Phone** - Android devices loaded with additional security defences. Not open source. 
-See More: [ano-phone.com](https://ano-phone.com)
-- **Secure Group** - Hardware-encrypted smart phones, for privacy and security. See more: [SecureGroup.com](https://securegroup.com/hardware)
-- **Librem Laptop** - The Librem 13, Librem 15 and Librem  Mini are well-speced, open source hardware-encrypted computing devices by Purism. They have several hardware features, like physical connectivity switches, and tamper-proof hardware. See More [puri.sm](https://puri.sm/products)
+- AES 硬件加密 USB 3.0 外置硬盘盒：[英国](https://amzn.to/2GM3GkB)
+- Integral 256 位 AES USB 3.0（需软件），16GB/32GB/64GB。[英国](https://amzn.to/37vpyNb)
+- iStorage 256 位 AES USB 3.0 Pro（硬件加密，带键盘），8GB/16GB/32GB/64GB。[美国](https://amzn.to/2T9wTgo) | [英国](https://amzn.to/2O1OPXu)
+- IornKey 企业级加密 U 盘，4GB~128GB。[美国](https://amzn.to/2wYWQH2) | [英国](https://amzn.to/3cjsnUi)
+- iStorage 256 位 AES USB 3.0 Personal（硬件加密，带键盘），8GB~64GB。[美国](https://amzn.to/2I99c1G) | [英国](https://amzn.to/38GzHqo)
+- Lexar JumpDrive 指纹加密 U 盘（需软件），32GB~256GB。[美国](https://amzn.to/38b0eeP) | [英国](https://amzn.to/2GtipRC)
+- iStorage 256 位硬件加密外置 USB 3.1 SSD，128GB~1TB。[英国](https://amzn.to/37wkhVA)
+- iStorage 256 位硬件加密外置 USB 3.1 HDD，1TB~4TB。[美国](https://amzn.to/32DI4RA) | [英国](https://amzn.to/37vpFYN)
+- iodd Mini USB 3.0 256 位加密 SSD，256GB~1TB。[英国](https://www.amazon.co.uk/dp/B07Y4FR9H7)
 
+*更经济的选择是软件加密 U 盘。[VeraCrypt](https://www.veracrypt.fr/en/Home.html) 是跨平台开源加密工具，简单安全。可搭配普通 U 盘使用。*
 
+*系统盘加密可用 [BitLocker](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview)（Windows）、[FileVault](https://support.apple.com/en-us/HT204837)（OSX）或 [Linux 方案](https://www.tecmint.com/file-and-disk-encryption-tools-for-linux)。*
 
-## Hardware Encrypted Storage
+## USB 数据隔离器
 
-Hardware-based encryption uses a device’s on-board security to perform encryption and decryption. It is self-contained and does not require the help of any additional software. Therefore, it is essentially free from the possibility of contamination, malicious code infection, or vulnerability, and able to be used on any platform.
+小巧低价但必不可少的设备，插在 USB 线和充电口之间，物理阻断数据传输，仅允许充电，防止 USB 攻击。
 
-If the device itself becomes compromised, your data will remain safe. Really useful backing up, transporting and sharing personal data safely. For maximum security, you can combine hardware encryption with software encryption.
+- PortaPow 3 代，USB A，2 个装。[红色](https://amzn.to/39aStqE) | [白色](https://amzn.to/2TqXl4i) | [黑色](https://amzn.to/38imYd2)
+- PortaPow 双 USB 电源监控器，带数据隔离。[美国](https://amzn.to/2I7HT7J) | [英国](https://amzn.to/3chnWcJ)
+- Privise USB A 数据隔离器。[美国](https://amzn.to/3cig0rr) | [英国](https://amzn.to/2VAbX3K)
+- 数据专用 Micro-USB 线，PortaPow 安全充电线。[美国](https://amzn.to/2Tq09ys) | [英国](https://amzn.to/38chHDF)
+- USB-C ondom，开源 USB-C 数据隔离器。[Tindie](https://www.tindie.com/products/CrowbarTech/usb-c-ondom/)
 
-Reliable options include:
+PortaPow（3 代）带有 SmartCharge 芯片，兼容快充。
 
-- AES Hardware encrypted USB 3.0 external hard drive enclosure for HDD or SSD: [US]() | [UK](https://amzn.to/2GM3GkB)
-- Integral 256-bit AES USB 3.0 (Software required), 16GB, 32GB, 64GB. [US]() | [UK](https://amzn.to/37vpyNb)
-- iStorage 256-bit AES USB 3.0 Pro (Hardware Encrypted), with keypad, 8GB, 16GB, 32GB, 64GB. [US](https://amzn.to/2T9wTgo) | [UK](https://amzn.to/2O1OPXu)
-- IornKey Rugged Enterprise-grade encrypted USB Pen, 4GB, 8GB, 16GB, 32GB, 64GB, 128GB. [US](https://amzn.to/2wYWQH2) | [UK](https://amzn.to/3cjsnUi)
-- iStorage 256-bit AES USB 3.0 Personal (Hardware Encrypted), with keypad, 8GB, 16GB, 32GB, 64GB. [US](https://amzn.to/2I99c1G) | [UK](https://amzn.to/38GzHqo)
-- Lexar JumpDrive Fingerprint USB 3.0 (Software required), 32GB, 64GB, 128GB, 256GB. [US](https://amzn.to/38b0eeP) | [UK](https://amzn.to/2GtipRC)
-- iStorage 256-bit Hardware Encrypted external USB 3.1 SSD Drive. 128GB, 256GB, 512GB, 1TB. [UK](https://amzn.to/37wkhVA)
-- iStorage 256-bit Hardware Encrypted external USB 3.1 HDD Drive. 1TB, 2TB, 3TB, 4TB. [US](https://amzn.to/32DI4RA) | [UK](https://amzn.to/37vpFYN)
-- iodd Mini USB 3.0 256-bit Secure encrypted SSD Drive. 256GB, 512GB, 1TB. [UK](https://www.amazon.co.uk/dp/B07Y4FR9H7)   
+也可自制，[原理图](https://www.electroschematics.com/diy-usb-condom-circuit)。
 
-*Alternatively, a cheaper option would be a software-encrypted USB. [VeraCrypt](https://www.veracrypt.fr/en/Home.html) is cross-platform open source encryption application. It's surprisingly simple (see [this how-to guide](https://www.howtogeek.com/108501/the-how-to-geek-guide-to-getting-started-with-truecrypt)), and very secure. Combine this with an ordinary USB drive, this [high-speed (300mb/s) 256GB flash drive](https://amzn.to/2RykcLD) is a great option*
+注意：有些数据线本身可能有风险，见 [O.M.G Cable](https://shop.hak5.org/products/o-mg-cable)。建议标记自己的线材。
 
-*For encryption your boot drive, you can use [BitLocker](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview) (Windows), [FileVault](https://support.apple.com/en-us/HT204837) (OSX), or any of these [options](https://www.tecmint.com/file-and-disk-encryption-tools-for-linux)  for Linux.*
+## FIDO U2F 密钥
 
+物理二次认证密钥是安全便捷的认证方式。更多支持网站见 [twofactorauth.org](https://twofactorauth.org)。
 
+- **[Solo Key](https://solokeys.com)** - 开源 U2F/FIDO2 密钥，支持 NFC。
+- **[LibremKey](https://puri.sm/products/librem-key/)** - USB 安全令牌，便于加密和密钥管理。
+- **[OnlyKey](onlykey.io/alicia)** - 开源硬件密码管理器，支持 FIDO2/U2F。
+- **[NitroKey](https://www.nitrokey.com/)** - 开源安全 USB，支持认证、加密、SSH 密钥等。
+- **[Secalot](https://www.secalot.com/)** - 开源多功能 USB，硬件钱包、PGP 卡、U2F、OTP。
+- **[Protectimus](https://www.protectimus.com/protectimus-slim-mini/)** - 信用卡大小 TOTP 硬件令牌。
+- **[Yubikey](https://www.yubico.com/products/)** - 流行易用的认证密钥，支持多种接口，非开源。
+- **[Thetis](https://thetis.io)** - 耐用移动友好型 USB-A FIDO U2F 密钥。
+- **[U2F Zero](https://u2fzero.com/)** - 开源 U2F 令牌，具备高熵随机数发生器。
 
-## USB Data Blockers
+也可自制，见 [U2f-Zero](https://github.com/conorpp/u2f-zero) 或 [NitroKey](https://github.com/nitrokey)，ESP8266 DIY 见[此文](https://hackaday.com/2018/01/04/two-factor-authentication-with-the-esp8266/)。
 
-Small, low-cost but essential devise. It attaches inbetween your USB cable and the charging socket, and will physically block data transfer and syncing while charging. Totally mitigates the risk of being hacked via a USB exploit, and stops anything being uploaded to your device.
+## 加密钱包
 
-- PortaPow 3rd Gen, USB A, 2-Pack. [Red](https://amzn.to/39aStqE) | [White](https://amzn.to/2TqXl4i) | [Black](https://amzn.to/38imYd2)
-- PortaPow Dual USB Power Monitor with Data Blocker, usful for monitoring power consumption and managing which devices are allowed data connections. [US](https://amzn.to/2I7HT7J) | [UK](https://amzn.to/3chnWcJ) 
-- Privise USB A Data Blocker. [US](https://amzn.to/3cig0rr) | [UK](https://amzn.to/2VAbX3K)
-- Data-only Micro-USB cable. Be sure that it is actually data-only, you can count the pins at each end. Again PortaPow make a legitimate safe-charge cable. [US](https://amzn.to/2Tq09ys) | [UK](https://amzn.to/38chHDF)
-- USB-C ondom. An open source power-with-no-data USB-C data blocker. [Tindie](https://www.tindie.com/products/CrowbarTech/usb-c-ondom/)
+最安全的加密货币存储方式是冷钱包（离线），避免被黑。选择开源、口碑好的钱包，妥善备份助记词。
 
-PortaPow (3rd gen) is one of the best options, since it has a SmartCharge chip (which isn't usually possible without the data wire).
+- Trezor 全开源，固件安全。[Trezor.com](https://trezor.io)
+- Prokey Optimum 离线钱包，支持 1000+ 币种，[开源](https://github.com/prokey-io)。[Prokey.io](https://prokey.io/?reflink=67e4a39bc5cd4c04bd7f38b50b041c1f)
+- Ledger 功能丰富，易用但非开源。[Ledger.com](https://shop.ledger.com/pages/hardware-wallets-comparison)
+- 金属冷钱包，防水防火。[美国](https://amzn.to/2Px0EFV) | [英国](https://amzn.to/2VLeVmr)
+- QUANTUM 多功能加密设备，开源钱包和密码管理器。[crypto-arts.com](https://security-arts.com/)
 
-You can also build your own very easily, [here is a schematic](https://www.electroschematics.com/diy-usb-condom-circuit).
-
-Word of Warning: Sometimes the cable itself can be dangerous. See [O.M.G Cable](https://shop.hak5.org/products/o-mg-cable), it looks like a totally authentic phone cable, but is actually able to deploy advanced exploits often without you being able to identify. It is always best label your cables, to ensure you are using your own, safe wire.
-
-
-## FIDO U2F Keys
-
-Physical 2-factor authentication keys are a secure and convinient method of authentication. See [twofactorauth.org](https://twofactorauth.org) for a list of websites that provide 2FA.
-- **[Solo Key](https://solokeys.com)** - An open source U2F and FIDO2 key, with NFC. via [SoloKeys.com](https://solokeys.com)
-- **[LibremKey](https://puri.sm/products/librem-key/)** - A USB security token to make encryption, key management, and tamper detection convenient and secure. via [Puri.sm](https://puri.sm/products/librem-key/)
-- **[OnlyKey](onlykey.io/alicia)** - A pin-protected open source hardware password manager with FIDO2/ U2F. It's very affordable, considering the broad feature set, but initial setup is a little complex. Via [OnlyKey.com](onlykey.io/alicia)
-- **[NitroKey](https://www.nitrokey.com/)** - An open source secure USB, providing authentication (OTP, U2F and static passwords), email encryption (GnuPG, OpenGPG, S/MIME etc), file encryption (with VeraCrypt, GnuPG and more), key and certificate management and SSH keys for server administration. via [NitroKey.com](https://www.nitrokey.com/)
-- **[Secalot](https://www.secalot.com/)** - A small open source USB, that functions as a hardware Hardware crypto wallet, OpenPGP smart card, U2F authenticator, and one-time password generator. via [Secalot.com](https://www.secalot.com/)
-- **[Protectimus](https://www.protectimus.com/protectimus-slim-mini/)** - A credit-card sized, slim TOTP hardware token. Allows you to generate 6-digit OTP codes, without the need for a mobile device. Useful as a backup, in case your phone is not accessible. Via [Protectimus.com](https://www.protectimus.com/protectimus-slim-mini/)
-- **[Yubikey](https://www.yubico.com/products/)** - Extremely popular, easy-to-use and reliable authentication keys, availible in a variety of form factors - from Micro keys, USB-C, Slim USB-A, and dual lightning + USB. Note, that neither the hardware, nor software is open source. Via [yubico.com](https://www.yubico.com/products/)
-- **[Thetis](https://thetis.io)** - Extremely durable, mobile-friendly USB-A FIDO U2F Key. via [Thetis.io](https://thetis.io)
-- **[U2F Zero](https://u2fzero.com/)** - Simple, open source U2F token, with write-only keys, tamper-resistance and hardware true random number generator to ensure high entropy.
-
-You can also build your own key, see [U2f-Zero](https://github.com/conorpp/u2f-zero) by Conor Patrick, lets you turn a Pi Zero into a second-factor auth method. Or check out [NitroKey](https://github.com/nitrokey), for a guide on building U2F with an ESP-8266, see [this Hackaday article](https://hackaday.com/2018/01/04/two-factor-authentication-with-the-esp8266/) 
-
-
-
-## Crypto Wallets
-
-The most secure medium to store your currency is cold (offline) wallets, since they cannot be hacked. Of course it is vital that you keep your private keys somewhere that they cannot be stolen, and cannot be lost or destroyed. Electronic devices can make it easy to securely store and spend crypto currency. Choose a wallet that is open source, and with a good reputation. Ensure you backup your seed, and keep it somewhere safe.
-
-- Trezor is fully open source and implements a firmware-based security on top of known hardware. [Trezor.com](https://trezor.io)
-- Prokey Optimum is a secure, easy-to-use offline wallet, that works directly through the browser (on Windows, Mac, Linux and Android), without the need for installing any apps. Both the firmware and browser app is [open source](https://github.com/prokey-io), and it natively supports [over 1000 coins and tokens](https://prokey.io/all-coins). It's affordably priced at £42/ $59, with free world-wide shipping and customer support. [Prokey.io](https://prokey.io/?reflink=67e4a39bc5cd4c04bd7f38b50b041c1f)
-- Ledger is a popular option, as both their hardware and software are good quality, easy to use, and feature rich, however it is not open source. [Ledger.com](https://shop.ledger.com/pages/hardware-wallets-comparison)
-- Indestructible Steel Wallet, for private key. [US](https://amzn.to/2Px0EFV) | [UK](https://amzn.to/2VLeVmr)
-- QUANTUM is a Multifunctional crypto device, that is an open source secure, reliable and simple cross-platform cryptocurrency wallet and password manager. [crypto-arts.com](https://security-arts.com/) | [Tindie](https://www.tindie.com/products/security-arts/quantum-multifunctional-crypto-device/)
-
-Always ensure the packaging has not been tampered with, buy direct from the manufacturer when possible.
+购买时请确保包装未被拆封，尽量官网购买。
 
 ---
 
-## See Also
+## 另见
 
-- [Awesome Privacy-Respecting Software](https://github.com/Lissy93/awesome-privacy)
-- [Ultimate Personal Security Checklist](/README.md)
-- [Why Privacy and Security Matters](/0_Why_It_Matters.md)
-- [Further Links + More Awesome Stuff](/4_Privacy_And_Security_Links.md)
+- [优秀隐私友好软件](https://github.com/Lissy93/awesome-privacy)
+- [终极个人安全清单](/README.md)
+- [为什么隐私和安全重要](/0_Why_It_Matters.md)
+- [更多链接与资源](/4_Privacy_And_Security_Links.md)
 
+欢迎贡献和建议 —— 提交 [issue](https://github.com/Lissy93/personal-security-checklist/issues/new/choose) 或 [PR](https://github.com/Lissy93/personal-security-checklist/pull/new/master)。参见 [`CONTRIBUTING.md`](/.github/CONTRIBUTING.md)
 
-Contributions welcome and appreciated - to propose an edit [raise an issue](https://github.com/Lissy93/personal-security-checklist/issues/new/choose) or [open a PR](https://github.com/Lissy93/personal-security-checklist/pull/new/master). See: [`CONTRIBUTING.md`](/.github/CONTRIBUTING.md)
-
-*Licensed under [Creative Commons, CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), © [Alicia Sykes](https://aliciasykes.com) 2020*
+*采用 [知识共享 CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 许可，© [Alicia Sykes](https://aliciasykes.com) 2020*
 
 [![Attribution 4.0 International](https://licensebuttons.net/l/by/3.0/88x31.png)](https://github.com/Lissy93/personal-security-checklist/blob/master/LICENSE.md)
 
 ---
 
-Found this helpful? Consider sharing it with others, to help them also improve their digital security 😇
+觉得有用？欢迎分享给他人，一起提升数字安全 😇
 
-[![Share on Twitter](https://img.shields.io/badge/Share-Twitter-17a2f3?style=for-the-badge&logo=Twitter)](http://twitter.com/share?text=Check%20out%20the%20Personal%20Cyber%20Security%20Checklist-%20an%20ultimate%20list%20of%20tips%20for%20protecting%20your%20digital%20security%20and%20privacy%20in%202020%2C%20with%20%40Lissy_Sykes%20%F0%9F%94%90%20%20%F0%9F%9A%80&url=https://github.com/Lissy93/personal-security-checklist)
-[![Share on LinkedIn](https://img.shields.io/badge/Share-LinkedIn-0077b5?style=for-the-badge&logo=LinkedIn)](
+[![分享到 Twitter](https://img.shields.io/badge/Share-Twitter-17a2f3?style=for-the-badge&logo=Twitter)](http://twitter.com/share?text=Check%20out%20the%20Personal%20Cyber%20Security%20Checklist-%20an%20ultimate%20list%20of%20tips%20for%20protecting%20your%20digital%20security%20and%20privacy%20in%202020%2C%20with%20%40Lissy_Sykes%20%F0%9F%94%90%20%20%F0%9F%9A%80&url=https://github.com/Lissy93/personal-security-checklist)
+[![分享到 LinkedIn](https://img.shields.io/badge/Share-LinkedIn-0077b5?style=for-the-badge&logo=LinkedIn)](
 http://www.linkedin.com/shareArticle?mini=true&url=https://github.com/Lissy93/personal-security-checklist&title=The%20Ultimate%20Personal%20Cyber%20Security%20Checklist&summary=%F0%9F%94%92%20A%20curated%20list%20of%20100%2B%20tips%20for%20protecting%20digital%20security%20and%20privacy%20in%202020&source=https://github.com/Lissy93)
-[![Share on Facebook](https://img.shields.io/badge/Share-Facebook-4267b2?style=for-the-badge&logo=Facebook)](https://www.linkedin.com/shareArticle?mini=true&url=https%3A//github.com/Lissy93/personal-security-checklist&title=The%20Ultimate%20Personal%20Cyber%20Security%20Checklist&summary=%F0%9F%94%92%20A%20curated%20list%20of%20100%2B%20tips%20for%20protecting%20digital%20security%20and%20privacy%20in%202020&source=)
-[![Share on Mastodon](https://img.shields.io/badge/Share-Mastodon-56a7e1?style=for-the-badge&logo=Mastodon)](https://mastodon.social/web/statuses/new?text=Check%20out%20the%20Ultimate%20Personal%20Cyber%20Security%20Checklist%20by%20%40Lissy93%20on%20%23GitHub%20%20%F0%9F%94%90%20%E2%9C%A8)
+[![分享到 Facebook](https://img.shields.io/badge/Share-Facebook-4267b2?style=for-the-badge&logo=Facebook)](https://www.linkedin.com/shareArticle?mini=true&url=https%3A//github.com/Lissy93/personal-security-checklist&title=The%20Ultimate%20Personal%20Cyber%20Security%20Checklist&summary=%F0%9F%94%92%20A%20curated%20list%20of%20100%2B%20tips%20for%20protecting%20digital%20security%20and%20privacy%20in%202020&source=)
+[![分享到 Mastodon](https://img.shields.io/badge/Share-Mastodon-56a7e1?style=for-the-badge&logo=Mastodon)](https://mastodon.social/web/statuses/new?text=Check%20out%20the%20Ultimate%20Personal%20Cyber%20Security%20Checklist%20by%20%40Lissy93%20on%20%23GitHub%20%20%F0%9F%94%90%20%E2%9C%A8)

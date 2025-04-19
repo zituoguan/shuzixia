@@ -1,64 +1,65 @@
 export const intro = [
-  `The objective of this project is to give you practical guidance on how to improve your digital security, and protect your privacy online.`,
+  `本项目旨在为您提供实用的数字安全提升指导，帮助您在线保护隐私。`,
   `
-  The checklist is a living document, and will be updated regularly to reflect the latest threats and best practices.
-  This is made possible by open sourcing the content, and making it a community maintained resource,
-  meaning that anyone can suggest changes, make additions or update the guidance.
-  All edits are then reviewed by maintainers before being merged and going live.
+  本清单是一个持续更新的文档，会定期根据最新威胁和最佳实践进行更新。
+  这得益于内容的开源，并由社区共同维护，
+  任何人都可以建议更改、补充或更新指南。
+  所有编辑都将由维护者审核后合并并上线。
   `];
 
 export const contributing = [
-  `This project is only possible thanks to contributors like you!`,
-  `You can make changes to any of the checklist content, by editing `
-  + `[\`personal-security-checklist.yml\`](https://github.com/Lissy93/personal-security-checklist/blob/master/personal-security-checklist.yml)`,
+  `本项目的实现离不开像您这样的贡献者！`,
+  `您可以通过编辑 `
+  + `[\`personal-security-checklist.yml\`](https://github.com/Lissy93/personal-security-checklist/blob/master/personal-security-checklist.yml)`
+  + ` 文件，对清单内容进行修改。`,
 ];
 
 export const projects = [
   {
     title: 'Web-Check',
-    description: 'OSINT tool for analysing any website',
+    description: '用于分析任意网站的OSINT工具',
     icon: 'https://icon.horse/icon/web-check.xyz',
     link: 'https://github.com/lissy93/web-check',
   },
   {
     title: 'Dashy',
-    description: 'Dashboard app, for organising your self-hosted services',
+    description: '用于组织自托管服务的仪表盘应用',
     icon: 'https://dashy.to/img/dashy.png',
     link: 'https://github.com/lissy93/dashy',
   },
   {
     title: 'Email Comparison',
-    description: 'Objective comparison of private/secure mail providers',
+    description: '对隐私/安全邮箱服务商的客观对比',
     icon: 'https://email-comparison.as93.net/favicon.png',
     link: 'https://github.com/lissy93/email-comparison',
   },
   {
     title: 'Awesome Privacy',
-    description: 'A list of privacy-respscting software and services',
+    description: '隐私友好型软件与服务列表',
     icon: 'https://awesome-privacy.xyz/awesome-privacy.png',
     link: 'https://github.com/lissy93/awesome-privacy',
   },
   {
     title: 'Portainer-Templates',
-    description: 'Compiled repository of 1-click Docker apps for self-hosting',
+    description: '一键部署Docker应用的模板仓库',
     icon: 'https://portainer-templates.as93.net/favicon.png',
     link: 'https://github.com/lissy93/portainer-templates',
   },
   {
     title: 'AdGuardian',
-    description: 'CLI tool for monitoring your networks traffic and AdGuard DNS stats',
+    description: '用于监控网络流量和AdGuard DNS统计的CLI工具',
     icon: 'https://adguardian.as93.net/favicon.png',
     link: 'https://github.com/lissy93/adguardian-term',
   },
   {
     title: 'Bug-Bounties',
-    description: 'Database of websites which accept responsible vulnerability discolsure',
+    description: '接受负责任漏洞披露的网站数据库',
     icon: 'https://bug-bounties.as93.net/favicon.png',
     link: 'https://github.com/lissy93/bug-bounties',
   },
   {
     title: 'Git-In',
-    description: 'Tools and resources to help beginners get into open source',
+    description: '帮助初学者参与开源的工具与资源',
     icon: 'https://www.git-in.to/favicon.png',
     link: 'https://github.com/lissy93/git-in',
   },
@@ -93,23 +94,12 @@ export const socials = [
 ];
 
 export const license = `
-The MIT License (MIT)
-Copyright (c) Alicia Sykes <alicia@aliciasykes.com> 
+MIT 许可证 (MIT)
+版权所有 (c) Alicia Sykes <alicia@aliciasykes.com> 
 
-Permission is hereby granted, free of charge, to any person obtaining a copy 
-of this software and associated documentation files (the "Software"), to deal 
-in the Software without restriction, including without limitation the rights 
-to use, copy, modify, merge, publish, distribute, sub-license, and/or sell 
-copies of the Software, and to permit persons to whom the Software is furnished 
-to do so, subject to the following conditions:
+特此免费授予任何获得本软件及相关文档文件（以下简称“软件”）副本的人无限制地处理本软件，包括但不限于使用、复制、修改、合并、出版、分发、再许可和/或销售本软件的副本，并允许向其提供本软件的人也这样做，须符合以下条件：
 
-The above copyright notice and this permission notice shall be included install 
-copies or substantial portions of the Software.
+上述版权声明和本许可声明应包含在本软件的所有副本或重要部分中。
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANT ABILITY, 
-FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL 
-THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+本软件是“按原样”提供的，不附带任何明示或暗示的担保，包括但不限于对适销性、特定用途适用性和非侵权性的担保。在任何情况下，作者或版权持有人均不对因本软件或本软件的使用或其他交易而产生的任何索赔、损害或其他责任承担责任，无论是在合同诉讼、侵权或其他方面。
 `;

@@ -23,9 +23,9 @@ export default component$((props: { section: Section }) => {
   const originalFilters = {
     show: 'all', // 'all', 'remaining', 'completed'
     levels: {
-      essential: true,
-      optional: true,
-      advanced: true,
+      基本: true,
+      可选: true,
+      高级: true,
     },
   };
 
@@ -33,11 +33,11 @@ export default component$((props: { section: Section }) => {
 
   const getBadgeClass = (priority: Priority, precedeClass: string = '') => {
     switch (priority.toLocaleLowerCase()) {
-      case 'essential':
+      case '基本':
         return `${precedeClass}success`;
-      case 'optional':
+      case '可选':
         return `${precedeClass}warning`;
-      case 'advanced':
+      case '高级':
         return `${precedeClass}error`;
       default:
         return `${precedeClass}neutral`;
@@ -87,7 +87,7 @@ export default component$((props: { section: Section }) => {
         case 'advice':
           return item.point;
         case 'level':
-          return ['essential', 'optional', 'advanced'].indexOf(item.priority.toLowerCase());
+          return ['基本', '可选', '高级'].indexOf(item.priority.toLowerCase());
         default:
           return 0;
       }
@@ -151,20 +151,20 @@ export default component$((props: { section: Section }) => {
       <div>
         <progress class="progress w-64" value={percent} max="100"></progress>
         <p class="text-xs text-center">
-          {done} out of {total} ({percent}%)
-          complete, {disabled} ignored</p>
+          {done}/{total} ({percent}%)
+          完成，{disabled} 忽略</p>
       </div>
 
       <div class="flex flex-wrap gap-2 justify-end my-4">
         {(sortState.column || JSON.stringify(filterState) !== JSON.stringify(originalFilters)) && (
-          <button class="btn btn-sm hover:btn-primary" onClick$={resetFilters}>
+            <button class="btn btn-sm hover:btn-primary" onClick$={resetFilters}>
             <Icon width={18} height={16} icon="clear"/>
-            Reset Filters
-          </button>
+            重置筛选器
+            </button>
         )}
         <button class="btn btn-sm hover:btn-primary" onClick$={() => { showFilters.value = !showFilters.value; }}>
           <Icon width={18} height={16} icon="filters"/>
-          {showFilters.value ? 'Hide' : 'Show'} Filters
+          {showFilters.value ? '隐藏' : '显示'}筛选器
         </button>
       </div>
     </div>
@@ -174,52 +174,52 @@ export default component$((props: { section: Section }) => {
         style={{ opacity: stage.value === "enterTo" ? 1 : 0, height: stage.value === "enterTo" ? 'auto' : 0 }}> 
         {/* Filter by completion */}
         <div class="flex justify-end items-center gap-1">
-          <p class="font-bold text-sm">Show</p>
+          <p class="font-bold text-sm">展示</p>
           <label onClick$={() => (filterState.show = 'all')}
             class="p-2 rounded hover:bg-front transition-all cursor-pointer flex gap-2">
-            <span class="text-sm">All</span> 
+            <span class="text-sm">全部</span> 
             <input type="radio" name="show" class="radio radio-sm checked:radio-info" checked />
           </label>
           <label onClick$={() => (filterState.show = 'remaining')}
             class="p-2 rounded hover:bg-front transition-all cursor-pointer flex gap-2">
-            <span class="text-sm">Remaining</span> 
+            <span class="text-sm">剩余</span> 
             <input type="radio" name="show" class="radio radio-sm checked:radio-error" />
           </label>
           <label onClick$={() => (filterState.show = 'completed')}
             class="p-2 rounded hover:bg-front transition-all cursor-pointer flex gap-2">
-            <span class="text-sm">Completed</span> 
+            <span class="text-sm">完成</span> 
             <input type="radio" name="show" class="radio radio-sm checked:radio-success" />
           </label>
         </div>
         {/* Filter by level */}
         <div class="flex justify-end items-center gap-1">
-          <p class="font-bold text-sm">Filter</p>
+            <p class="font-bold text-sm">筛选</p>
           <label class="p-2 rounded hover:bg-front transition-all cursor-pointer flex gap-2">
-            <span class="text-sm">Basic</span> 
+            <span class="text-sm">基本</span> 
             <input
               type="checkbox"
-              checked={filterState.levels.essential}
-              onChange$={() => (filterState.levels.essential = !filterState.levels.essential)}
+              checked={filterState.levels.基本}
+              onChange$={() => (filterState.levels.基本 = !filterState.levels.基本)}
               class="checkbox checkbox-sm checked:checkbox-success"
             />
           </label>
           <label class="p-2 rounded hover:bg-front transition-all cursor-pointer flex gap-2">
-            <span class="text-sm">Optional</span> 
+            <span class="text-sm">可选</span> 
             <input
               type="checkbox"
-              checked={filterState.levels.optional}
-              onChange$={() => (filterState.levels.optional = !filterState.levels.optional)}
+              checked={filterState.levels.可选}
+              onChange$={() => (filterState.levels.可选 = !filterState.levels.可选)}
               class="checkbox checkbox-sm checked:checkbox-warning"
             />
           </label>
           <label
             class="p-2 rounded hover:bg-front transition-all cursor-pointer flex gap-2">
-            <span class="text-sm">Advanced</span> 
+            <span class="text-sm">高级</span> 
             <input
               type="checkbox"
-              checked={filterState.levels.advanced}
+              checked={filterState.levels.高级}
               class="checkbox checkbox-sm checked:checkbox-error"
-              onChange$={() => (filterState.levels.advanced = !filterState.levels.advanced)}
+              onChange$={() => (filterState.levels.高级 = !filterState.levels.高级)}
             />
           </label>
         </div>
@@ -230,9 +230,9 @@ export default component$((props: { section: Section }) => {
       <thead>
         <tr>
           { [
-            { id: 'done', text: 'Done?'},
-            { id: 'advice', text: 'Advice' },
-            { id: 'level', text: 'Level' }
+            { id: 'done', text: '是否完成'},
+            { id: 'advice', text: '名称' },
+            { id: 'level', text: '级别' }
           ].map((item) => (
             <th
               key={item.id}
@@ -245,7 +245,7 @@ export default component$((props: { section: Section }) => {
               </span>
             </th>
           ))}
-          <th>Details</th>
+          <th>描述</th>
         </tr>
       </thead>
       <tbody>
@@ -274,7 +274,7 @@ export default component$((props: { section: Section }) => {
                     setCompleted(data);
                   }}
                 />
-                <label for={`ignore-${itemId}`} class="text-small block opacity-50 mt-2">Ignore</label>
+                <label for={`ignore-${itemId}`} class="text-small block opacity-50 mt-2">忽略</label>
                 <input
                   type="checkbox"
                   id={`ignore-${itemId}`}
@@ -294,12 +294,12 @@ export default component$((props: { section: Section }) => {
               <td>
                 <label
                   for={`done-${itemId}`}
-                  class={`text-base font-bold ${isIgnored(itemId) ? 'line-through' : 'cursor-pointer'}`}>
+                  class={`text-base font-bold ${isIgnored(itemId) ? 'line-through' : 'cursor-pointer'} text-nowrap`}>
                   {item.point}
                 </label>
               </td>
               <td>
-                <div class={`badge gap-2 badge-${badgeColor}`}>
+                <div class={`badge gap-2 badge-${badgeColor} text-nowrap`}>
                   {item.priority}
                 </div>
               </td>

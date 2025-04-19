@@ -1,63 +1,61 @@
-# Choosing a Secure Messenging Platform
+# 选择安全的消息平台
 
-This article explains the considerations you should be aware of when selecting a secure messenger.
+本文介绍在选择安全消息应用时应注意的事项。
 
-**TLDR;** Opting for a secure messaging app can prevent any third-parties accessing your private conversions. Choose a platform that is E2E encrypted, open source and actively maintained. Advanced security features can harden defenses further, such as  self-destructing messages, contact verification, forward secrecy, the ability to sign up with an aliases (instead of phone number or email) and a decentralized P2P network sending content over Tor.
+**摘要：** 选择安全的消息应用可以防止第三方访问你的私人对话。请选择具备端到端加密（E2E）、开源且积极维护的平台。高级安全功能如自毁消息、联系人验证、前向保密、支持别名注册（无需手机号或邮箱）以及通过 Tor 传输内容的去中心化 P2P 网络，都能进一步增强防护。
 
-## Considerations
+## 主要考量
 
-### End-to-end Encryption
-End-to-end encryption means that messages are encrypted locally on your device, before being sent to your recipient(s). Neither the service provider, nor any actor who intercepts messages can ever decrypt the content. This is important since your data is safe from a data breach, law enforcement warrant, rogue employee or a malicious actor. Avoid apps that offer E2E encryption as an optional feature, as this could increase the chance of a plain text accidentally message being sent. Be aware that some providers offer weak or backdore'd encryption - (often called [Snake Oil Encryption](https://en.wikipedia.org/wiki/Snake_oil_(cryptography))), if the platform is not open source, then there is no way of verifying weather this is the case.
+### 端到端加密
+端到端加密意味着消息在你设备本地加密后才发送给收件人。服务提供商或任何拦截消息的第三方都无法解密内容。这确保了你的数据不会因数据泄露、执法部门调查、内部人员或恶意攻击者而泄露。避免使用将 E2E 加密作为可选功能的应用，因为这可能导致明文消息意外发送。注意，有些平台可能提供弱加密或存在后门（通常称为[蛇油加密](https://en.wikipedia.org/wiki/Snake_oil_(cryptography)))，如果平台不是开源的，就无法验证其加密的真实性。
 
-### Open Source
-The most secure designs, are the ones you do not have to trust. Without an app being open source, we can not verify that it is truly secure. It may have backdoors, weak cryptography or security vulnerabilities. This is one reason why apps which has fully-open and public source code can be more trustworthy But don't be fooled by false advertising; just because an app uses open source cryptography, does not mean it is fully open source, and hence cannot be verified. The published source code must be complete, and the security design system must be thoroughly documented.
+### 开源
+最安全的设计是不需要你去信任的设计。如果应用不是开源的，我们无法验证其真正的安全性，可能存在后门、弱加密或安全漏洞。因此，拥有完全公开源代码的应用更值得信赖。但不要被虚假宣传迷惑；仅仅使用开源加密算法并不代表整个应用开源，无法被完全验证。发布的源代码必须完整，安全设计也要有详细文档。
 
-### Code Audit
-As well as encryption, the developers need to take care of code quality, user experience, and service availability. The math behind the cryptography may be flawless, but a small mistake in the implementation, can result in serious consequences for security. Therefore the code base should be regularly audited by independant security specialists, and the report published publicly.
+### 代码审计
+除了加密，开发者还需关注代码质量、用户体验和服务可用性。即使加密算法无懈可击，代码实现中的小错误也可能带来严重安全后果。因此，代码库应定期由独立安全专家审计，并公开发布审计报告。
 
-### Active Maintenance
-Pushing  well tested security updates in a timely manner is of prime importance to security.  New bugs, vulnerabilities and issues are being discovered all the time, and without being patched they may be exploited by an adversary.  For a messenger to be secure, a public stable (non-beta) release needs to be available, and there needs to be secure auto-updating mechanisms to quickly mitigate security problems. It should be clear to the user which version they are running, and if a newer version is available
+### 积极维护
+及时推送经过充分测试的安全更新对安全至关重要。新漏洞和问题不断被发现，若不及时修复，可能被攻击者利用。安全的消息应用应有公开稳定（非测试版）版本，并具备安全的自动更新机制，确保快速修复安全问题。用户应能清楚知道当前版本及是否有新版本可用。
 
-### Reproducible Builds
-Most apps are distributed in a pre-compiled form, making it very difficult to verify that the version you downloaded is authentic and the same as that in the open source repository.  [Binary Transparency](https://wiki.mozilla.org/Security/Binary_Transparency) allows third parties to verify that the binaries are built directly from the public source code. [Reproducible builds](https://reproducible-builds.org) is the practice of verifying the build are authentic, and do not contain backdoors. This is done with a pre-defined build environment and a  fully deterministic build process - transforming a given set of source code must always output the same result. The user can then, if they desire build the app themselves and validate that the output matches the original build.
+### 可复现构建
+大多数应用以预编译形式分发，难以验证下载版本是否与开源仓库一致。[二进制透明性](https://wiki.mozilla.org/Security/Binary_Transparency)允许第三方验证二进制文件确实由公开源代码构建。[可复现构建](https://reproducible-builds.org)则确保构建过程确定性，用户可自行编译并验证输出与官方一致，防止后门。
 
-### Additional Features
-Some messaging platforms have additional features, that can be enticing to users, but it critical that these features do not undermine the goals of security. For example, cloud backups should be off by default, and if exported data will be decrypted the user must be made aware of this. Avoid platforms that priorities feature development over security
+### 附加功能
+部分消息平台有吸引用户的附加功能，但这些功能不能破坏安全目标。例如，云备份应默认关闭，若导出数据会被解密，必须明确告知用户。避免优先开发新功能而忽视安全的平台。
 
-### Meta Data
-Sending and receiving messages generates meta data, and this can reveal a lot of information: Who do you talk to, how often/ for how long, when, where, how etc. Not all messaging platforms automatically encrypt this, so it is important to check: What is collected, how long is it stored, with whom is it shared for and for what purposes. In general, the best meta data policies are the shortest: We do not collect any user meta data.
+### 元数据
+消息收发会产生元数据，可能泄露你与谁、何时、多久、在哪里、如何交流等信息。并非所有平台都自动加密这些数据，因此需关注：收集了哪些元数据、保存多久、与谁共享及用途。最佳做法是：不收集任何用户元数据。
 
-### Stability
-The app should be usable, salable and reliable.  One of the biggest dangers is that if the platform fails to reliably deliver messages, users may be forced to fall back to less secure channels.  Some smaller messaging services may not have the resources required to build a robust and reliable messaging platform, yet this is essential for security.
+### 稳定性
+应用应可用、可扩展且可靠。如果平台无法稳定传递消息，用户可能被迫转用不安全的渠道。一些小型服务可能缺乏构建可靠平台的资源，但这对安全至关重要。
 
-### Financing
-Building apps and maintaining servers is expensive. Ask yourself - who is paying for all that? Because usually, if a service is free - you're the product. This isn't always the case, as some open source apps are funded by non-profit organisations, who receive donations and sponsorship.  But if you cannot easily find out who is behind the app, this should be a red flag.
+### 融资方式
+开发和维护应用及服务器成本高昂。请思考——谁在为此买单？通常，免费服务意味着你就是产品。当然，也有开源应用由非营利组织通过捐赠和赞助支持。但如果无法轻易查明应用背后是谁，这应引起警惕。
 
-### Reputable Developers
-Developers should have a solid history of responding to technical problems and legal threats with the platform, as well as a realistic and transparent attitude toward government and law enforcement
+### 开发者声誉
+开发者应有应对技术和法律问题的良好记录，并对政府和执法部门持现实且透明的态度。
 
+### 司法管辖区
+公司注册地、运营地及用户数据存储地对安全影响很大。在某些国家或地区，组织可能被强制记录所有用户数据或交出加密密钥。一般建议避免选择[五眼联盟](https://en.wikipedia.org/wiki/Five_Eyes)成员国的公司。
 
-### Jurisdiction 
-The location of where the company is legally registered, where they run operations from and where they host user data plays a big role in security. In some countries or states, organisations are forced to comply with local government regulations, which can often require the organisation log all their users data, or hand over any encryption keys. Generally, it's better to avoid companies from within the [Five Eyes](https://en.wikipedia.org/wiki/Five_Eyes) Alliance.
+### 匿名性
+如果应用要求手机号、邮箱或姓名注册，你就不是匿名的。对于高风险用户，匿名注册至关重要，因为手机号等信息一旦泄露，可能被针对（如政府、跟踪者或犯罪分子）。如有需要，建议选择支持匿名注册的应用，通过 Tor 下载，避开 Google Play/苹果商店，创建匿名身份，并仅在连接 Tor 时使用。
 
-### Anonymity
-If the app asks for a phone number, email address or name, then you are not anonymous.  For vulnerable users, the ability to sign up anonymously is critical, as a major identifier like a phone number  is private information, and could be risky if they are being targeted by someone who knows their identity, (such as a government, stalker or criminal adversary). This may not be needed for everyone, but if you believe you may be targeted, then opt for an anonymous messaging app, download it over Tor, outside of Google Play / Apple App Store, create an anonymous identity  ant only run the app while connected through Tor.
+### 联系人验证
+通信安全取决于最薄弱环节。如果无法验证联系人身份，就无法确保对方账号未被盗用或确实是目标对象。若收件人被攻破，你的消息也不安全。指纹验证功能可让用户确认对方身份，防止会话被劫持。通常通过比对指纹码、电话或现实中扫码实现。安全应用应为用户提供可识别的异常提示，如有新设备登录应通知双方。
 
-### Contact Verification
-Your communications can only be as secure as the weakest link, and if you cannot verify your contacts identity, you cannot be sure that their account has not been taken over, or even that you are communicating with the intended entity. In the same way, if your recipient has been compromised, your messages are not safe at all. Contact fingerprint verification is a powerful feature, enabling users to trust the destination, and preventing hackers from hijacking the conversation. It usually takes the form of comparing fingerprint codes, even over a phone call or in real life via a QR code. A secure messenger should provide reliable indicators of compromise that are recognizable to an end-user, so if someone has logged on from a new device, both parties should be notified.
+### 临时消息
+设备物理安全无法完全依赖。自毁消息功能可让消息在设定时间后自动删除，若设备丢失或被盗，攻击者只能获取最近的通信内容。与远程擦除不同，消失消息无需设备在线或有信号。可根据威胁模型设置消息保留时间，从几周到几秒不等。
 
-### Ephemeral Messages
-You cannot always rely on the physical security of your device. Self-destructing messages is a really neat feature the causes your messages to automatically delete after a set amount of time. This means that if your device is lost or stolen, an adversary will only have access to the most recent communications. Unlike remote erase, disappearing messages does not require your device to be remotely accessible or have signal. You are able to vary this time frame from weeks all the way down to just a few seconds, depending on your threat model.
+### 前向保密
+请选择实现[前向保密](https://en.wikipedia.org/wiki/Forward_secrecy)的平台。即每条消息生成新加密密钥，即使攻击者获取设备和私钥，也无法解密之前的消息。这样即便某一密钥被攻破，也无法解密整个会话。
 
-### Forward Secrecy
-Opt for a platform that implements  [forward secrecy](https://en.wikipedia.org/wiki/Forward_secrecy). This is where your app generates a new encryption key for every message, then even if your adversary has obtained your device and extracted the private encryption key, they will not be able to use it to decrypt any previously captured messages. This means that even if a key from one party is compromised, it will not be possible to decrypt the remainder of the session with this key.
+### 去中心化
+去中心化可避免单点故障。如果所有数据都通过中心化服务商，则需完全信任其处理元数据能力，且一旦服务中断，整个网络都不可用。去中心化系统可将信任委托给其他司法辖区的节点。完全点对点的应用没有中心服务器，无单点故障。
 
-### Decentralization
-Without freedom, your app will have a single point of failure. If all data flows through a central provider, then you have to trust them with your meta-data. And if that provider ceases to operate, the entire network will be unavailable for that duration. Whereas with a decentralized system, you have the freedom to delegate trust to someone else, in another jurisdiction. With a fully peer-to-peer app, there are no central servers to compromise, and there is no single point of failure.
+## 附加设置
+请选择可关闭非安全功能（如已读回执、最后在线、输入状态通知）的应用。如果支持云同步（用于备份或网页端），这会增加攻击面，应关闭。
 
-## Additional Settings
-Your choose an application that allows you to disable optional non-security features such as read receipt, last online and typing notification. If the app supports cloud sync either for backup or for access through a web app companion, this increases the attack surface and so should be disabled also.
-
-## Final Considerations
-The weakest point in any system is the user. If you or your recipient is compromised, then even the most advanced security features will become obsolete. Follow good security practices, and ensure the contact you are communicating with also does so. It's important to remember that new vulnerabilities are being discovered and exploited all the time, and the most secure messaging app of today could become compromised in the future
-
+## 最终建议
+任何系统的最薄弱环节都是用户。如果你或联系人被攻破，再先进的安全功能也无济于事。请遵循良好安全习惯，并确保联系人也这样做。要记住，新的漏洞不断被发现和利用，今天最安全的消息应用未来也可能被攻破。

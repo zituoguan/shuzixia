@@ -1,56 +1,55 @@
-name: Addition
-description: 🆕 Suggest something to be added to the list
-title: '[ADDITION] <title>'
-labels: ['Suggested Addition', 'Awaiting Review']
+name: 添加建议
+description: 🆕 建议将某内容添加到列表中
+title: '[ADDITION] <标题>'
+labels: ['建议添加', '等待审核']
 assignees:
   - lissy93
 body:
-  # Location
+  # 位置
   - type: input
     id: location
     attributes:
-      label: Location
+      label: 位置
       description: >-
-        Indicate which section (and if applicable sub-section) the addition should be made
+        请指出应添加内容的章节（如适用，还需注明子章节）
       placeholder:
     validations:
       required: true
 
-  # Addition Info
+  # 添加内容信息
   - type: textarea
     id: addition
     attributes:
-      label: Addition
+      label: 添加内容
       description: |
-        Please describe what should be added
-        Where applicable, provide links to reputable sources to back up any info
+        请描述应添加的内容
+        如有必要，请提供权威来源的链接以佐证信息
       placeholder: 
     validations:
       required: true
 
-  # Can user submit PR
+  # 是否愿意提交 PR
   - type: dropdown
     id: canImplement
     attributes:
-      label: Would you like to submit a PR?
-      description: Is this addition something that you are willing to submit a pull request for?
+      label: 您愿意提交 PR 吗？
+      description: 您是否愿意为此建议提交一个拉取请求（PR）？
       options:
-        - 'No'
-        - 'Maybe'
-        - 'Yes'
+        - '否'
+        - '可能'
+        - '是'
     validations:
       required: false
 
-
-  # Confirmation checkboxes
+  # 确认复选框
   - type: checkboxes
     id: idiot-check
     attributes:
-      label: Please tick the boxes
+      label: 请勾选以下选项
       options:
-        - label: To the best of my knowledge, the information I've provided is correct
+        - label: 据我所知，我提供的信息是正确的
           required: true
-        - label: I have checked that a similar ticket has not previously been opened
+        - label: 我已确认没有类似的问题被提出
           required: true
-        - label: I agree to the repositories [Code of Conduct](https://github.com/Lissy93/personal-security-checklist/blob/master/.github/CODE_OF_CONDUCT.md)
+        - label: 我同意遵守本仓库的[行为准则](https://github.com/Lissy93/personal-security-checklist/blob/master/.github/CODE_OF_CONDUCT.md)
           required: true
