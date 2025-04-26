@@ -8,7 +8,7 @@ export const RouterHead = component$(() => {
   return (
     <>
       {/* 基本信息 */}
-      <title>{head.title || 'Digital Defense - 终极个人安全清单，保护你的数字生活'}</title>
+      <title>{head.title || '数字侠 - 终极个人安全清单，保护你的数字生活'}</title>
       <meta name="description" content="终极个人安全清单，保护你的数字生活" />
       
       {/* 网站配置 */}
@@ -22,14 +22,14 @@ export const RouterHead = component$(() => {
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={loc.url.href} />
-      <meta property="og:title" content="Digital Defense - 终极个人安全清单，保护你的数字生活" />
+      <meta property="og:title" content="数字侠 - 终极个人安全清单，保护你的数字生活" />
       <meta property="og:description" content="终极个人安全清单，保护你的数字生活" />
       <meta property="og:image" content="/banner.png" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={loc.url.href} />
-      <meta name="twitter:title" content="Digital Defense - 终极个人安全清单，保护你的数字生活" />
+      <meta name="twitter:title" content="数字侠 - 终极个人安全清单，保护你的数字生活" />
       <meta name="twitter:description" content="终极个人安全清单，保护你的数字生活" />
       <meta name="twitter:image" content="/banner.png" />
 

@@ -1,13 +1,12 @@
 import { component$, useContextProvider, Slot } from "@builder.io/qwik";
 // 导入 StaticGenerateHandler 用于 SSG
-import { routeLoader$, type RequestHandler, type StaticGenerateHandler } from "@builder.io/qwik-city";
+import { routeLoader$, type RequestHandler, } from "@builder.io/qwik-city";
 import jsyaml from "js-yaml";
 
 import Navbar from "~/components/furniture/nav";
 import Footer from "~/components/furniture/footer";
 import { ChecklistContext } from "~/store/checklist-context";
-// 导入 Section 类型，用于 onStaticGenerate
-import type { Sections, Section } from "~/types/PSC";
+import type { Sections } from "~/types/PSC";
 
 const remoteUrl = 'https://cdn.jsdelivr.net/gh/zituoguan/shuzixia@HEAD/personal-security-checklist.yml';
 
@@ -35,20 +34,7 @@ export const useChecklists = routeLoader$(async () => {
   return await fetchChecklistData();
 });
 
-// 添加 onStaticGenerate 并使其也执行 fetch (用于 SSG 构建时)
-export const onStaticGenerate: StaticGenerateHandler = async () => {
-  // 在构建时获取数据
-  const sections = await fetchChecklistData();
-  // 从获取的数据中提取 slug 作为动态路由 [title] 的参数
-  const params = sections.map((section: Section) => ({ title: section.slug }));
-   if (params.length === 0) {
-      console.warn("[SSG] Warning: No params generated from fetched data. Checklist routes might be missing.");
-   } else {
-     console.log(`[SSG] Generated ${params.length} params for dynamic routes from fetched data.`);
-   }
-  // 返回参数列表，Qwik City 将为每个参数生成静态页面
-  return { params };
-};
+
 
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
